@@ -1,0 +1,7 @@
+/* Estilos para imprimir las fichas: oculta menú y adornos. */
+.cabecera, .pie, .saltar, .aviso, .no-imprimir { display: none !important; }
+
+body { background: #fff; color: #000; font-size: 12pt; }
+main { max-width: none; padding: 0; }
+a { color: #000; }
+.pregunta-esencial { border: 1px solid #000; }

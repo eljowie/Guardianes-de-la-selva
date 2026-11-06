@@ -1,0 +1,16 @@
+<header class="cabecera">
+  <a class="marca" href="/">{{ sitio.titulo }}</a>
+  <nav aria-label="Principal">
+    <ul class="menu">
+      {%- for item in sitio.menu %}
+      <li>
+        {%- if item.lista %}
+        <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.texto }}</a>
+        {%- else %}
+        <span class="proximamente">{{ item.texto }} <small>(próximamente)</small></span>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</header>

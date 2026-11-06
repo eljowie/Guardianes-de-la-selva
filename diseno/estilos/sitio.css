@@ -1,0 +1,128 @@
+/* Estilos base del sitio. El diseño completo llega en la Fase 1. */
+
+:root {
+  --selva: #2d3b1e;       /* verde profundo, color principal */
+  --selva-clara: #4a6131;
+  --tierra: #8a5a2b;      /* tono tierra cálido */
+  --acento: #c2410c;      /* llamadas a la acción */
+  --fondo: #faf7f0;
+  --superficie: #ffffff;
+  --texto: #1f2418;
+  --texto-suave: #4b5340;
+  --borde: #d9d2c0;
+
+  --letra: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --ancho: 72rem;
+  --radio: 0.75rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--letra);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+main {
+  display: block;
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1, h2, h3 { line-height: 1.2; color: var(--selva); }
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0.5rem 0; }
+
+a { color: var(--selva-clara); text-underline-offset: 0.2em; }
+a:hover { color: var(--selva); }
+
+:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+}
+
+/* Enlace para saltar el menú con el teclado */
+.saltar {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 1rem;
+  background: var(--selva);
+  color: #fff;
+  border-radius: var(--radio);
+  z-index: 10;
+}
+.saltar:focus { top: 1rem; }
+
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 1rem;
+  background: var(--selva);
+  color: #fff;
+}
+.cabecera a { color: #fff; }
+.marca { font-weight: 700; font-size: 1.25rem; text-decoration: none; }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu a, .menu .proximamente {
+  display: inline-block;
+  min-height: 2.75rem;     /* área de toque amplia */
+  padding: 0.5rem 0.25rem;
+}
+.menu a[aria-current="page"] { font-weight: 700; text-decoration-thickness: 3px; }
+.proximamente { opacity: 0.85; }
+.proximamente small { font-size: 0.8em; }
+
+.pie {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid var(--borde);
+  color: var(--texto-suave);
+  font-size: 1rem;
+  text-align: center;
+}
+.pie .menu { justify-content: center; }
+
+.subtitulo { font-size: 1.375rem; color: var(--tierra); margin-top: 0; }
+
+.pregunta-esencial {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--superficie);
+  border-left: 6px solid var(--acento);
+  border-radius: var(--radio);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.pregunta-esencial p { margin: 0; }
+
+.aviso, .pendiente {
+  padding: 0.75rem 1rem;
+  border: 2px dashed var(--tierra);
+  border-radius: var(--radio);
+  background: #fff8ec;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

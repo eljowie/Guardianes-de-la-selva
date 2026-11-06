@@ -1,0 +1,18 @@
+{
+  "titulo": "Guardianes de la Selva",
+  "subtitulo": "Una expedición por la Amazonía",
+  "idioma": "es-AR",
+  "menu": [
+    { "texto": "Misión 1", "url": "/mision-1/", "lista": false },
+    { "texto": "Misión 2", "url": "/mision-2/", "lista": false },
+    { "texto": "Misión 3", "url": "/mision-3/", "lista": false },
+    { "texto": "Misión 4", "url": "/mision-4/", "lista": false },
+    { "texto": "Biblioteca", "url": "/biblioteca/", "lista": false },
+    { "texto": "Bitácora", "url": "/bitacora/", "lista": false }
+  ],
+  "pie": [
+    { "texto": "Para docentes", "url": "/docentes/", "lista": false },
+    { "texto": "Fundamentos", "url": "/fundamentos/", "lista": false }
+  ],
+  "creditos": "Trabajo final de Tecnología Educativa Audiovisual · Licenciatura en Producción Audiovisual · UNTREF"
+}

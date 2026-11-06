@@ -1,0 +1,43 @@
+# Guardianes de la Selva — sitio web
+
+Sitio educativo para 6.º grado sobre la deforestación de la Amazonía.
+Trabajo final de Tecnología Educativa Audiovisual (UNTREF).
+
+## Dónde está cada cosa
+
+| Carpeta o archivo | Qué hay | ¿Se puede editar? |
+|---|---|---|
+| `contenido\` | Los textos de cada página, en Markdown (texto con marcas simples: `#` es un título, `**así**` es negrita) | Sí |
+| `contenido\_datos\enlaces.json` | Enlaces del video de YouTube, del Padlet y de Genially | Sí: pegar el enlace entre las comillas |
+| `contenido\_datos\sitio.json` | Título, menú y créditos | Sí, con cuidado |
+| `diseno\` | Plantillas y estilos: cómo se ve el sitio | No |
+| `public\` | Imágenes, audios e íconos | Sí: agregar archivos |
+| `.github\workflows\publicar.yml` | La acción que publica el sitio en GitHub Pages | No |
+
+**Reglas para editar un archivo `.json`:** no borrar las comillas, las comas ni las llaves `{ }`.
+
+## Ver el sitio en la computadora
+
+Se necesita Node.js, el programa que hace funcionar a Eleventy. En esta PC está en `G:\VideoTools\node`.
+
+1. Abrir una terminal en esta carpeta.
+2. La primera vez, escribir `npm install`: descarga Eleventy, el programa que arma el sitio.
+3. Escribir `npm run previsualizar` y abrir <http://localhost:8080> en el navegador.
+   Cada vez que se guarda un cambio, la página se actualiza sola. Para cortar: `Ctrl + C`.
+
+## Publicar
+
+El sitio se publica en **GitHub Pages**, el hosting gratuito de GitHub.
+
+1. Crear un repositorio en GitHub (la carpeta del proyecto en internet) y subir esta carpeta.
+2. En el repositorio, entrar a **Settings → Pages** y en «Source» elegir **GitHub Actions**.
+3. A partir de ahí, cada cambio que se guarde en la rama `main` se publica solo en 1 o 2 minutos.
+   El avance se ve en la pestaña **Actions**.
+
+El link queda así: `https://usuario.github.io/nombre-del-repositorio/`. Se abre sin cuenta.
+
+## Reglas del proyecto
+
+- El texto viene del documento del grupo y **no se reescribe**.
+- Si falta un enlace, se deja un cartel de «pendiente», nunca un enlace inventado.
+- Es un sitio para chicos: **sin cuentas, sin formularios, sin estadísticas de visitas ni rastreadores.**

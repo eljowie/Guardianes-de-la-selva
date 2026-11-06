@@ -1,0 +1,16 @@
+<footer class="pie">
+  <nav aria-label="Secundaria">
+    <ul class="menu">
+      {%- for item in sitio.pie %}
+      <li>
+        {%- if item.lista %}
+        <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.texto }}</a>
+        {%- else %}
+        <span class="proximamente">{{ item.texto }} <small>(próximamente)</small></span>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+  <p>{{ sitio.creditos }} · {{ "" | anio }}</p>
+</footer>
