@@ -20,12 +20,16 @@ permalink: /bitacora/
 
 <section class="bloque" aria-labelledby="titulo-muro">
 <h2 id="titulo-muro">El muro del curso</h2>
-{% if enlaces.padlet %}
+{%- set srcPadlet = enlaces.padletInsertar | padletEmbed %}
+{% if srcPadlet %}
 <div class="padlet">
-<iframe src="{{ enlaces.padlet }}" title="Bitácora del curso en Padlet: una columna por misión" loading="lazy" allow="camera;microphone;geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<iframe src="{{ srcPadlet }}" title="Bitácora del curso en Padlet: una columna por misión" loading="lazy" allow="camera;clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </div>
+{% endif %}
+{% if enlaces.padlet %}
 <p>{% boton "Abrir el muro en otra pestaña", enlaces.padlet, "acento" %}</p>
-{% else %}
+{% endif %}
+{% if not srcPadlet and not enlaces.padlet %}
 <div class="video video--pendiente padlet--pendiente" role="note"><p>Muro pendiente: el docente todavía no cargó el enlace del Padlet.</p></div>
 {% endif %}
 </section>

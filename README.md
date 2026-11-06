@@ -38,6 +38,23 @@ El sitio se publica en **GitHub Pages**, el hosting gratuito de GitHub.
 
 El link queda así: `https://usuario.github.io/nombre-del-repositorio/`. Se abre sin cuenta.
 
+### Antes de subir por primera vez
+
+1. Una persona del grupo crea la cuenta gratuita en <https://github.com> (con su correo; el sitio no lo muestra).
+2. En GitHub, **Settings → Emails**: tildar «Keep my email addresses private» y copiar la dirección
+   que termina en `@users.noreply.github.com`. Con esa dirección se firman las versiones, así el correo real
+   no queda publicado en el historial.
+3. Crear un repositorio **público** y vacío (sin README), por ejemplo `guardianes-de-la-selva`.
+4. Subir esta carpeta. La primera vez, Git abre el navegador para iniciar sesión en GitHub.
+5. Hacer el paso 2 de «Publicar» (Settings → Pages → GitHub Actions).
+
+### Lista de control antes de mostrar el sitio
+
+- [ ] Video y Padlet cargados en `contenido\_datos\enlaces.json`.
+- [ ] Cada enlace externo de `biblioteca.json` revisado por un adulto (`"revisado": true`).
+- [ ] El grupo confirmó los textos marcados como «Borrador», «Agregado» o «Pendiente del grupo».
+- [ ] El Padlet está configurado para que el docente apruebe las publicaciones antes de que se vean.
+
 ## Reglas del proyecto
 
 - El texto viene del documento del grupo y **no se reescribe**.

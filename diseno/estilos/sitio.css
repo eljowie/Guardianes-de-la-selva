@@ -29,7 +29,8 @@
 }
 
 :root {
-  --selva: #2d3b1e;          /* verde profundo, color principal */
+  color-scheme: light;
+  --selva: #2d3b1e;         /* verde profundo, color principal */
   --selva-media: #3f5a2a;
   --selva-clara: #4a6b2e;
   --musgo: #e3ead2;
@@ -85,6 +86,11 @@ a { color: var(--selva-clara); text-underline-offset: 0.2em; text-decoration-thi
 a:hover { color: var(--selva); text-decoration-thickness: 0.14em; }
 
 :focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; border-radius: 4px; }
+/* Sobre fondos verdes oscuros el naranja casi no se ve: ahí el foco es amarillo. */
+.cabecera :focus-visible, .mensaje :focus-visible, .video--pendiente :focus-visible { outline-color: #f2c94c; }
+
+/* Toques en pantallas táctiles: sin demora de doble toque y con un resaltado suave. */
+a, button, input { touch-action: manipulation; -webkit-tap-highlight-color: rgba(45, 59, 30, 0.15); }
 
 /* Texto solo para lectores de pantalla */
 .sr {

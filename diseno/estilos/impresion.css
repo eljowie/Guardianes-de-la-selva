@@ -61,3 +61,4 @@ table, .caja, .huella, .flujo__eslabon, .red, .ficha-datos { break-inside: avoid
 .credencial__campo input { border-bottom: 1.5pt solid #000; color: #000; outline: none !important; }
 .credencial__campo input::placeholder { color: transparent; }
 .credencial__sellos li { border-color: #000 !important; color: #000 !important; }
+.accesos { display: none !important; }

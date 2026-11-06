@@ -36,6 +36,14 @@ export default function (eleventyConfig) {
     return m ? m[1] : "";
   });
 
+  // Saca la dirección del muro del código «Insertar» de Padlet. Acepta el código
+  // completo (<iframe src="…">) o solo la dirección. Solo deja pasar padlet.com.
+  eleventyConfig.addFilter("padletEmbed", (codigo) => {
+    const texto = String(codigo || "").trim();
+    const src = (texto.match(/src=["']([^"']+)["']/) || [, texto])[1];
+    return /^https:\/\/padlet\.com\/embed\/[\w-]+/.test(src) ? src : "";
+  });
+
   // Filtra una lista: {{ biblioteca.recursos | donde("seccion", "prensa") }}
   eleventyConfig.addFilter("donde", (lista, clave, valor) =>
     (lista || []).filter((item) => item[clave] === valor)
