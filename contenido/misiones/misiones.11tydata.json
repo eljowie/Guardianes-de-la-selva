@@ -1,0 +1,4 @@
+{
+  "layout": "mision.njk",
+  "permalink": "/{{ page.fileSlug }}/"
+}

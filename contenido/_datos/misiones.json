@@ -1,0 +1,30 @@
+[
+  {
+    "numero": 1,
+    "titulo": "El territorio que cambió",
+    "url": "/mision-1/",
+    "zona": "Zona del satélite",
+    "enfoque": "Observación por cuadrantes en Google Earth → Guía de lectura de noticias → Formulación e integración de hipótesis sobre intervención humana vs. fenómeno natural de El Niño."
+  },
+  {
+    "numero": 2,
+    "titulo": "Las huellas humanas",
+    "url": "/mision-2/",
+    "zona": "Zona de las huellas",
+    "enfoque": "Investigación de actividades extractivas (agronegocio, minería, tala, incendios) → Matriz causa-actor-consecuencia → Debate de polifonía sobre tensiones socioeconómicas (\"Cara A y Cara B\")."
+  },
+  {
+    "numero": 3,
+    "titulo": "Lo que se pierde",
+    "url": "/mision-3/",
+    "zona": "Zona del sotobosque",
+    "enfoque": "Ficha de Búsqueda y Rescate de fauna nativa → Esquema de red alimentaria → Escucha del podcast de voces locales → Diagrama de flujo de impacto en el clima global."
+  },
+  {
+    "numero": 4,
+    "titulo": "Guardianes en acción",
+    "url": "/mision-4/",
+    "zona": "Campamento de los guardianes",
+    "enfoque": "Rastreo de ONGs reales (WWF, COICA, RAISG) → Análisis del rol dual de la tecnología → Redacción de la Carta/Plan de Rescate → Transferencia a la deforestación del Gran Chaco argentino."
+  }
+]

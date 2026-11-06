@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+{%- set actual = misiones[numero - 1] -%}
+{%- set anterior = misiones[numero - 2] if numero > 1 else null -%}
+{%- set siguiente = misiones[numero] if numero < misiones.length else null -%}
+<article class="mision mision--{{ numero }}">
+  <header class="mision__encabezado">
+    <p class="mision__numero">Misión <strong>{{ numero }}</strong></p>
+    <h1>{{ actual.titulo }}</h1>
+    <div class="mision__acciones no-imprimir">
+      <button type="button" class="boton boton--imprimir" onclick="window.print()">Imprimir ficha</button>
+      <a class="boton boton--secundario" href="/#mapa">Volver al mapa</a>
+    </div>
+  </header>
+
+  <div class="ficha-datos" role="group" aria-label="Datos de la ficha">
+    <p><span class="ficha-datos__rotulo">Proyecto:</span> {{ proyecto }}</p>
+    <p><span class="ficha-datos__rotulo">Integrantes del equipo:</span> {% completar "largo" %}</p>
+    <p><span class="ficha-datos__rotulo">Fecha:</span> {% completar "corto" %} / {% completar "corto" %} / {% completar "corto" %}
+      <span class="ficha-datos__separador" aria-hidden="true">|</span> <span class="ficha-datos__rotulo">Grado:</span> 6.°</p>
+  </div>
+
+  {{ content | safe }}
+
+  <nav class="mision__nav no-imprimir" aria-label="Otras misiones">
+    {% if anterior %}
+    <a class="mision__nav-enlace" href="{{ anterior.url }}" rel="prev"><small>← Misión {{ anterior.numero }}</small>{{ anterior.titulo }}</a>
+    {% else %}<span></span>{% endif %}
+    <a class="mision__nav-enlace mision__nav-mapa" href="/#mapa"><small>Elegir otra misión</small>Mapa de la expedición</a>
+    {% if siguiente %}
+    <a class="mision__nav-enlace mision__nav-siguiente" href="{{ siguiente.url }}" rel="next"><small>Misión {{ siguiente.numero }} →</small>{{ siguiente.titulo }}</a>
+    {% else %}<span></span>{% endif %}
+  </nav>
+</article>

@@ -1,0 +1,4 @@
+{
+  "_ayuda": "Puntos de Google Earth para la Misión 1. Agreguen uno por línea, con este formato: { \"nombre\": \"Punto A\", \"latitud\": -9.5, \"longitud\": -62.5 }. Separen cada punto con una coma. Mientras la lista esté vacía, el sitio muestra «coordenadas pendientes».",
+  "puntos": []
+}

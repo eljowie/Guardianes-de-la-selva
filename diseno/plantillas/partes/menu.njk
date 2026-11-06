@@ -1,16 +1,21 @@
 <header class="cabecera">
-  <a class="marca" href="/">{{ sitio.titulo }}</a>
-  <nav aria-label="Principal">
-    <ul class="menu">
-      {%- for item in sitio.menu %}
-      <li>
-        {%- if item.lista %}
-        <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.texto }}</a>
-        {%- else %}
-        <span class="proximamente">{{ item.texto }} <small>(próximamente)</small></span>
-        {%- endif %}
-      </li>
-      {%- endfor %}
-    </ul>
-  </nav>
+  <div class="cabecera__interior">
+    <a class="marca" href="/">
+      <svg class="marca__icono" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#f3e6c4"/><path d="M16 26 C9 22 8 13 16 6 C24 13 23 22 16 26Z" fill="#4a6b2e"/><path d="M16 9 V25" stroke="#2d3b1e" stroke-width="1.6"/></svg>
+      {{ sitio.titulo }}
+    </a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        {%- for item in sitio.menu %}
+        <li>
+          {%- if item.lista %}
+          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.texto }}</a>
+          {%- else %}
+          <span class="proximamente">{{ item.texto }} <small>(próximamente)</small></span>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
 </header>

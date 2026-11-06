@@ -1,0 +1,100 @@
+{#- Mapa provisorio de la expedición. Se reemplaza por la ilustración definitiva del grupo. -#}
+<figure class="mapa__figura">
+<svg class="mapa__svg" viewBox="0 0 1200 720" role="group" aria-labelledby="mapa-desc" xmlns="http://www.w3.org/2000/svg">
+  <desc id="mapa-desc">Mapa ilustrado de la selva con cuatro zonas, una por misión.</desc>
+  <defs>
+    <pattern id="copas" width="90" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="22" r="22" fill="#3f5a2a"/>
+      <circle cx="62" cy="18" r="18" fill="#4d6b31"/>
+      <circle cx="44" cy="54" r="24" fill="#365024"/>
+      <circle cx="84" cy="62" r="16" fill="#46622d"/>
+      <circle cx="6" cy="66" r="14" fill="#4d6b31"/>
+    </pattern>
+    <filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1b2412" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <!-- Selva de fondo -->
+  <rect width="1200" height="720" fill="#2d3b1e"/>
+  <rect width="1200" height="720" fill="url(#copas)"/>
+  <!-- Río -->
+  <path d="M610 -10 C560 110 700 170 640 280 S520 420 600 520 S720 640 660 730" fill="none" stroke="#7fb3b8" stroke-width="46" stroke-linecap="round"/>
+  <path d="M610 -10 C560 110 700 170 640 280 S520 420 600 520 S720 640 660 730" fill="none" stroke="#a6cfd1" stroke-width="16" stroke-linecap="round" opacity=".7"/>
+  <!-- Sendero sugerido 1 → 2 → 3 → 4 -->
+  <path d="M290 230 C460 180 700 160 900 220 M900 220 C760 330 470 380 300 500 M300 500 C500 560 700 600 900 520" fill="none" stroke="#f3e6c4" stroke-width="5" stroke-dasharray="4 14" stroke-linecap="round" opacity=".85"/>
+  <!-- Detalles escondidos -->
+  <g class="mapa__detalle">
+    <title>Un delfín rosado del Amazonas</title>
+    <path d="M590 410 q22 -18 46 -2 q-8 4 -10 12 q-16 -8 -36 -10z" fill="#e7a6b4"/>
+  </g>
+  <g class="mapa__detalle">
+    <title>Un tucán mirando desde una rama</title>
+    <circle cx="1105" cy="95" r="13" fill="#141a0d"/>
+    <path d="M1116 90 q26 2 30 10 q-18 4 -30 0z" fill="#f29a2e"/>
+    <circle cx="1109" cy="91" r="3" fill="#fff"/>
+  </g>
+  <g class="mapa__detalle">
+    <title>Una capibara junto al río</title>
+    <ellipse cx="715" cy="655" rx="26" ry="15" fill="#8a5a2b"/>
+    <circle cx="738" cy="646" r="9" fill="#8a5a2b"/>
+  </g>
+  {%- for m in misiones %}
+  {%- set pos = [[290, 230], [900, 220], [300, 500], [900, 520]][loop.index0] %}
+  <a class="zona zona--{{ m.numero }}" href="{{ m.url }}" aria-label="Misión {{ m.numero }}: {{ m.titulo }}">
+    <circle class="zona__area" cx="{{ pos[0] }}" cy="{{ pos[1] }}" r="150"/>
+    <g class="zona__dibujo" transform="translate({{ pos[0] }} {{ pos[1] }})" aria-hidden="true">
+      {%- if m.numero == 1 %}
+      <!-- Zona del satélite: imagen dividida en cuadrantes -->
+      <rect x="-95" y="-70" width="190" height="140" rx="6" fill="#4d6b31" stroke="#f3e6c4" stroke-width="5"/>
+      <path d="M0 -70 L0 70 M-95 0 L95 0" stroke="#f3e6c4" stroke-width="3" stroke-dasharray="8 6"/>
+      <path d="M5 5 h85 v60 h-85z" fill="#b0834f"/>
+      <path d="M-90 30 l60 -20 l10 25 l-70 30z" fill="#c39a63"/>
+      <path d="M20 -60 l60 10 l-5 40 l-50 -5z" fill="#b0834f"/>
+      <g transform="translate(70 -100)">
+        <rect x="-12" y="-9" width="24" height="18" rx="2" fill="#d9dee3"/>
+        <rect x="-44" y="-6" width="28" height="12" fill="#5b7ea6"/>
+        <rect x="16" y="-6" width="28" height="12" fill="#5b7ea6"/>
+      </g>
+      {%- elif m.numero == 2 %}
+      <!-- Zona de las huellas: parcelas, camino y humo -->
+      <path d="M-120 -40 l90 -30 l40 70 l-95 30z" fill="#b0834f"/>
+      <path d="M10 -10 l100 -20 l10 80 l-100 15z" fill="#c39a63"/>
+      <path d="M-140 70 C-60 40 20 90 140 40" fill="none" stroke="#d8b98a" stroke-width="12" stroke-linecap="round"/>
+      <g fill="#cfcac0" opacity=".9">
+        <circle cx="60" cy="-60" r="18"/><circle cx="75" cy="-88" r="22"/><circle cx="92" cy="-120" r="26"/>
+      </g>
+      <g fill="#6b4220">
+        <rect x="-70" y="10" width="60" height="10" rx="5"/><rect x="-64" y="-2" width="60" height="10" rx="5"/><rect x="-58" y="22" width="60" height="10" rx="5"/>
+      </g>
+      {%- elif m.numero == 3 %}
+      <!-- Zona del sotobosque: selva densa y animales -->
+      <circle cx="-60" cy="-20" r="60" fill="#22301a"/>
+      <circle cx="40" cy="-40" r="55" fill="#283a1c"/>
+      <circle cx="10" cy="40" r="65" fill="#1e2a15"/>
+      <g class="mapa__ojos"><ellipse cx="-12" cy="30" rx="8" ry="5" fill="#f2c94c"/><ellipse cx="14" cy="30" rx="8" ry="5" fill="#f2c94c"/></g>
+      <g transform="translate(70 -70)"><circle r="14" fill="#d23c2a"/><path d="M8 -4 l18 6 l-16 6z" fill="#f2c94c"/><path d="M-6 6 l-10 30 l10 -6z" fill="#2b6cb0"/></g>
+      <path d="M-110 70 q10 -40 30 -50 q-6 30 -30 50z M-90 80 q20 -30 40 -30 q-14 24 -40 30z" fill="#5f8a3a"/>
+      {%- else %}
+      <!-- Campamento de los guardianes: carpa, bandera y fogata -->
+      <ellipse cx="0" cy="55" rx="140" ry="40" fill="#b9a26e"/>
+      <path d="M-80 50 L-20 -50 L40 50z" fill="#c2410c"/>
+      <path d="M-20 -50 L-20 50 L-5 50z" fill="#8f2f08"/>
+      <path d="M70 50 V-80" stroke="#f3e6c4" stroke-width="5"/>
+      <path d="M70 -80 l48 14 l-48 14z" fill="#f2c94c"/>
+      <g transform="translate(100 48)"><path d="M-14 6 h28" stroke="#6b4220" stroke-width="6" stroke-linecap="round"/><path d="M0 4 q-12 -14 0 -30 q12 16 0 30z" fill="#f29a2e"/></g>
+      <path d="M-110 50 V-20 M-122 -20 h24" stroke="#d9dee3" stroke-width="4"/>
+      {%- endif %}
+    </g>
+    <g class="zona__marca" transform="translate({{ pos[0] - 120 }} {{ pos[1] - 120 }})" aria-hidden="true">
+      <circle r="30" fill="#f3e6c4" stroke="#2d3b1e" stroke-width="4" filter="url(#sombra)"/>
+      <text y="11" text-anchor="middle" class="zona__numero">{{ m.numero }}</text>
+    </g>
+    <g class="zona__rotulo" transform="translate({{ pos[0] }} {{ pos[1] + 125 }})" aria-hidden="true">
+      <rect x="-170" y="-26" width="340" height="52" rx="26" fill="#f3e6c4" filter="url(#sombra)"/>
+      <text y="9" text-anchor="middle">{{ m.titulo }}</text>
+    </g>
+  </a>
+  {%- endfor %}
+  <text x="1180" y="704" text-anchor="end" class="mapa__provisorio">Mapa provisorio · ilustración pendiente</text>
+</svg>
+</figure>
