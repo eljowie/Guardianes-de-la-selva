@@ -1,0 +1,51 @@
+---
+layout: base.njk
+title: Credencial de Guardianes
+descripcion: "La credencial que reciben los equipos al terminar la expedición. Se imprime; no guarda datos."
+permalink: /credencial/
+clase: pagina-credencial
+---
+<article class="pagina">
+<header class="pagina__encabezado no-imprimir">
+<p class="pagina__sello">Fin de la expedición</p>
+<h1>Credencial de Guardianes</h1>
+<p class="pagina__intro">¡Felicidades! Han completado la expedición y recibido sus credenciales virtuales de Guardianes de la Selva.</p>
+</header>
+
+<section class="credencial" aria-labelledby="titulo-credencial">
+<div class="credencial__cabecera">
+<svg class="credencial__escudo" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 L57 12 V30 C57 45 46 56 32 61 C18 56 7 45 7 30 V12 Z" fill="#2d3b1e"/><path d="M32 47 C22 41 21 28 32 17 C43 28 42 41 32 47Z" fill="#8bb05a"/><path d="M32 21 V46" stroke="#f3e6c4" stroke-width="2"/></svg>
+<div>
+<p>{{ sitio.subtitulo }}</p>
+<h2 id="titulo-credencial">Credencial de Guardianes de la Selva</h2>
+</div>
+</div>
+
+<label class="credencial__campo">
+<span>Nombre del equipo</span>
+<input type="text" name="equipo" maxlength="40" autocomplete="off" spellcheck="false" placeholder="Escríbanlo acá">
+</label>
+
+<p class="credencial__dato">Completaron las cuatro misiones de la expedición:</p>
+<ul class="credencial__sellos">
+{%- for m in misiones %}
+<li class="mision--{{ m.numero }}"><span><strong aria-hidden="true">✓</strong>Misión {{ m.numero }}<span class="sr">: {{ m.titulo }}</span></span></li>
+{%- endfor %}
+</ul>
+
+<p class="credencial__dato">Fecha: {% completar "corto" %} / {% completar "corto" %} / {% completar "corto" %}</p>
+
+<div class="credencial__firma">
+<span>6.º grado</span>
+<span><em>Lía</em><br>Guardaparque de la reserva</span>
+</div>
+</section>
+
+<div class="no-imprimir">
+<p class="credencial__nota">El nombre no se guarda en ningún lado: queda solo en esta pantalla hasta que la impriman o cierren la página.</p>
+<p class="pagina__acciones" style="justify-content:center">
+<button type="button" class="boton boton--acento" onclick="window.print()">Imprimir credencial</button>
+{% boton "Volver al mapa", "/#mapa", "secundario" %}
+</p>
+</div>
+</article>

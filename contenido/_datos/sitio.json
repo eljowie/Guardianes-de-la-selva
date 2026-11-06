@@ -7,15 +7,15 @@
     { "texto": "Misión 2", "url": "/mision-2/", "lista": true },
     { "texto": "Misión 3", "url": "/mision-3/", "lista": true },
     { "texto": "Misión 4", "url": "/mision-4/", "lista": true },
-    { "texto": "Biblioteca", "url": "/biblioteca/", "lista": false },
-    { "texto": "Bitácora", "url": "/bitacora/", "lista": false }
+    { "texto": "Biblioteca", "url": "/biblioteca/", "lista": true },
+    { "texto": "Bitácora", "url": "/bitacora/", "lista": true }
   ],
   "pie": [
-    { "texto": "Para docentes", "url": "/docentes/", "lista": false },
-    { "texto": "Fundamentos", "url": "/fundamentos/", "lista": false }
+    { "texto": "Para docentes", "url": "/docentes/", "lista": true },
+    { "texto": "Fundamentos", "url": "/fundamentos/", "lista": true }
   ],
   "otras": [
-    { "texto": "Credencial", "url": "/credencial/", "lista": false }
+    { "texto": "Credencial", "url": "/credencial/", "lista": true }
   ],
   "creditos": "Trabajo final de Tecnología Educativa Audiovisual · Licenciatura en Producción Audiovisual · UNTREF"
 }

@@ -9,6 +9,8 @@ Trabajo final de Tecnología Educativa Audiovisual (UNTREF).
 |---|---|---|
 | `contenido\` | Los textos de cada página, en Markdown (texto con marcas simples: `#` es un título, `**así**` es negrita) | Sí |
 | `contenido\_datos\enlaces.json` | Enlaces del video de YouTube, del Padlet y de Genially | Sí: pegar el enlace entre las comillas |
+| `contenido\_datos\biblioteca.json` | Todos los recursos de la Biblioteca del Explorador. Arriba de todo explica cómo agregar uno | Sí: copiar un bloque `{ … }` y cambiar los datos |
+| `contenido\_datos\coordenadas.json` | Coordenadas de Google Earth para la Misión 1 | Sí |
 | `contenido\_datos\sitio.json` | Título, menú y créditos | Sí, con cuidado |
 | `diseno\` | Plantillas y estilos: cómo se ve el sitio | No |
 | `public\` | Imágenes, audios e íconos | Sí: agregar archivos |

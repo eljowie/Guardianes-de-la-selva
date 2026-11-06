@@ -36,6 +36,19 @@ export default function (eleventyConfig) {
     return m ? m[1] : "";
   });
 
+  // Filtra una lista: {{ biblioteca.recursos | donde("seccion", "prensa") }}
+  eleventyConfig.addFilter("donde", (lista, clave, valor) =>
+    (lista || []).filter((item) => item[clave] === valor)
+  );
+
+  // Busca un elemento por su id: {{ biblioteca.tipos | buscar("noticia") }}
+  eleventyConfig.addFilter("buscar", (lista, id) => (lista || []).find((item) => item.id === id) || {});
+
+  // Tipos de recurso que se usan al menos una vez (para los filtros de la Biblioteca).
+  eleventyConfig.addFilter("tiposUsados", (tipos, recursos) =>
+    (tipos || []).filter((t) => (recursos || []).some((r) => r.tipo === t.id))
+  );
+
   // ── Piezas para los textos ───────────────────────────────────────────
 
   // Línea para escribir. Tamaños: "corto", "medio" (por defecto), "largo"

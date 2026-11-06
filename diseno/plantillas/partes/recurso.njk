@@ -1,0 +1,14 @@
+{#- Tarjeta de un recurso de la Biblioteca. Usa las variables r (recurso) y nivel (h3 o h4). -#}
+{%- set tipo = biblioteca.tipos | buscar(r.tipo) -%}
+<li class="recurso" data-tipo="{{ r.tipo }}" data-misiones="{{ r.misiones | join(' ') }}">
+<p class="recurso__tipo"><span aria-hidden="true">{{ tipo.icono }}</span> {{ tipo.nombre }}</p>
+<{{ nivel }} class="recurso__titulo">{{ r.titulo }}</{{ nivel }}>
+<p class="recurso__fuente">{{ r.fuente }}</p>
+{%- if r.descripcion %}
+<p class="recurso__descripcion">{{ r.descripcion }}</p>
+{%- endif %}
+<ul class="recurso__misiones" aria-label="Misiones donde se usa">
+{%- for n in r.misiones %}<li class="mision--{{ n }}">Misión {{ n }}</li>{% endfor -%}
+</ul>
+<div class="recurso__accion">{% boton "Abrir «" + r.titulo + "»", r.enlace, "chico" %}</div>
+</li>

@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Biblioteca del Explorador
+descripcion: "Todas las fuentes de la expedición: prensa, especies, mapas, podcast, ONG y pueblos originarios."
+permalink: /biblioteca/
+clase: pagina-biblioteca
+---
+<article class="pagina">
+<header class="pagina__encabezado">
+<p class="pagina__sello">Fuentes de la expedición</p>
+<h1>Biblioteca del Explorador</h1>
+<p class="pagina__intro">Acá están todas las fuentes para investigar en las misiones. Pueden ver todo o elegir una misión para encontrar solo lo que necesitan.</p>
+<nav class="estantes-indice" aria-label="Secciones de la Biblioteca">
+<ul>
+{%- for s in biblioteca.secciones %}
+<li><a href="#{{ s.id }}"><span aria-hidden="true">{{ s.icono }}</span> {{ s.titulo }}</a></li>
+{%- endfor %}
+</ul>
+</nav>
+</header>
+
+<div class="filtros" data-filtros hidden>
+<div class="filtros__grupo" role="group" aria-labelledby="filtro-mision-rotulo">
+<p class="filtros__rotulo" id="filtro-mision-rotulo">Misión</p>
+<div class="filtros__opciones">
+<button type="button" class="chip" data-mision="todas" aria-pressed="true">Todas</button>
+{%- for m in misiones %}
+<button type="button" class="chip chip--mision mision--{{ m.numero }}" data-mision="{{ m.numero }}" aria-pressed="false">Misión {{ m.numero }}</button>
+{%- endfor %}
+</div>
+</div>
+<div class="filtros__grupo" role="group" aria-labelledby="filtro-tipo-rotulo">
+<p class="filtros__rotulo" id="filtro-tipo-rotulo">Tipo de recurso</p>
+<div class="filtros__opciones">
+<button type="button" class="chip" data-tipo="todos" aria-pressed="true">Todos</button>
+{%- for t in biblioteca.tipos | tiposUsados(biblioteca.recursos) %}
+<button type="button" class="chip" data-tipo="{{ t.id }}" aria-pressed="false"><span aria-hidden="true">{{ t.icono }}</span> {{ t.nombre }}</button>
+{%- endfor %}
+</div>
+</div>
+<p class="filtros__estado" data-estado aria-live="polite"></p>
+</div>
+
+{%- for s in biblioteca.secciones %}
+{%- set lista = biblioteca.recursos | donde("seccion", s.id) %}
+<section class="estante" id="{{ s.id }}" aria-labelledby="{{ s.id }}-titulo" data-estante>
+<h2 id="{{ s.id }}-titulo"><span aria-hidden="true">{{ s.icono }}</span> {{ s.titulo }}</h2>
+<p class="estante__descripcion">{{ s.descripcion }}</p>
+{%- if s.id == "huellas" %}
+{%- for h in biblioteca.huellas %}
+<div class="estante__grupo" id="huella-{{ h.id }}" data-grupo>
+<h3>{{ h.titulo }}</h3>
+<ul class="recursos-lista">
+{%- for r in lista | donde("huella", h.id) %}{% set nivel = "h4" %}
+{% include "partes/recurso.njk" %}
+{%- endfor %}
+</ul>
+</div>
+{%- endfor %}
+{%- else %}
+<ul class="recursos-lista">
+{%- for r in lista %}{% set nivel = "h3" %}
+{% include "partes/recurso.njk" %}
+{%- endfor %}
+</ul>
+{%- endif %}
+</section>
+{%- endfor %}
+</article>
+<script src="/js/biblioteca.js" defer></script>

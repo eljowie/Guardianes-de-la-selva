@@ -45,3 +45,19 @@ table, .caja, .huella, .flujo__eslabon, .red, .ficha-datos { break-inside: avoid
 .red__ramas, .red__ramas li::before { border-color: #000 !important; }
 .opciones li { background: none; border: 1pt solid #000; }
 .pregunta-esencial { border: 1pt solid #000; box-shadow: none; }
+
+/* Páginas generales (Docentes, Fundamentos, Biblioteca) */
+.pagina { max-width: none; }
+.pagina__encabezado { padding: 0 0 6pt; margin-bottom: 8pt; border-bottom: 2pt solid #000; }
+.pagina__sello, .pagina__intro { color: #000 !important; }
+.filtros, .estantes-indice, .recurso__accion { display: none !important; }
+.bloque > h2, .estante h2 { border-color: #000; break-after: avoid; }
+.marca-borrador { border: 1pt solid #000; background: none; color: #000; }
+.en-el-sitio, .cita, .recurso, .tarjeta-guia { background: none !important; border: 1pt solid #000 !important; color: #000 !important; break-inside: avoid; }
+.nivel { color: #000; }
+
+/* Credencial: una sola tarjeta centrada */
+.credencial { box-shadow: none; border: 2pt solid #000; margin: 1cm auto 0; break-inside: avoid; }
+.credencial__campo input { border-bottom: 1.5pt solid #000; color: #000; outline: none !important; }
+.credencial__campo input::placeholder { color: transparent; }
+.credencial__sellos li { border-color: #000 !important; color: #000 !important; }

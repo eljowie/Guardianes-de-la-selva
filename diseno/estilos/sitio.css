@@ -492,6 +492,161 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
 .mision__nav-mapa { text-align: center; background: var(--musgo); }
 .mision__nav-siguiente { text-align: right; }
 
+/* ── Páginas generales (Biblioteca, Bitácora, Docentes…) ──── */
+.pagina { max-width: 56rem; margin: 0 auto; }
+.pagina__encabezado {
+  padding: 1rem 0 1.25rem; margin-bottom: 1.5rem;
+  border-bottom: 4px solid var(--tierra-clara);
+}
+.pagina__sello {
+  margin: 0; color: var(--tierra); font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.pagina__intro { max-width: var(--ancho-texto); color: var(--texto-suave); font-size: 1.15rem; }
+.pagina__acciones { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.pagina h2 { margin-top: 0.25rem; }
+.texto { max-width: var(--ancho-texto); }
+.bloque { margin: 0 0 2.25rem; }
+.bloque > h2 { padding-top: 0.5rem; border-top: 2px solid var(--borde); }
+
+.marca-borrador {
+  display: flex; gap: 0.6rem; align-items: baseline;
+  margin: 0 0 1rem; padding: 0.6rem 0.9rem;
+  border: 2px dashed var(--acento); border-radius: var(--radio);
+  background: #fff4ec; color: var(--acento-oscuro); font-size: 0.98rem;
+}
+.marca-borrador strong { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85rem; }
+
+/* Biblioteca */
+.estantes-indice ul { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.estantes-indice a {
+  display: inline-flex; align-items: center; gap: 0.35rem; min-height: 2.75rem;
+  padding: 0.3rem 0.85rem; border-radius: 999px;
+  background: var(--musgo); color: var(--selva); font-size: 0.95rem; font-weight: 700; text-decoration: none;
+}
+.estantes-indice a:hover { background: #d4dfbd; }
+
+.filtros {
+  display: grid; gap: 0.5rem 1.5rem;
+  margin: 0 0 1.5rem; padding: 0.85rem 1rem;
+  background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+.filtros[hidden] { display: none; }
+@media (min-width: 52rem) { .filtros { grid-template-columns: auto 1fr; align-items: start; } .filtros__estado { grid-column: 1 / -1; } }
+.filtros__rotulo { margin: 0 0 0.3rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--texto-suave); }
+.filtros__opciones { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.filtros__estado { margin: 0; font-size: 0.95rem; color: var(--texto-suave); }
+.chip {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  min-height: 2.75rem; padding: 0.3rem 0.9rem;
+  border: 2px solid var(--borde); border-radius: 999px;
+  background: #fff; color: var(--texto);
+  font: inherit; font-size: 0.95rem; cursor: pointer;
+}
+.chip:hover { border-color: var(--selva); }
+.chip[aria-pressed="true"] { background: var(--selva); border-color: var(--selva); color: #fff; font-weight: 700; }
+.chip--mision[aria-pressed="true"] { background: var(--color-mision); border-color: var(--color-mision); }
+
+.estante { margin: 0 0 2.25rem; scroll-margin-top: 1rem; }
+.estante h2 { padding-top: 0.5rem; border-top: 2px solid var(--borde); }
+.estante__descripcion { color: var(--texto-suave); }
+.estante__grupo { margin: 0 0 1.25rem; scroll-margin-top: 1rem; }
+.estante__grupo h3 { font-size: 1.05rem; color: var(--tierra); }
+
+.recursos-lista {
+  display: grid; gap: 0.85rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  margin: 0; padding: 0; list-style: none;
+}
+.recurso {
+  display: flex; flex-direction: column; gap: 0.35rem;
+  padding: 0.9rem 1rem 1rem;
+  background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio);
+}
+.recurso[hidden] { display: none; }
+.recurso p { margin: 0; }
+.recurso__tipo { font-size: 0.85rem; font-weight: 700; color: var(--tierra); }
+.recurso__titulo { margin: 0; font-size: 1.15rem; color: var(--selva); }
+.recurso__fuente { font-size: 0.95rem; color: var(--texto-suave); }
+.recurso__descripcion { font-size: 0.95rem; }
+.recurso__misiones { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.15rem 0 0; padding: 0; list-style: none; }
+.recurso__misiones li {
+  padding: 0.05rem 0.55rem; border-radius: 999px;
+  border: 1.5px solid var(--color-mision); color: var(--color-mision);
+  font-size: 0.8rem; font-weight: 700;
+}
+.recurso__accion { margin-top: auto; padding-top: 0.4rem; }
+.recurso__accion .boton { width: 100%; }
+
+/* Bitácora */
+.padlet { position: relative; height: min(80vh, 46rem); margin: 0 0 1rem; border-radius: var(--radio); overflow: hidden; border: 1px solid var(--borde); background: #fff; }
+.padlet iframe { width: 100%; height: 100%; border: 0; }
+.padlet--pendiente { height: auto; min-height: 14rem; aspect-ratio: auto; }
+.columnas { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); margin: 0 0 1.5rem; padding: 0; list-style: none; }
+.columna a {
+  display: flex; flex-direction: column; gap: 0.2rem; height: 100%;
+  padding: 0.75rem 0.9rem; border-radius: var(--radio);
+  background: var(--superficie); border: 2px solid var(--borde); border-top: 6px solid var(--color-mision);
+  color: var(--texto); text-decoration: none;
+}
+.columna a:hover { border-color: var(--selva); border-top-color: var(--color-mision); }
+.columna strong { color: var(--selva); }
+.columna small { color: var(--texto-suave); font-size: 0.9rem; }
+.pasos-lista { max-width: var(--ancho-texto); padding-left: 1.4rem; }
+.pasos-lista li { margin-bottom: 0.4rem; }
+.tarjetas-guia { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); margin: 0 0 1.5rem; }
+.tarjeta-guia { padding: 1rem 1.1rem 0.25rem; background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); }
+.tarjeta-guia--convivencia { background: var(--musgo); border-color: var(--musgo); }
+
+/* Docentes y Fundamentos */
+.rubrica th:first-child, .matriz th:first-child { width: 22%; }
+.rubrica td, .matriz td { font-size: 0.95rem; }
+.nivel { display: block; font-size: 0.8rem; font-weight: 400; color: var(--texto-suave); }
+.en-el-sitio {
+  margin: 0 0 1rem; padding: 0.75rem 1rem;
+  border-left: 5px solid var(--selva-clara); background: #f1f5e8; border-radius: 0 var(--radio) var(--radio) 0;
+}
+.en-el-sitio p { margin: 0 0 0.4rem; }
+.en-el-sitio p:last-child { margin: 0; }
+.en-el-sitio__rotulo { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--selva-clara); }
+.autor { margin: 0 0 2rem; }
+.autor h3 { font-size: 1.25rem; }
+.cita { margin: 0 0 1.25rem; padding: 1rem 1.25rem; border: 2px solid var(--selva); border-radius: var(--radio); background: var(--superficie); font-weight: 700; color: var(--selva); }
+
+/* Credencial */
+.credencial {
+  position: relative; max-width: 36rem; margin: 0 auto 1.5rem;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: var(--superficie);
+  border: 3px solid var(--selva); border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 var(--tierra-clara);
+}
+.credencial__cabecera { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem; padding-bottom: 0.85rem; border-bottom: 2px dashed var(--borde); }
+.credencial__escudo { width: 3.75rem; height: 3.75rem; flex: none; }
+.credencial__cabecera p { margin: 0; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tierra); }
+.credencial__cabecera h2 { margin: 0; font-size: clamp(1.35rem, 4vw, 1.7rem); }
+.credencial__campo { display: block; margin: 0 0 1rem; }
+.credencial__campo span { display: block; font-size: 0.9rem; font-weight: 700; color: var(--texto-suave); }
+.credencial__campo input {
+  width: 100%; padding: 0.35rem 0.1rem; min-height: 2.75rem;
+  border: 0; border-bottom: 2px solid var(--linea); background: transparent;
+  font: inherit; font-size: 1.35rem; font-weight: 700; color: var(--selva);
+}
+.credencial__campo input:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+.credencial__dato { margin: 0 0 0.85rem; }
+.credencial__sellos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin: 0.5rem 0 1rem; padding: 0; list-style: none; }
+.credencial__sellos li {
+  display: grid; place-items: center; text-align: center;
+  aspect-ratio: 1; padding: 0.25rem; border-radius: 50%;
+  border: 3px double var(--color-mision); color: var(--color-mision);
+  font-size: 0.75rem; font-weight: 700; line-height: 1.15;
+}
+.credencial__sellos strong { display: block; font-size: 1.4rem; }
+.credencial__firma { display: flex; justify-content: space-between; gap: 1rem; align-items: end; font-size: 0.9rem; color: var(--texto-suave); }
+.credencial__firma em { font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; color: var(--selva); }
+.credencial__nota { text-align: center; color: var(--texto-suave); font-size: 0.95rem; }
+
 /* ── Movimiento reducido ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

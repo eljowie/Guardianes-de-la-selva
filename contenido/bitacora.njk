@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: Bitácora
+descripcion: "El muro donde cada equipo publica sus fichas: una columna por misión."
+permalink: /bitacora/
+---
+<article class="pagina">
+<header class="pagina__encabezado">
+<p class="pagina__sello">Muro de la expedición</p>
+<h1>Bitácora</h1>
+<p class="pagina__intro">El muro donde cada equipo publica sus fichas. Tiene una columna por misión: cuando terminen una ficha, súbanla a la columna que corresponde y lean lo que publicaron los otros equipos.</p>
+</header>
+
+<h2 class="sr">Columnas del muro</h2>
+<ul class="columnas">
+{%- for m in misiones %}
+<li class="columna mision--{{ m.numero }}"><a href="{{ m.url }}#paso-5"><small>Columna</small><strong>Misión {{ m.numero }}</strong><small>{{ m.titulo }}</small></a></li>
+{%- endfor %}
+</ul>
+
+<section class="bloque" aria-labelledby="titulo-muro">
+<h2 id="titulo-muro">El muro del curso</h2>
+{% if enlaces.padlet %}
+<div class="padlet">
+<iframe src="{{ enlaces.padlet }}" title="Bitácora del curso en Padlet: una columna por misión" loading="lazy" allow="camera;microphone;geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+<p>{% boton "Abrir el muro en otra pestaña", enlaces.padlet, "acento" %}</p>
+{% else %}
+<div class="video video--pendiente padlet--pendiente" role="note"><p>Muro pendiente: el docente todavía no cargó el enlace del Padlet.</p></div>
+{% endif %}
+</section>
+
+<section class="bloque" aria-labelledby="titulo-como">
+<h2 id="titulo-como">Cómo usar la Bitácora</h2>
+<div class="tarjetas-guia">
+<div class="tarjeta-guia">
+<h3>Para subir una ficha</h3>
+<ol class="pasos-lista">
+<li>Saquen una foto clara de la ficha completa, o guarden el archivo.</li>
+<li>En el muro, busquen la columna de su misión y toquen el botón <strong>+</strong>.</li>
+<li>Como título, escriban el nombre del equipo.</li>
+<li>Agreguen la foto o el archivo y publiquen.</li>
+</ol>
+</div>
+<div class="tarjeta-guia">
+<h3>Para comentar</h3>
+<ol class="pasos-lista">
+<li>Lean la publicación de otro equipo.</li>
+<li>Empiecen por algo que les haya gustado o sorprendido.</li>
+<li>Sumen una pregunta o una idea para seguir investigando.</li>
+</ol>
+</div>
+<div class="tarjeta-guia tarjeta-guia--convivencia">
+<h3>Convivencia en el muro</h3>
+<ul class="pasos-lista">
+<li>Respetamos todas las ideas, aunque no pensemos igual.</li>
+<li>No publicamos datos personales: ni apellidos, ni direcciones, ni teléfonos, ni fotos de caras.</li>
+<li>Si ven algo que les molesta, avísenle al docente.</li>
+<li>El docente revisa las publicaciones del muro.</li>
+</ul>
+</div>
+</div>
+</section>
+</article>
