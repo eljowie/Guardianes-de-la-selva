@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Guardianes: preguntas y visuales (para el grupo)</title>
+<style>
+/* Versión en línea para el grupo: sin pedidos a otros sitios; tipografía alojada en el propio sitio. */
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 400; font-display: swap; src: url("../fuentes-tipograficas/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fuentes-tipograficas/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 700; font-display: swap; src: url("../fuentes-tipograficas/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2"); }
+.votar { margin: 1.25rem 0; padding: 1rem 1.1rem; border: 2px solid var(--selva-clara); border-radius: 0.9rem; background: var(--musgo); }
+.votar p { margin: 0.3rem 0; }
+.votar .pendiente-link { display: inline-block; padding: 0.15rem 0.5rem; border: 2px dashed var(--acento); border-radius: 0.4rem; background: #fff4ec; font-weight: 700; }
+/* Mundo del sitio: papel de expedición, verde selva, acento naranja de acción.
+   Layout: columna de lectura con tarjetas de decisión y bocetos a ancho completo. */
+:root {
+  color-scheme: light;
+  --selva: #2d3b1e;
+  --selva-clara: #4a6b2e;
+  --tierra: #7a4e22;
+  --acento: #c2410c;
+  --papel: #f7f2e6;
+  --hoja: #fffdf7;
+  --musgo: #e3ead2;
+  --borde: #d6cbb0;
+  --texto: #1f2418;
+  --suave: #4b5340;
+  --m1: #4a6b2e; --m2: #9a5b22; --m3: #1f5f5b; --m4: #c2410c;
+  --display: "Bitter", Georgia, serif;
+  --cuerpo: "Atkinson Hyperlegible", system-ui, "Segoe UI", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--papel); color: var(--texto); font: 1.05rem/1.6 var(--cuerpo); }
+main { max-width: 60rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+h1, h2, h3 { font-family: var(--display); color: var(--selva); line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.7rem); margin: 0.2rem 0 0.6rem; }
+h2 { font-size: clamp(1.4rem, 3.4vw, 1.8rem); margin: 3rem 0 0.75rem; padding-top: 0.75rem; border-top: 3px solid var(--borde); }
+h3 { font-size: 1.15rem; margin: 0 0 0.4rem; }
+p { margin: 0 0 0.9rem; max-width: 46rem; }
+a { color: var(--selva-clara); }
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; border-radius: 4px; }
+.sello { margin: 0; color: var(--tierra); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.intro { font-size: 1.15rem; color: var(--suave); }
+.resumen { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin: 1.5rem 0 0; }
+.resumen div { padding: 1rem 1.1rem; background: var(--hoja); border: 1px solid var(--borde); border-radius: 0.75rem; }
+.resumen strong { display: block; font-family: var(--display); font-size: 1.6rem; color: var(--selva); }
+.resumen span { color: var(--suave); font-size: 0.95rem; }
+
+.etiqueta { display: inline-block; padding: 0.05rem 0.55rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; color: #fff; background: var(--c, var(--selva)); }
+.m1 { --c: var(--m1); } .m2 { --c: var(--m2); } .m3 { --c: var(--m3); } .m4 { --c: var(--m4); } .mg { --c: var(--tierra); }
+
+/* Decisiones */
+.decision { margin: 0 0 1rem; padding: 1rem 1.15rem 1.1rem; background: var(--hoja); border: 1px solid var(--borde); border-left: 6px solid var(--c, var(--selva)); border-radius: 0.75rem; }
+.decision header { display: flex; flex-wrap: wrap; gap: 0.4rem 0.75rem; align-items: baseline; margin-bottom: 0.4rem; }
+.decision header h3 { margin: 0; }
+.decision .ref { color: var(--suave); font-size: 0.85rem; }
+fieldset { border: 0; margin: 0.5rem 0 0; padding: 0; display: grid; gap: 0.45rem; }
+legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.opcion { display: flex; gap: 0.6rem; align-items: flex-start; padding: 0.55rem 0.75rem; border: 2px solid var(--borde); border-radius: 0.6rem; cursor: pointer; background: #fff; }
+.opcion:hover { border-color: var(--selva-clara); }
+.opcion:has(input:checked) { border-color: var(--selva); background: #f1f5e8; }
+.opcion input { margin-top: 0.35rem; accent-color: var(--selva); flex: none; }
+.opcion b { color: var(--selva); }
+.recomendada { display: inline-block; margin-left: 0.3rem; padding: 0 0.45rem; border-radius: 999px; background: var(--acento); color: #fff; font-size: 0.75rem; font-weight: 700; vertical-align: 0.1em; }
+.porque { margin: 0.6rem 0 0; font-size: 0.95rem; color: var(--suave); }
+.porque::before { content: "Por qué la recomiendo: "; font-weight: 700; color: var(--tierra); }
+
+/* Listas simples */
+.lista { display: grid; gap: 0.5rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.lista li { padding: 0.65rem 0.9rem; background: var(--hoja); border: 1px solid var(--borde); border-radius: 0.6rem; }
+.lista li .etiqueta { margin-right: 0.4rem; }
+.aviso { padding: 0.85rem 1rem; border: 2px dashed var(--acento); border-radius: 0.75rem; background: #fff4ec; }
+.aviso p:last-child { margin: 0; }
+.antes-despues { display: grid; gap: 0.25rem 1rem; grid-template-columns: auto 1fr; margin: 0.4rem 0 0; font-size: 0.95rem; }
+.antes-despues dt { font-weight: 700; color: var(--suave); }
+.antes-despues dd { margin: 0; }
+.antes-despues .tachado { text-decoration: line-through; text-decoration-color: var(--acento); color: var(--suave); }
+
+/* Bocetos */
+.bocetos { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr)); }
+.boceto { display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem; background: var(--hoja); border: 1px solid var(--borde); border-radius: 0.9rem; }
+.boceto figure { margin: 0; padding: 0.75rem; background: var(--papel); border: 1px dashed var(--borde); border-radius: 0.6rem; min-height: 11rem; display: grid; place-items: center; }
+.boceto svg { width: 100%; height: auto; max-height: 14rem; }
+.boceto p { margin: 0; font-size: 0.95rem; }
+.boceto .donde { color: var(--suave); font-size: 0.88rem; }
+.boceto--ancho { grid-column: 1 / -1; }
+.nota-boceto { font-size: 0.85rem; color: var(--suave); font-style: italic; }
+
+/* Mini maquetas en HTML dentro de los bocetos */
+.mq-glosario { font-size: 0.95rem; background: #fff; padding: 0.8rem; border-radius: 0.5rem; border: 1px solid var(--borde); position: relative; width: 100%; }
+.mq-glosario u { text-decoration: underline dotted var(--selva-clara) 2px; text-underline-offset: 3px; }
+.mq-globo { margin-top: 0.6rem; padding: 0.55rem 0.7rem; background: var(--selva); color: #f4f1e6; border-radius: 0.5rem; font-size: 0.88rem; position: relative; }
+.mq-globo::before { content: ""; position: absolute; top: -7px; left: 2.5rem; border: 7px solid transparent; border-top: 0; border-bottom-color: var(--selva); }
+.mq-ejes { display: grid; gap: 0.4rem; width: 100%; }
+.mq-ejes .paraguas { padding: 0.5rem 0.65rem; border: 2px solid var(--selva); border-radius: 0.5rem; background: #fff; font-weight: 700; font-size: 0.85rem; color: var(--selva); }
+.mq-ejes .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
+.mq-ejes .tres span { padding: 0.4rem; border-radius: 0.45rem; background: #fff; border-top: 5px solid var(--c); font-size: 0.78rem; line-height: 1.25; }
+.mq-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; width: 100%; }
+.mq-meta div { padding: 0.55rem; border-radius: 0.5rem; background: #fff; border: 2px solid var(--borde); font-size: 0.82rem; min-height: 5.5rem; }
+.mq-meta div:last-child { border-color: var(--selva-clara); }
+.mq-meta b { display: block; color: var(--selva); margin-bottom: 0.2rem; }
+.mq-meta .abajo { grid-column: 1 / -1; min-height: 0; border-style: dashed; }
+.boceto figure > * { min-width: 0; }
+.emoji-vs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.6rem; width: 100%; font-size: 0.82rem; text-align: center; }
+.emoji-vs div { background: #fff; border-radius: 0.5rem; padding: 0.5rem; border: 1px solid var(--borde); }
+.emoji-vs .fila { display: flex; justify-content: center; gap: 0.45rem; font-size: 1.3rem; margin-bottom: 0.3rem; }
+.emoji-vs svg { width: 1.6rem; height: 1.6rem; }
+
+/* Etapas */
+.etapas { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); counter-reset: etapa; }
+.etapa { padding: 1rem; background: var(--hoja); border: 1px solid var(--borde); border-radius: 0.75rem; }
+.etapa h3::before { counter-increment: etapa; content: "Etapa " counter(etapa) " · "; color: var(--acento); }
+.etapa p { margin: 0; font-size: 0.95rem; }
+
+/* Enviar respuestas */
+.enviar { position: sticky; bottom: 0.75rem; margin-top: 2rem; padding: 0.85rem 1rem; display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; justify-content: space-between; background: var(--selva); color: #f4f1e6; border-radius: 0.9rem; box-shadow: 0 8px 24px -10px rgba(45,59,30,.55); }
+.enviar p { margin: 0; }
+.boton { min-height: 2.75rem; padding: 0.5rem 1.1rem; border: 0; border-radius: 999px; background: var(--acento); color: #fff; font: 700 1rem var(--cuerpo); cursor: pointer; }
+.boton:hover { background: #9a3412; }
+.boton:focus-visible { outline-color: #f2c94c; }
+textarea#salida { width: 100%; min-height: 9rem; margin-top: 0.75rem; font: 0.9rem/1.45 ui-monospace, Consolas, monospace; border: 1px solid var(--borde); border-radius: 0.5rem; padding: 0.6rem; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main>
+<p class="sello">Guardianes de la Selva · propuesta para el grupo</p>
+<h1>Ajustes de preguntas y propuesta visual</h1>
+<p class="intro">Basado en <strong>CAMBIOS.md</strong> (devolución de la profesora y aportes de Maia). Los cambios ya decididos (sección 3) ya están aplicados en el sitio. Falta que el grupo elija las 13 decisiones de la sección 1.</p>
+
+<section class="votar" aria-labelledby="titulo-votar">
+  <h2 id="titulo-votar" style="margin-top:0">Cómo votar</h2>
+  <p>1. Lean las tarjetas y miren los bocetos de esta página.</p>
+  <p>2. Voten en el formulario: <span class="pendiente-link">Link del formulario: pendiente</span></p>
+  <p>Pueden marcar opciones acá para ir pensando, pero eso queda guardado solo en su navegador: el voto que cuenta es el del formulario.</p>
+</section>
+
+<div class="resumen">
+  <div><strong>11</strong><span>cambios ya decididos (marcados «APLICAR»), ya aplicados en el sitio</span></div>
+  <div><strong>13</strong><span>decisiones para el grupo, cada una con mi recomendación</span></div>
+  <div><strong>9</strong><span>ideas visuales para que las actividades sean más claras para chicos de 11 y 12 años</span></div>
+</div>
+
+<h2 id="decisiones">1. Lo que tiene que decidir el grupo</h2>
+<p>Cada tarjeta tiene las opciones y una recomendada, con el porqué. El voto se hace en el formulario (ver «Cómo votar», arriba). Si alguien no puede usar el formulario, el botón «Copiar las elecciones» del final arma un texto para mandarlo por mensaje.</p>
+
+<article class="decision m1" data-id="M1-P4 reflexión">
+  <header><span class="etiqueta">Misión 1 · Paso 4</span><h3>Pregunta de reflexión sobre El Niño</h3><span class="ref">CAMBIOS §2</span></header>
+  <fieldset><legend>Pregunta de reflexión sobre El Niño</legend>
+    <label class="opcion"><input type="radio" name="d1" value="A (Maia)"><span><b>A · Maia:</b> «¿Por qué es importante diferenciar una sequía relacionada con un fenómeno natural… de las acciones humanas…? ¿De qué manera pueden influir ambas situaciones…?»</span></label>
+    <label class="opcion"><input type="radio" name="d1" value="B (ajustada)"><span><b>B · ajustada:</b> «¿Qué diferencias encuentran entre una sequía relacionada con El Niño y las acciones humanas que transforman la selva? ¿De qué manera pueden influir ambas situaciones, por separado o combinadas…?» <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">«¿Por qué es importante…?» ya da por hecho que es importante. B pide comparar y relacionar, que es lo que busca Maia.</p>
+</article>
+
+<article class="decision m2" data-id="M2-P2 fila 4">
+  <header><span class="etiqueta">Misión 2 · Paso 2</span><h3>Matriz, fila 4: consecuencias</h3><span class="ref">CAMBIOS §3</span></header>
+  <fieldset><legend>Matriz, fila 4</legend>
+    <label class="opcion"><input type="radio" name="d2" value="A (nombra suelo, agua y biodiversidad)"><span><b>A · Maia:</b> nombra «el suelo, el agua y la biodiversidad» y pide distinguir corto y largo plazo.</span></label>
+    <label class="opcion"><input type="radio" name="d2" value="B (sin enumerar)"><span><b>B · sin enumerar:</b> «¿Qué consecuencias ambientales genera esta actividad? ¿Cuáles pueden observarse a corto plazo y cuáles… después de varios años?» <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">La primera pregunta de la Cara B (texto de la profesora) ya pide «suelo, agua y biodiversidad» en corto y largo plazo. Con A, la ficha repetiría casi la misma pregunta dos veces en la misma misión.</p>
+</article>
+
+<article class="decision m2" data-id="M2-P3 carga de trabajo">
+  <header><span class="etiqueta">Misión 2 · Paso 3</span><h3>Cómo repartir las 8 preguntas de Cara A, Cara B y el dilema</h3><span class="ref">CAMBIOS §3</span></header>
+  <fieldset><legend>Reparto de la carga de trabajo</legend>
+    <label class="opcion"><input type="radio" name="d3" value="i (todo el equipo responde todo)"><span><b>i ·</b> Todo el equipo responde las 8.</span></label>
+    <label class="opcion"><input type="radio" name="d3" value="ii (rompecabezas: una pareja Cara A, otra Cara B)"><span><b>ii · Rompecabezas:</b> una pareja hace la Cara A, otra la Cara B, se las explican y el dilema lo responden juntos. <span class="recomendada">recomendada</span></span></label>
+    <label class="opcion"><input type="radio" name="d3" value="iii (dos sesiones)"><span><b>iii ·</b> Cara A y Cara B en dos clases distintas.</span></label>
+  </fieldset>
+  <p class="porque">Baja la carga a la mitad para cada chico y refuerza la idea de «polifonía»: cada pareja defiende una perspectiva ante la otra. En la ficha se vería con dos columnas marcadas «Pareja 1» y «Pareja 2» (ver boceto 5).</p>
+</article>
+
+<article class="decision m2" data-id="M2-P3 dilema">
+  <header><span class="etiqueta">Misión 2 · Paso 3</span><h3>El dilema del equipo</h3><span class="ref">CAMBIOS §3</span></header>
+  <fieldset><legend>El dilema del equipo</legend>
+    <label class="opcion"><input type="radio" name="d4" value="A (Maia)"><span><b>A · Maia:</b> «…¿creen que esta actividad podría desarrollarse de una manera más sostenible? ¿Qué cambios o medidas concretas propondrían…?»</span></label>
+    <label class="opcion"><input type="radio" name="d4" value="B (directa)"><span><b>B · directa:</b> «…¿qué cambios o medidas concretas propondrían para que esta actividad reduzca su impacto ambiental…? Justifiquen con lo que investigaron.» <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">«¿Creen que…?» se contesta con sí o no. B va directo a proponer y justificar.</p>
+</article>
+
+<article class="decision m3" data-id="M3-P2 red trófica">
+  <header><span class="etiqueta">Misión 3 · Paso 2</span><h3>Red alimentaria: cómo presentar las 4 preguntas de la profesora</h3><span class="ref">CAMBIOS §4</span></header>
+  <fieldset><legend>Red alimentaria</legend>
+    <label class="opcion"><input type="radio" name="d5" value="A (solo las 4 preguntas)"><span><b>A · profesora:</b> se saca el esquema y quedan la consigna y las 4 preguntas.</span></label>
+    <label class="opcion"><input type="radio" name="d5" value="B (esquema actual + 4 preguntas)"><span><b>B · Maia:</b> se deja el esquema actual y se suman las 4 preguntas debajo (7 espacios).</span></label>
+    <label class="opcion"><input type="radio" name="d5" value="C (esquema renovado + preguntas 3 y 4)"><span><b>C · mezcla:</b> el esquema pasa a ser «Afectados primero → Afectados después → Funciones que se interrumpen» y debajo van las preguntas 3 y 4. <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">Mantiene lo visual (cuenta en la grilla de la cátedra como diseño de interacción) y saca las consignas cerradas. Las preguntas 1 y 2 de la profesora quedan como títulos de los recuadros del esquema (ver boceto 6).</p>
+</article>
+
+<article class="decision m3" data-id="M3-P3 podcast">
+  <header><span class="etiqueta">Misión 3 · Paso 3</span><h3>Mesa de voces: pregunta sobre las pérdidas</h3><span class="ref">CAMBIOS §4</span></header>
+  <fieldset><legend>Mesa de voces</legend>
+    <label class="opcion"><input type="radio" name="d6" value="Mantener"><span><b>Mantener</b> «Pérdidas sociales y culturales: ¿Qué cuenta el poblador sobre cómo cambió su vida…?» (Maia).</span></label>
+    <label class="opcion"><input type="radio" name="d6" value="Reformular"><span><b>Reformular:</b> «¿Qué cambios en su vida cotidiana mencionan los pobladores? ¿Qué saberes sobre la selva aparecen en sus voces y qué pasaría con ellos si la selva se transforma?» <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">El rótulo «Pérdidas…» adelanta que hubo pérdidas antes de escuchar el testimonio.</p>
+</article>
+
+<article class="decision m3" data-id="M3-P4 mapa causa-efecto">
+  <header><span class="etiqueta">Misión 3 · Paso 4</span><h3>Mapa de causa y efecto del clima</h3><span class="ref">CAMBIOS §4</span></header>
+  <fieldset><legend>Mapa de causa y efecto</legend>
+    <label class="opcion"><input type="radio" name="d7" value="A (completar sin banco de palabras)"><span><b>A ·</b> Se mantiene el texto para completar, pero sin la lista de palabras: completan con lo que investigaron.</span></label>
+    <label class="opcion"><input type="radio" name="d7" value="B (lo arman ellos)"><span><b>B ·</b> Lo arman ellos: solo se da el punto de partida «Tala y quema» y ubican y conectan las consecuencias. En la web, con tarjetas que se tocan para ubicarlas; en papel, recuadros en blanco. <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">Pasa de «completar la palabra que falta» a construir la explicación. Aclaración: «pulmón» ya no aparece en esta ficha; en la Fase 1 se cambió por «gran regulador del clima», como habían aprobado.</p>
+</article>
+
+<article class="decision m3" data-id="M3-P4 pregunta de cierre">
+  <header><span class="etiqueta">Misión 3 · Paso 4</span><h3>Pregunta de cierre del mapa climático</h3><span class="ref">CAMBIOS §4</span></header>
+  <fieldset><legend>Pregunta de cierre</legend>
+    <label class="opcion"><input type="radio" name="d8" value="A (Maia)"><span><b>A · Maia:</b> «¿Por qué creen que la pérdida de la selva… no afecta solamente a las especies…, sino también al clima de otras regiones…?»</span></label>
+    <label class="opcion"><input type="radio" name="d8" value="B (ajustada)"><span><b>B · ajustada:</b> «¿Qué relación pueden establecer entre lo que ocurre con la selva amazónica y el clima de otras regiones del planeta? ¿Qué evidencia de lo que investigaron lo muestra?» <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">A trae la conclusión adentro de la pregunta.</p>
+</article>
+
+<article class="decision m4" data-id="M4-P2 tecnología">
+  <header><span class="etiqueta">Misión 4 · Paso 2</span><h3>Debate sobre la tecnología</h3><span class="ref">CAMBIOS §5</span></header>
+  <fieldset><legend>Debate sobre la tecnología</legend>
+    <label class="opcion"><input type="radio" name="d9" value="A (un solo espacio)"><span><b>A ·</b> Las tres preguntas de Maia juntas, con un solo espacio de respuesta.</span></label>
+    <label class="opcion"><input type="radio" name="d9" value="B (tres espacios)"><span><b>B ·</b> El mismo texto, con un espacio de respuesta para cada pregunta. <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">Con tres preguntas en una sola caja, los chicos suelen contestar solo la primera.</p>
+</article>
+
+<article class="decision m4" data-id="M4-P3 carta">
+  <header><span class="etiqueta">Misión 4 · Paso 3</span><h3>La carta: frases para completar o texto propio</h3><span class="ref">CAMBIOS §5</span></header>
+  <fieldset><legend>La carta</legend>
+    <label class="opcion"><input type="radio" name="d10" value="Mantener frases para completar"><span><b>Mantener</b> las frases para completar («Aprendimos que… debido a ____»).</span></label>
+    <label class="opcion"><input type="radio" name="d10" value="Texto propio guiado"><span><b>Texto propio:</b> quedan el encabezado, el saludo y la firma; el cuerpo se escribe libre, guiado por las preguntas nuevas de Maia (problema más urgente, evidencia, y para cada propuesta: qué acción, quiénes participan, qué cambio esperan). <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">Es la producción integradora del proyecto: completar huecos la vuelve un ejercicio cerrado. Además, la frase actual «Esto no solo destruye los árboles, sino que provoca…» ya trae la conclusión.</p>
+</article>
+
+<article class="decision m4" data-id="M4-P4 territorio">
+  <header><span class="etiqueta">Misión 4 · Paso 4</span><h3>Territorio argentino para comparar</h3><span class="ref">CAMBIOS §5</span></header>
+  <fieldset><legend>Territorio argentino</legend>
+    <label class="opcion"><input type="radio" name="d11" value="Solo Gran Chaco"><span><b>Solo Gran Chaco</b> para todos los equipos.</span></label>
+    <label class="opcion"><input type="radio" name="d11" value="Elección libre (Gran Chaco, Yungas o humedales)"><span><b>Que cada equipo elija</b> entre Gran Chaco, Yungas o humedales, como dice hoy la ficha. <span class="recomendada">recomendada</span></span></label>
+  </fieldset>
+  <p class="porque">CAMBIOS dice que el territorio ya está definido, pero la ficha actual ofrece tres. Si eligen uno solo, en la Biblioteca armo una sección con material de ese territorio. Con elección libre, en la Bitácora aparecen comparaciones distintas para leer entre equipos.</p>
+</article>
+
+<article class="decision mg" data-id="Pregunta esencial">
+  <header><span class="etiqueta">Portada y Guía docente</span><h3>La pregunta esencial</h3><span class="ref">CAMBIOS §6.2</span></header>
+  <fieldset><legend>Pregunta esencial</legend>
+    <label class="opcion"><input type="radio" name="d12" value="Paraguas + 3 ejes"><span><b>Pregunta paraguas:</b> queda la frase completa y debajo se muestran sus 3 ejes (causas, intereses y estrategias), cada uno unido a las misiones donde se trabaja. <span class="recomendada">recomendada</span></span></label>
+    <label class="opcion"><input type="radio" name="d12" value="Separar en 3 preguntas"><span><b>Separar</b> en 3 preguntas orientadoras y sacar la frase única.</span></label>
+  </fieldset>
+  <p class="porque">No toca el texto del grupo y hace visible cómo las misiones responden la pregunta (ver boceto 8).</p>
+</article>
+
+<article class="decision mg" data-id="Cierre metacognitivo">
+  <header><span class="etiqueta">Las 4 misiones</span><h3>Cierre «Antes pensábamos… / Ahora pensamos…»</h3><span class="ref">CAMBIOS §6.4</span></header>
+  <fieldset><legend>Cierre metacognitivo</legend>
+    <label class="opcion"><input type="radio" name="d13" value="Sí, en las 4 misiones"><span><b>Sí:</b> un recuadro igual al final de cada misión, antes de la Bitácora. <span class="recomendada">recomendada</span></span></label>
+    <label class="opcion"><input type="radio" name="d13" value="No"><span><b>No</b> por ahora.</span></label>
+  </fieldset>
+  <p class="porque">Sostiene la evaluación continua (Perkins y Blythe) y la metacognición (Furman) con muy poco espacio. En la Misión 1 ya existe con la hipótesis (ver boceto 9).</p>
+</article>
+
+<h2 id="auditoria">2. Lo que encontró la auditoría y no estaba en CAMBIOS</h2>
+<p>Busqué en todo el sitio ejemplos entre paréntesis, palabras que ya traen la conclusión y preguntas cerradas. Además de lo que CAMBIOS ya cubre, aparecieron estas. No las cambio sin su OK.</p>
+<ul class="lista">
+  <li><span class="etiqueta m1">Misión 1 · Paso 1</span> Adelanta la respuesta.
+    <dl class="antes-despues"><dt>Hoy</dt><dd class="tachado">¿Se observan ríos o cursos de agua modificados o secos? (Describir)</dd><dt>Propuesta</dt><dd>¿Qué cambios observan en los ríos o cursos de agua? Descríbanlos.</dd></dl></li>
+  <li><span class="etiqueta m1">Misión 1 · Paso 3</span> Da por hecho que la evidencia confirma la hipótesis, justo cuando la pregunta nueva de Maia invita a revisarla.
+    <dl class="antes-despues"><dt>Hoy</dt><dd class="tachado">La captura N.° __ demuestra nuestra hipótesis porque… / El dato de la Noticia N.° __ confirma que…</dd><dt>Propuesta</dt><dd>La captura N.° __ apoya o pone en duda nuestra hipótesis porque… / El dato de la Noticia N.° __ apoya o pone en duda nuestra hipótesis porque…</dd></dl></li>
+  <li><span class="etiqueta m1">Misión 1 · Paso 4</span> La primera fila de la tabla ya dice la respuesta («por El Niño»).
+    <dl class="antes-despues"><dt>Hoy</dt><dd class="tachado">Aumento de sequías e incendios por El Niño</dd><dt>Propuesta</dt><dd>Aumento de sequías e incendios</dd></dl></li>
+  <li><span class="etiqueta m4">Misión 4 · Paso 1</span> «(ejemplo: COICA, RAISG, WWF o Greenpeace)» está en la consigna, no en una pregunta: es la lista para elegir organización. <strong>Propongo mantenerlo.</strong></li>
+  <li><span class="etiqueta m3">Misión 3 · mensaje de Lía</span> «está destruyendo refugios» es la voz del relato, no una pregunta. <strong>Propongo mantenerlo.</strong></li>
+  <li><span class="etiqueta m2">Misión 2 · Paso 4</span> Dice «Explotación Indiscriminada», no «tala ilegal» como categoría. <strong>Está bien, sin cambios.</strong></li>
+  <li><span class="etiqueta mg">Todo el sitio</span> «Pulmón del mundo» solo aparece en la Guía docente, citado como ejemplo de conocimiento inerte. <strong>Es el uso válido.</strong></li>
+</ul>
+
+<h2 id="aplicar">3. Lo que ya se aplicó en el sitio (decidido en CAMBIOS)</h2>
+<p>Todo esto ya está publicado desde el 16/11. Única diferencia con CAMBIOS: en la Misión 3 quedó «¿De qué se alimenta?» como pregunta aparte de «¿Qué función cumple en la selva?»; si prefieren sacarla, se saca.</p>
+<ul class="lista">
+  <li><span class="etiqueta m1">M1 · Paso 1</span> Saco «(Caminos, humo, manchas madereras)» de la grilla, dejo «Registren qué elementos del paisaje observan en cada imagen.» y agrego la pregunta de relaciones entre los cambios.</li>
+  <li><span class="etiqueta m1">M1 · Paso 3</span> Agrego la pregunta de Maia: ¿mantienen la hipótesis o la cambiarían?</li>
+  <li><span class="etiqueta m1">M1 · Paso 4</span> Agrego la columna «¿En qué evidencia se basan?».</li>
+  <li><span class="etiqueta m2">M2 · Paso 2</span> Fila 2 sin el ejemplo entre paréntesis.</li>
+  <li><span class="etiqueta m2">M2 · Paso 3</span> Cara A con sus 3 preguntas y Cara B con sus 4 preguntas, cada una con su espacio.</li>
+  <li><span class="etiqueta m3">M3 · Paso 1</span> Amenaza: pregunta nueva sobre hábitat y supervivencia. Hábitat y nicho sin ejemplos entre paréntesis; los ejemplos pasan a la Guía docente.</li>
+  <li><span class="etiqueta m4">M4 · Paso 1</span> «¿Qué acciones concretas realiza esta organización o pueblo?» sin ejemplos.</li>
+  <li><span class="etiqueta m4">M4 · Paso 3</span> Las preguntas de orientación de Maia antes del Plan de Acción.</li>
+  <li><span class="etiqueta m4">M4 · Paso 4</span> Las 2 preguntas nuevas de Maia (similitudes y diferencias; estrategias iguales o adaptadas).</li>
+  <li><span class="etiqueta mg">Todas</span> Más renglones para las respuestas, con prueba de que cada ficha se sigue imprimiendo bien y se ve bien en celular.</li>
+  <li><span class="etiqueta mg">Todas</span> Glosario: las palabras difíciles (hipótesis, sostenible, indicadores, regulación, red trófica, interdependencia, antrópica…) se tocan y muestran una definición corta. Las definiciones las escribo yo como borrador para que el grupo las revise.</li>
+</ul>
+
+<div class="aviso">
+<p><strong>Cuatro cosas para avisarles</strong></p>
+<p>1. La pregunta 2 de la profesora en la red trófica trae ejemplos entre paréntesis («como dispersar semillas, polinizar o controlar plagas»), lo mismo que ella pide evitar. La dejo tal cual porque es su texto; quizá convenga consultarle.</p>
+<p>2. CAMBIOS pide «textarea» y un «editor de texto» en la web. Hoy las fichas se imprimen y se completan en papel; escribir en pantalla es la Fase 4, que quedó para más adelante. Por ahora agrando los renglones de la ficha impresa.</p>
+<p>3. CAMBIOS nombra una «galería», una «autoevaluación» y un Canva que no están en el sitio. ¿Son de otro material del proyecto o quieren sumarlos a la web?</p>
+<p>4. CAMBIOS §7 dice «no tocar el diseño visual», y Joe pidió proponer visuales. Por eso la parte visual va aparte y no la toco sin su OK.</p>
+</div>
+
+<h2 id="visuales">4. Propuesta visual</h2>
+<p>La idea: que cada actividad se entienda de un vistazo antes de leer la consigna, y que la expedición tenga cara y paisaje. Los dibujos de abajo son <strong>bocetos para mostrar la idea</strong>, no el diseño final.</p>
+
+<div class="bocetos">
+
+  <section class="boceto">
+    <h3>1 · Lía con cara propia</h3>
+    <figure>
+      <svg viewBox="0 0 220 170" role="img" aria-label="Boceto de Lía: guardaparque con sombrero de ala ancha, trenza, radio en la mano y parche verde en la camisa">
+        <rect x="0" y="0" width="220" height="170" rx="12" fill="#e3ead2"/>
+        <path d="M0 130 Q60 112 110 124 T220 118 V170 H0Z" fill="#8bb05a"/>
+        <path d="M60 170 Q62 120 110 116 Q158 120 160 170Z" fill="#4a6b2e"/>
+        <rect x="96" y="128" width="14" height="10" rx="2" fill="#f3e6c4"/>
+        <path d="M103 129 C99 132 99 135 103 137 C107 135 107 132 103 129Z" fill="#4a6b2e"/>
+        <rect x="100" y="98" width="20" height="20" rx="6" fill="#b07a4f"/>
+        <ellipse cx="110" cy="80" rx="27" ry="30" fill="#c68b5c"/>
+        <path d="M136 82 Q150 105 140 132" stroke="#3b2a1d" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <circle cx="100" cy="80" r="3.2" fill="#1f2418"/><circle cx="120" cy="80" r="3.2" fill="#1f2418"/>
+        <path d="M101 93 Q110 99 119 93" stroke="#1f2418" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <path d="M74 62 Q110 44 146 62 Q110 70 74 62Z" fill="#7a4e22"/>
+        <path d="M88 60 Q90 36 110 34 Q130 36 132 60Z" fill="#9a6a3a"/>
+        <rect x="88" y="54" width="44" height="6" fill="#c2410c"/>
+        <rect x="150" y="112" width="18" height="30" rx="4" fill="#2d3b1e"/>
+        <path d="M163 112 V94" stroke="#2d3b1e" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="163" cy="92" r="3" fill="#f29a2e"/>
+        <path d="M145 128 Q150 118 158 124" stroke="#c68b5c" stroke-width="8" fill="none" stroke-linecap="round"/>
+      </svg>
+    </figure>
+    <p>Un personaje fijo y reconocible: sombrero de guardaparque, trenza, radio, parche con la hoja del sitio.</p>
+    <p class="donde">Aparece en cada «Mensaje recibido», en la bienvenida, en la credencial (firma), en el glosario («Lía explica») y en la página de error.</p>
+  </section>
+
+  <section class="boceto">
+    <h3>2 · Un entorno por misión</h3>
+    <figure>
+      <svg viewBox="0 0 240 150" role="img" aria-label="Boceto de cuatro paisajes: vista satelital, frontera agrícola, sotobosque y campamento">
+        <g><rect x="4" y="4" width="112" height="68" rx="8" fill="#4a6b2e"/><rect x="16" y="14" width="40" height="22" fill="#a57c4a"/><rect x="62" y="40" width="44" height="24" fill="#a57c4a"/><path d="M4 50 Q50 36 116 46" stroke="#7fb7c9" stroke-width="5" fill="none"/><text x="10" y="66" font-size="10" fill="#fff" font-family="sans-serif">1 · Satélite</text></g>
+        <g><rect x="124" y="4" width="112" height="68" rx="8" fill="#d9b77e"/><path d="M124 46 H236 V72 H124Z" fill="#9a5b22"/><rect x="140" y="30" width="24" height="14" rx="3" fill="#c2410c"/><circle cx="146" cy="46" r="5" fill="#2d3b1e"/><circle cx="160" cy="46" r="4" fill="#2d3b1e"/><path d="M200 44 q4 -14 0 -26 q-4 12 0 26" fill="#8a8a8a"/><text x="130" y="66" font-size="10" fill="#fff" font-family="sans-serif">2 · Huellas</text></g>
+        <g><rect x="4" y="78" width="112" height="68" rx="8" fill="#1f5f5b"/><path d="M14 146 V100 M30 146 V92 M90 146 V96" stroke="#0f3a37" stroke-width="7"/><ellipse cx="30" cy="92" rx="18" ry="12" fill="#2e7a5f"/><ellipse cx="90" cy="96" rx="20" ry="13" fill="#2e7a5f"/><circle cx="62" cy="122" r="7" fill="#f2c94c"/><text x="10" y="140" font-size="10" fill="#fff" font-family="sans-serif">3 · Sotobosque</text></g>
+        <g><rect x="124" y="78" width="112" height="68" rx="8" fill="#f3e6c4"/><path d="M150 132 L170 100 L190 132Z" fill="#c2410c"/><path d="M196 132 V104" stroke="#2d3b1e" stroke-width="3"/><path d="M196 104 L214 110 L196 116Z" fill="#4a6b2e"/><circle cx="222" cy="92" r="6" fill="#f29a2e"/><text x="130" y="140" font-size="10" fill="#2d3b1e" font-family="sans-serif">4 · Campamento</text></g>
+      </svg>
+    </figure>
+    <p>Una ilustración de cabecera por misión, en el mismo estilo que Lía. Son las mismas cuatro zonas del mapa de la portada, así el mapa y las misiones se sienten un solo mundo.</p>
+  </section>
+
+  <section class="boceto">
+    <h3>3 · Íconos propios en lugar de emojis</h3>
+    <figure>
+      <div class="emoji-vs">
+        <div><div class="fila"><span>📌</span><span>🕸️</span><span>🇦🇷</span></div>Hoy: emojis. Cambian según el aparato; en Windows la bandera se ve como «AR».</div>
+        <div><div class="fila">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" fill="none" stroke="#2d3b1e" stroke-width="2.4"/><path d="M15.5 15.5 L21 21" stroke="#c2410c" stroke-width="3" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="#1f5f5b"/><circle cx="4" cy="5" r="2" fill="#1f5f5b"/><circle cx="20" cy="6" r="2" fill="#1f5f5b"/><circle cx="6" cy="20" r="2" fill="#1f5f5b"/><circle cx="19" cy="19" r="2" fill="#1f5f5b"/><path d="M12 12 L4 5 M12 12 L20 6 M12 12 L6 20 M12 12 L19 19" stroke="#1f5f5b" stroke-width="1.6"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2" fill="#fff" stroke="#2d3b1e" stroke-width="1.4"/><rect x="2" y="5" width="20" height="4.6" fill="#6cace4"/><rect x="2" y="14.4" width="20" height="4.6" fill="#6cace4"/><circle cx="12" cy="12" r="1.8" fill="#f2c94c"/></svg>
+        </div>Propuesta: un juego de íconos dibujados con la paleta del sitio, iguales en cualquier pantalla y en blanco y negro al imprimir.</div>
+      </div>
+    </figure>
+  </section>
+
+  <section class="boceto">
+    <h3>4 · Cuadrantes para mirar el satélite</h3>
+    <figure>
+      <svg viewBox="0 0 240 130" role="img" aria-label="Boceto: dos imágenes satelitales, hace 10 años y hoy, cada una dividida en cuatro cuadrantes NO, NE, SO y SE">
+        <g font-family="sans-serif" font-size="10">
+          <text x="10" y="12" fill="#4b5340">Hace 10 años</text><text x="130" y="12" fill="#4b5340">Hoy</text>
+          <rect x="10" y="18" width="100" height="100" rx="6" fill="#4a6b2e"/>
+          <rect x="130" y="18" width="100" height="100" rx="6" fill="#4a6b2e"/><rect x="138" y="26" width="34" height="22" fill="#a57c4a"/><rect x="186" y="74" width="36" height="34" fill="#a57c4a"/><path d="M130 64 H230" stroke="#c9a46a" stroke-width="3"/>
+          <path d="M60 18 V118 M10 68 H110 M180 18 V118 M130 68 H230" stroke="#f3e6c4" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <g fill="#f3e6c4" font-weight="700"><text x="16" y="32">NO</text><text x="92" y="32">NE</text><text x="16" y="112">SO</text><text x="92" y="112">SE</text><text x="136" y="62">NO</text><text x="212" y="32">NE</text><text x="136" y="112">SO</text><text x="212" y="66">SE</text></g>
+        </g>
+      </svg>
+    </figure>
+    <p>El «dividan mentalmente en 4 cuadrantes» pasa a verse dibujado, con los mismos nombres de la grilla. Cuando estén las capturas reales de Google Earth, van adentro de los marcos, con su crédito.</p>
+  </section>
+
+  <section class="boceto">
+    <h3>5 · Cara A y Cara B como una balanza</h3>
+    <figure>
+      <svg viewBox="0 0 240 130" role="img" aria-label="Boceto: balanza con Cara A, necesidades y desarrollo, y Cara B, costos ambientales; cada platillo con una pareja asignada">
+        <g font-family="sans-serif" font-size="10">
+          <path d="M120 22 V108 M96 112 H144" stroke="#2d3b1e" stroke-width="4" stroke-linecap="round"/>
+          <path d="M40 34 H200" stroke="#2d3b1e" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="120" cy="22" r="6" fill="#c2410c"/>
+          <path d="M40 34 L22 72 H58Z M200 34 L182 72 H218Z" fill="none" stroke="#2d3b1e" stroke-width="1.5"/>
+          <rect x="6" y="72" width="68" height="40" rx="6" fill="#eef6ea" stroke="#3f7d3a" stroke-width="2"/>
+          <rect x="166" y="72" width="68" height="40" rx="6" fill="#fbecea" stroke="#b4372a" stroke-width="2"/>
+          <text x="14" y="88" fill="#2d5a29" font-weight="700">Cara A</text><text x="14" y="102" fill="#2d5a29">Pareja 1</text>
+          <text x="174" y="88" fill="#8f2a20" font-weight="700">Cara B</text><text x="174" y="102" fill="#8f2a20">Pareja 2</text>
+          <text x="98" y="126" fill="#4b5340">Dilema: juntos</text>
+        </g>
+      </svg>
+    </figure>
+    <p>Muestra que hay dos perspectivas que pesar, sin decir cuál gana. Si eligen el rompecabezas, cada platillo lleva su pareja y el dilema queda abajo, para todo el equipo.</p>
+  </section>
+
+  <section class="boceto">
+    <h3>6 · Efecto dominó de la red</h3>
+    <figure>
+      <svg viewBox="0 0 240 130" role="img" aria-label="Boceto: especie elegida en el centro, flechas hacia afectados primero, afectados después y funciones que se interrumpen">
+        <g font-family="sans-serif" font-size="9.5">
+          <rect x="6" y="48" width="58" height="34" rx="8" fill="#fff" stroke="#1f5f5b" stroke-width="2.5"/><text x="13" y="62" fill="#1f5f5b" font-weight="700">Especie</text><text x="13" y="74" fill="#1f5f5b">elegida</text>
+          <g fill="#fff" stroke="#1f5f5b" stroke-width="1.5"><rect x="88" y="8" width="66" height="34" rx="6" transform="rotate(-6 121 25)"/><rect x="100" y="50" width="66" height="34" rx="6" transform="rotate(-3 133 67)"/><rect x="112" y="92" width="66" height="34" rx="6"/></g>
+          <text x="95" y="25" fill="#1f2418" transform="rotate(-6 121 25)">Afectados</text><text x="95" y="36" fill="#1f2418" transform="rotate(-6 121 25)">primero</text>
+          <text x="107" y="66" fill="#1f2418">Afectados</text><text x="107" y="77" fill="#1f2418">después</text>
+          <text x="119" y="106" fill="#1f2418">Funciones que</text><text x="119" y="117" fill="#1f2418">se interrumpen</text>
+          <path d="M64 58 Q78 34 88 28 M66 65 H98 M64 72 Q84 100 110 106" stroke="#1f5f5b" stroke-width="2" fill="none" marker-end="url(#f)"/>
+          <defs><marker id="f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#1f5f5b"/></marker></defs>
+          <text x="186" y="40" fill="#4b5340">las fichas</text><text x="186" y="52" fill="#4b5340">caen como</text><text x="186" y="64" fill="#4b5340">un dominó</text>
+        </g>
+      </svg>
+    </figure>
+    <p>Es la opción C de la red trófica: los recuadros se llenan en orden y la imagen ya sugiere que hay una cadena, sin decir qué especies se afectan.</p>
+  </section>
+
+  <section class="boceto">
+    <h3>7 · Mapa del clima que arman ellos</h3>
+    <figure>
+      <svg viewBox="0 0 240 130" role="img" aria-label="Boceto: tarjeta de inicio Tala y quema, flechas hacia recuadros vacíos, y tarjetas sueltas para ubicar">
+        <g font-family="sans-serif" font-size="10">
+          <rect x="8" y="10" width="72" height="28" rx="6" fill="#c2410c"/><text x="16" y="28" fill="#fff" font-weight="700">Tala y quema</text>
+          <g fill="#fff" stroke="#8c8068" stroke-width="1.5" stroke-dasharray="5 4"><rect x="100" y="10" width="62" height="28" rx="6"/><rect x="100" y="56" width="62" height="28" rx="6"/><rect x="172" y="56" width="62" height="28" rx="6"/></g>
+          <path d="M80 24 H98 M131 38 V54 M162 70 H170" stroke="#2d3b1e" stroke-width="2" marker-end="url(#g)"/>
+          <defs><marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#2d3b1e"/></marker></defs>
+          <g><rect x="10" y="98" width="64" height="22" rx="11" fill="#e3ead2"/><text x="18" y="113" fill="#2d3b1e">tarjeta</text><rect x="84" y="98" width="64" height="22" rx="11" fill="#e3ead2"/><text x="92" y="113" fill="#2d3b1e">tarjeta</text><rect x="158" y="98" width="64" height="22" rx="11" fill="#e3ead2"/><text x="166" y="113" fill="#2d3b1e">tarjeta</text></g>
+        </g>
+      </svg>
+    </figure>
+    <p>Opción B: en la web tocan una tarjeta y después el recuadro donde va (funciona con el dedo, el mouse y el teclado). En papel quedan los recuadros en blanco y las flechas para dibujar.</p>
+    <p class="donde">Es la única pieza interactiva nueva y no guarda nada.</p>
+  </section>
+
+  <section class="boceto">
+    <h3>8 · Pregunta paraguas con 3 ejes</h3>
+    <figure>
+      <div class="mq-ejes">
+        <div class="paraguas">¿Qué sucedió para que la Amazonía se vea así…, qué intereses… y qué estrategias…?</div>
+        <div class="tres">
+          <span class="m1">Causas<br><small>Misiones 1 y 2</small></span>
+          <span class="m3">Intereses<br><small>Misiones 2 y 3</small></span>
+          <span class="m4">Estrategias<br><small>Misión 4</small></span>
+        </div>
+      </div>
+    </figure>
+    <p>La frase queda entera; abajo, tres tarjetas muestran en qué misiones se responde cada parte.</p>
+  </section>
+
+  <section class="boceto">
+    <h3>9 · Cierre «Antes / Ahora» y glosario</h3>
+    <figure>
+      <div style="display:grid;gap:.6rem;width:100%">
+        <div class="mq-meta">
+          <div><b>Antes pensábamos…</b>&nbsp;</div>
+          <div><b>Ahora pensamos…</b>&nbsp;</div>
+          <div class="abajo"><b>¿Qué nos hizo cambiar de idea?</b></div>
+        </div>
+        <div class="mq-glosario">¿A partir de qué <u>indicadores</u> considerarían…?
+          <div class="mq-globo"><strong>Indicador:</strong> una señal que se puede observar o medir y que muestra cómo está algo.</div>
+        </div>
+      </div>
+    </figure>
+    <p>El mismo recuadro al final de las 4 misiones. Las palabras del glosario se ven subrayadas con puntos; al tocarlas aparece la definición. Al imprimir, la ficha suma un mini glosario al pie.</p>
+  </section>
+
+</div>
+
+<h2 id="quien-dibuja">5. Quién dibuja a Lía y los entornos</h2>
+<p>Los bocetos 1 y 2 necesitan una ilustración de verdad. Hay tres caminos; se pueden combinar:</p>
+<ul class="lista">
+  <li><strong>Dibujo del grupo</strong>: el más propio y el que mejor cuenta como producción del proyecto. Lo escaneo o fotografío y lo integro.</li>
+  <li><strong>Ilustración con IA</strong>: puedo generar opciones con la herramienta de imágenes de Canva conectada a tu cuenta (si me das permiso). Como pide el BRIEF, se rotula «ilustración» y reviso que no mezcle especies que no conviven.</li>
+  <li><strong>Versión provisoria vectorial</strong>: dibujo yo una Lía y los entornos simples, en el estilo del mapa actual, para que el sitio ya tenga cara mientras deciden.</li>
+</ul>
+<p>Si ya tienen en Canva una Lía o una paleta del proyecto, conviene partir de ahí para que el documento, la presentación y la web se vean iguales.</p>
+
+<h2 id="orden">6. Orden de trabajo que propongo</h2>
+<div class="etapas">
+  <div class="etapa"><h3>Textos</h3><p>Los cambios decididos, los renglones más grandes y el glosario ya están publicados. Falta aplicar las opciones que elija el grupo.</p></div>
+  <div class="etapa"><h3>Organizadores gráficos</h3><p>Bocetos 3 a 9: íconos, cuadrantes, balanza, dominó, mapa del clima, ejes de la pregunta, cierre y glosario.</p></div>
+  <div class="etapa"><h3>Lía y entornos</h3><p>Bocetos 1 y 2, cuando el grupo defina quién dibuja y con qué estilo.</p></div>
+</div>
+
+<div class="enviar">
+  <p id="contador">Marcaron 0 de 13 decisiones.</p>
+  <button type="button" class="boton" id="copiar">Copiar las elecciones</button>
+</div>
+<textarea id="salida" readonly hidden aria-label="Texto con las elecciones para mandar por mensaje"></textarea>
+</main>
+
+<script>
+(function () {
+  var clave = "guardianes-propuesta-elecciones";
+  var radios = Array.prototype.slice.call(document.querySelectorAll('.decision input[type="radio"]'));
+  var total = document.querySelectorAll(".decision").length;
+  var contador = document.getElementById("contador");
+  var salida = document.getElementById("salida");
+
+  try {
+    var guardado = JSON.parse(localStorage.getItem(clave) || "{}");
+    radios.forEach(function (r) { if (guardado[r.name] === r.value) r.checked = true; });
+  } catch (e) {}
+
+  function elecciones() {
+    var res = {};
+    radios.forEach(function (r) { if (r.checked) res[r.name] = r.value; });
+    return res;
+  }
+  function actualizar() {
+    var e = elecciones();
+    contador.textContent = "Marcaron " + Object.keys(e).length + " de " + total + " decisiones.";
+    try { localStorage.setItem(clave, JSON.stringify(e)); } catch (err) {}
+  }
+  radios.forEach(function (r) { r.addEventListener("change", actualizar); });
+  actualizar();
+
+  document.getElementById("copiar").addEventListener("click", function () {
+    var lineas = ["Elecciones del grupo (propuesta de preguntas y visuales):"];
+    document.querySelectorAll(".decision").forEach(function (d) {
+      var marcado = d.querySelector("input:checked");
+      lineas.push("- " + d.getAttribute("data-id") + ": " + (marcado ? marcado.value : "sin decidir"));
+    });
+    var texto = lineas.join("\n");
+    salida.hidden = false;
+    salida.value = texto;
+    var boton = this;
+    function listo(msj) { boton.textContent = msj; setTimeout(function () { boton.textContent = "Copiar las elecciones"; }, 2500); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(function () { listo("¡Copiado!"); }, function () { salida.select(); listo("Seleccioné el texto: copialo"); });
+    } else { salida.select(); listo("Seleccioné el texto: copialo"); }
+  });
+})();
+</script>
+</body>
+</html>
