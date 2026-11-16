@@ -10,7 +10,7 @@ proyecto: "Guardianes de la Selva"
 {% endmensajeLia %}
 
 {% paso "📌", "PASO 1: Observación Detenida en Google Earth (Enseñar a mirar)", "paso-1" %}
-**Consigna:** Abran la línea de tiempo en Google Earth en la coordenada asignada por el docente. Observen primero la imagen de hace 10 años y luego la imagen actual. Dividan la imagen mentalmente en 4 cuadrantes para no pasar nada por alto.
+**Consigna:** Abran la línea de tiempo en Google Earth en la coordenada asignada por el docente. Observen primero la imagen de hace 10 años y luego la imagen actual. Dividan la imagen mentalmente en 4 {% g "cuadrantes" %} para no pasar nada por alto.
 
 <div class="recursos no-imprimir">
 <p class="recursos__titulo">Coordenadas para Google Earth</p>
@@ -23,11 +23,11 @@ proyecto: "Guardianes de la Selva"
 {% endif %}
 </div>
 
-Grilla de Evidencias Visuales:
+Grilla de Evidencias Visuales: Registren qué elementos del paisaje observan en cada imagen.
 
 <div class="tabla-envoltorio">
 
-| Cuadrante | ¿Qué elementos o vegetación había HACE 10 AÑOS? | ¿Qué elementos NUEVOS o cambios aparecen HOY? (Caminos, humo, manchas madereras) |
+| Cuadrante | ¿Qué elementos o vegetación había HACE 10 AÑOS? | ¿Qué elementos NUEVOS o cambios aparecen HOY? |
 |---|---|---|
 | Noroeste (Arriba Izq.) |   |   |
 | Noreste (Arriba Der.) |   |   |
@@ -42,7 +42,12 @@ Color y textura predominante en el pasado: {% completar "largo" %}
 
 Color y textura predominante en el presente: {% completar "largo" %}
 
+{# AUDITORÍA (sin aplicar, espera OK): la pregunta de los ríos adelanta la respuesta. Ver propuesta §2. #}
 ¿Se observan ríos o cursos de agua modificados o secos? (Describir): {% completar "largo" %}
+
+¿Qué relaciones encuentran entre los cambios que observaron en las imágenes? ¿Cuáles creen que podrían estar relacionados entre sí y por qué?
+
+Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
 
 {% paso "📰", "PASO 2: Guía de Lectura Crítica de Prensa Ambiental", "paso-2" %}
@@ -88,9 +93,13 @@ Noticia 3 (Título / Fuente): {% completar "largo" %}
 **NUESTRA HIPÓTESIS DE EQUIPO:** "Consideramos que el territorio de la Amazonía cambió en estos 10 años debido a {% completar "renglones", 3 %}"
 {% endcaja %}
 
-Evidencia Visual (Google Earth): La captura de pantalla N.° {% completar "corto" %} demuestra nuestra hipótesis porque {% completar "renglones", 2 %}
+Evidencia Visual (Google Earth): La captura de pantalla N.° {% completar "corto" %} demuestra nuestra {% g "hipótesis" %} porque {% completar "renglones", 2 %}
 
 Evidencia de Prensa: El dato de la Noticia N.° {% completar "corto" %} confirma que {% completar "renglones", 2 %}
+
+Después de observar las imágenes y consultar las noticias, ¿mantienen la hipótesis inicial o cambiarían alguna parte? ¿Qué información nueva los llevó a confirmarla o modificarla?
+
+Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
 
 {% paso "🌦️", "PASO 4: Causa Climática Natural vs. Intervención Humana (El Niño)", "paso-4" %}
@@ -102,16 +111,17 @@ Evidencia de Prensa: El dato de la Noticia N.° {% completar "corto" %} confirma
 
 <div class="tabla-envoltorio">
 
-| Evento o Factor Identificado | Fenómeno Climático Natural | Acción Antrópica Directa (Humana) |
-|---|---|---|
-| Aumento de sequías e incendios por El Niño | {% casilla %} | {% casilla %} |
-| Apertura de carreteras y caminos de tierra | {% casilla %} | {% casilla %} |
-| Desmonte de parcelas para ganadería o agricultura | {% casilla %} | {% casilla %} |
-| Quemas intencionales para despejar el suelo | {% casilla %} | {% casilla %} |
-| Calentamiento de las aguas del Océano Pacífico | {% casilla %} | {% casilla %} |
+| Evento o Factor Identificado | Fenómeno Climático Natural | Acción {% g "antrópica", "Antrópica" %} Directa (Humana) | ¿En qué {% g "evidencia" %} se basan? |
+|---|---|---|---|
+| Aumento de sequías e incendios por El Niño | {% casilla %} | {% casilla %} |   |
+| Apertura de carreteras y caminos de tierra | {% casilla %} | {% casilla %} |   |
+| Desmonte de parcelas para ganadería o agricultura | {% casilla %} | {% casilla %} |   |
+| Quemas intencionales para despejar el suelo | {% casilla %} | {% casilla %} |   |
+| Calentamiento de las aguas del Océano Pacífico | {% casilla %} | {% casilla %} |   |
 
 </div>
 
+{# DECIDIR: ver CAMBIOS.md §2 (M1-P4, opción A o B). Hasta entonces queda la pregunta actual. #}
 Pregunta de reflexión: ¿Por qué es importante diferenciar una sequía natural de la tala e incendio intencional?
 
 Respuesta del equipo: {% completar "renglones", 3 %}

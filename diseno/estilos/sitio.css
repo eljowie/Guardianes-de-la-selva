@@ -653,6 +653,35 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
 .credencial__firma em { font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; color: var(--selva); }
 .credencial__nota { text-align: center; color: var(--texto-suave); font-size: 0.95rem; }
 
+/* ── Glosario ──────────────────────────────────────────────── */
+.glosa { position: relative; }
+.glosa__palabra {
+  display: inline; padding: 0; margin: 0; border: 0; background: none;
+  font: inherit; color: inherit; cursor: help;
+  text-decoration: underline dotted var(--selva-clara) 2px; text-underline-offset: 0.22em;
+}
+.glosa__palabra:hover, .glosa__palabra[aria-expanded="true"] { color: var(--selva); background: var(--musgo); border-radius: 3px; }
+.glosa__def {
+  position: absolute; left: 0; top: calc(100% + 0.45rem); z-index: 5;
+  width: max-content; max-width: min(19rem, calc(100vw - 2rem));
+  padding: 0.6rem 0.8rem; border-radius: 0.6rem;
+  background: var(--selva); color: #f4f1e6; box-shadow: var(--sombra);
+  font-size: 0.95rem; font-weight: 400; line-height: 1.45; text-align: left; white-space: normal;
+}
+.glosa__def[hidden] { display: none; }
+.glosa__def strong { color: var(--arena); }
+.glosario {
+  margin: 1.5rem 0; padding: 1rem 1.25rem;
+  background: var(--superficie); border: 2px dashed var(--selva-clara); border-radius: var(--radio);
+}
+.glosario h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.glosario dl { display: grid; gap: 0.4rem 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 0; }
+.glosario dt { font-weight: 700; color: var(--selva); }
+.glosario dd { margin: 0; font-size: 0.95rem; color: var(--texto-suave); }
+
+.caja--orientacion { font-family: var(--letra); background: #f4f7ec; border: 2px dashed var(--color-mision); }
+.caja__rotulo { margin-bottom: 0.4rem; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-mision); }
+
 /* ── Movimiento reducido ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

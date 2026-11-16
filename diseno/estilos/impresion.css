@@ -62,3 +62,13 @@ table, .caja, .huella, .flujo__eslabon, .red, .ficha-datos { break-inside: avoid
 .credencial__campo input::placeholder { color: transparent; }
 .credencial__sellos li { border-color: #000 !important; color: #000 !important; }
 .accesos { display: none !important; }
+
+/* Glosario y preguntas largas */
+.glosa__palabra { text-decoration: none; background: none; color: #000; }
+.glosa__def { display: none !important; }
+.glosario { border: 1pt solid #000; background: none; break-inside: avoid; }
+.glosario dd { color: #000; }
+.caras { display: block; }
+.caras .caja { margin-bottom: 8pt; }
+.caja--orientacion { border: 1pt dashed #000 !important; }
+.caja__rotulo { color: #000; }

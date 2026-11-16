@@ -23,6 +23,8 @@ layout: base.njk
 
   {{ content | safe }}
 
+  {% glosarioPagina %}
+
   <nav class="mision__nav no-imprimir" aria-label="Otras misiones">
     {% if anterior %}
     <a class="mision__nav-enlace" href="{{ anterior.url }}" rel="prev"><small>← Misión {{ anterior.numero }}</small>{{ anterior.titulo }}</a>

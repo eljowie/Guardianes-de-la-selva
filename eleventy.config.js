@@ -90,6 +90,37 @@ export default function (eleventyConfig) {
     return `<a class="${clase}" href="${escapar(destino)}">${escapar(texto)}</a>`;
   });
 
+  // Glosario: {% g "indicadores" %} o {% g "hábitat", "Hábitat" %} (clave, texto visible).
+  // La palabra se toca y muestra su definición (de _datos/glosario.json). Cada página
+  // junta sus palabras para el recuadro «Palabras de la expedición» del final.
+  const palabrasPorPagina = new Map();
+  let contadorGlosa = 0;
+  const leerGlosario = () => JSON.parse(readFileSync(new URL("./contenido/_datos/glosario.json", import.meta.url), "utf8"));
+
+  eleventyConfig.addShortcode("g", function (clave, visible) {
+    const entrada = leerGlosario()[clave];
+    if (!entrada) throw new Error(`Glosario: falta la palabra «${clave}» en glosario.json`);
+    const pagina = this.page?.inputPath || "";
+    if (!palabrasPorPagina.has(pagina)) palabrasPorPagina.set(pagina, new Set());
+    palabrasPorPagina.get(pagina).add(clave);
+    const id = `glosa-${++contadorGlosa}`;
+    return `<span class="glosa"><button type="button" class="glosa__palabra" aria-expanded="false" aria-controls="${id}">${escapar(visible || clave)}</button><span class="glosa__def" id="${id}" role="note" hidden><strong>${escapar(entrada.termino)}:</strong> ${escapar(entrada.definicion)}</span></span>`;
+  });
+
+  eleventyConfig.addShortcode("glosarioPagina", function () {
+    const pagina = this.page?.inputPath || "";
+    const claves = [...(palabrasPorPagina.get(pagina) || [])];
+    palabrasPorPagina.delete(pagina);
+    if (!claves.length) return "";
+    const datos = leerGlosario();
+    const items = claves
+      .map((c) => datos[c])
+      .sort((a, b) => a.termino.localeCompare(b.termino, "es"))
+      .map((e) => `<div><dt>${escapar(e.termino)}</dt><dd>${escapar(e.definicion)}</dd></div>`)
+      .join("");
+    return `<aside class="glosario" aria-labelledby="titulo-glosario"><h2 id="titulo-glosario">Palabras de la expedición</h2><dl>${items}</dl></aside>`;
+  });
+
   // Cartel visible para contenido que todavía no existe.
   eleventyConfig.addPairedShortcode(
     "pendiente",

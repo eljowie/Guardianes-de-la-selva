@@ -121,6 +121,31 @@ Enfoque: {{ m.enfoque }}
 
 </section>
 
+<section class="bloque texto" aria-labelledby="orientaciones">
+
+<h2 id="orientaciones">Orientaciones para acompañar las fichas</h2>
+
+Siguiendo la devolución de la cátedra, las fichas ya no traen ejemplos entre paréntesis dentro de las preguntas, para no sugerir la respuesta. Si un equipo no sabe por dónde empezar, el docente puede ofrecer estas pistas en forma oral:
+
+<div class="tabla-envoltorio">
+<table class="matriz">
+<thead>
+<tr><th scope="col">Ficha</th><th scope="col">Pregunta</th><th scope="col">Pistas posibles</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Misión 1 · Paso 1</th><td>Grilla de evidencias visuales</td><td>Caminos, humo, manchas madereras.</td></tr>
+<tr><th scope="row">Misión 2 · Paso 2</th><td>¿Quiénes son los actores que realizan esta actividad?</td><td>Pequeñas familias, empresas, mineros informales.</td></tr>
+<tr><th scope="row">Misión 3 · Paso 1</th><td>Hábitat y estrato: ¿En qué parte de la selva vive?</td><td>Copa de los árboles, suelo, ríos, sotobosque.</td></tr>
+<tr><th scope="row">Misión 3 · Paso 1</th><td>¿Qué función cumple en la selva?</td><td>Dispersor de semillas, depredador de plagas, polinizador.</td></tr>
+<tr><th scope="row">Misión 4 · Paso 1</th><td>¿Qué acciones concretas realiza esta organización o pueblo?</td><td>Monitoreo de incendios, protección de bosques, demarcación de tierras indígenas, reforestación.</td></tr>
+</tbody>
+</table>
+</div>
+
+Las palabras difíciles de cada ficha (hipótesis, indicadores, sostenible, regulación…) están subrayadas con puntos: al tocarlas se ve una definición corta, y al imprimir aparecen al pie, en el recuadro «Palabras de la expedición».
+
+</section>
+
 <section class="bloque" aria-labelledby="evaluacion">
 
 <h2 id="evaluacion">Guía docente y evaluación formativa (resumen)</h2>
@@ -143,7 +168,7 @@ Enfoque: {{ m.enfoque }}
 <tr><th scope="col">Objetivo</th><th scope="col">Misión y pasos</th><th scope="col">Entregable visible</th><th scope="col">Dónde se publica</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">1. Reconocer las transformaciones del paisaje</th><td>Misión 1 · Paso 1</td><td>Registro de observación por cuadrantes en Google Earth</td><td>Bitácora, columna «Misión 1»</td></tr>
+<tr><th scope="row">1. Reconocer las transformaciones del paisaje</th><td>Misión 1 · Paso 1</td><td>Registro de observación por cuadrantes en Google Earth y relaciones entre los cambios</td><td>Bitácora, columna «Misión 1»</td></tr>
 <tr><th scope="row">2. Formular y contrastar hipótesis</th><td>Misión 1 · Pasos 2 y 3</td><td>Guía de lectura de las 3 noticias e hipótesis con evidencia de prensa</td><td>Bitácora, columna «Misión 1»</td></tr>
 <tr><th scope="row">3. Diferenciar causas naturales y humanas</th><td>Misión 1 · Paso 4</td><td>Tabla de clasificación de factores (El Niño vs. intervención humana)</td><td>Ficha impresa</td></tr>
 <tr><th scope="row">4. Analizar actividades productivas, actores e intereses</th><td>Misión 2 · Pasos 1 a 4</td><td>Matriz Causa-Actor-Consecuencia y análisis «Cara A y Cara B»</td><td>Bitácora, columna «Misión 2»</td></tr>

@@ -16,7 +16,7 @@ Para entender la crisis amazónica, no alcanza con saber qué cambia; necesitamo
 
 <ul class="huellas">
 <li class="huella huella--a">{% casilla %} <span class="huella__texto"><strong>Huella A:</strong> Expansión Agropecuaria (Ganadería y cultivo de soja)</span> <span class="no-imprimir">{% boton "Material en la Biblioteca", "/biblioteca/#huella-a", "chico" %}</span></li>
-<li class="huella huella--b">{% casilla %} <span class="huella__texto"><strong>Huella B:</strong> Minería a gran escala y Minería Ilegal (Garimpo)</span> <span class="no-imprimir">{% boton "Material en la Biblioteca", "/biblioteca/#huella-b", "chico" %}</span></li>
+<li class="huella huella--b">{% casilla %} <span class="huella__texto"><strong>Huella B:</strong> Minería a gran escala y Minería Ilegal ({% g "garimpo", "Garimpo" %})</span> <span class="no-imprimir">{% boton "Material en la Biblioteca", "/biblioteca/#huella-b", "chico" %}</span></li>
 <li class="huella huella--c">{% casilla %} <span class="huella__texto"><strong>Huella C:</strong> Tala de Madera y Extracción Forestal</span> <span class="no-imprimir">{% boton "Material en la Biblioteca", "/biblioteca/#huella-c", "chico" %}</span></li>
 <li class="huella huella--d">{% casilla %} <span class="huella__texto"><strong>Huella D:</strong> Incendios Intencionales para cambio de uso del suelo</span> <span class="no-imprimir">{% boton "Material en la Biblioteca", "/biblioteca/#huella-d", "chico" %}</span></li>
 </ul>
@@ -30,44 +30,59 @@ Para entender la crisis amazónica, no alcanza con saber qué cambia; necesitamo
 | Pregunta Guía | Registro de Investigación del Equipo |
 |---|---|
 | 1. Actividad: ¿En qué consiste exactamente esta huella o intervención? |   |
-| 2. Actores: ¿Quiénes la realizan? (Ej: pequeñas familias, empresas, mineros informales) |   |
+| 2. Actores: ¿Quiénes son los {% g "actores" %} que realizan esta actividad? |   |
 | 3. Productos y Destino: ¿Qué recursos se obtienen y a qué mercados o industrias abastecen? |   |
 | 4. Impacto ambiental: ¿Qué consecuencias directas genera en el suelo, el agua y los árboles? |   |
 
 </div>
+{# DECIDIR: ver CAMBIOS.md §3 (M2-P2 fila 4, opción A o B). Hasta entonces queda la fila actual. #}
 {% endpaso %}
 
 {% paso "⚖️", "PASO 3: Análisis Polifónico – \"Cara A y Cara B\"", "paso-3" %}
 Reflexión del equipo: En los problemas ambientales reales rara vez hay villanos de película; existen intereses, necesidades humanas y dilemas complejos. Vamos a analizar ambas caras de la moneda para comprender la postura de los distintos actores.
 
+{# DECIDIR: ver CAMBIOS.md §3 (carga de trabajo: i, ii rompecabezas o iii). Se aplica (i); cada Cara está en su propia caja para poder asignarla a una pareja. #}
 <div class="caras">
 
 {% caja "cara-a" %}
 <h3><span aria-hidden="true">🟢</span> CARA A: La perspectiva socioeconómica (Necesidades y Desarrollo)</h3>
 
-¿Qué necesidades humanas, empleos o beneficio económico busca resolver esta actividad?
+1\. Si tuvieran que establecer un orden de prioridad entre el beneficio económico, la generación de empleo y la satisfacción de necesidades básicas, ¿cuál dirían que es el motor principal de esta actividad y por qué?
 
-Respuesta: {% completar "renglones", 3 %}
+Respuesta: {% completar "renglones", 4 %}
 
-¿Qué productos de consumo diario (alimentos, madera, minerales para tecnología o medicamentos) provienen de esta producción?
+2\. ¿Qué relación encuentran entre los recursos que extrae o genera esta producción y las necesidades de la vida urbana actual?
 
-Respuesta: {% completar "renglones", 3 %}
+Respuesta: {% completar "renglones", 4 %}
+
+3\. Frente a la necesidad de obtener estos productos de uso diario y generar empleo, ¿qué criterios debería priorizar la sociedad para decidir hasta qué punto y de qué manera desarrollar esta actividad?
+
+Respuesta: {% completar "renglones", 4 %}
 {% endcaja %}
 
 {% caja "cara-b" %}
 <h3><span aria-hidden="true">🔴</span> CARA B: La perspectiva ecológica (Costos Ambientales)</h3>
 
-¿Qué daños irreversibles o costos ambientales sufre el ecosistema a corto y largo plazo por esta actividad?
+1\. Si analizamos el funcionamiento de la selva como un sistema, ¿qué cambios concretos se producen en el suelo, el agua y la {% g "biodiversidad" %} al inicio de esta actividad y cuáles aparecen recién décadas después?
 
-Respuesta: {% completar "renglones", 3 %}
+Respuesta: {% completar "renglones", 4 %}
 
-¿Qué ocurre con la selva si esta actividad se realiza sin control ni límites?
+2\. ¿Qué relaciones de causa y consecuencia pueden establecer entre la intensidad con la que se realiza esta actividad y la capacidad de recuperación natural del {% g "ecosistema" %}?
 
-Respuesta: {% completar "renglones", 3 %}
+Respuesta: {% completar "renglones", 4 %}
+
+3\. ¿A partir de qué {% g "indicadores" %} o señales ambientales considerarían que esta actividad superó el límite de lo {% g "sostenible" %} en la selva? ¿Qué criterios deberían definir esos límites?
+
+Respuesta: {% completar "renglones", 4 %}
+
+4\. Frente a los costos ambientales detectados, ¿qué alternativas de {% g "regulación" %} o manejo creen que serían más eficaces para equilibrar la producción y la conservación del ecosistema?
+
+Respuesta: {% completar "renglones", 4 %}
 {% endcaja %}
 
 </div>
 
+{# DECIDIR: ver CAMBIOS.md §3 (dilema, opción A o B). Hasta entonces queda el texto actual. #}
 {% caja "dilema" %}
 <h3><span aria-hidden="true">🤝</span> EL DILEMA DEL EQUIPO:</h3>
 

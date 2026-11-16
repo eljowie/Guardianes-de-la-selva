@@ -24,20 +24,25 @@ Nombre científico / Nombre común: {% completar "largo" %}
 
 Datos Ecosistémicos:
 
-Hábitat y estrato: ¿En qué parte de la selva vive? (Ej: copa de los árboles, suelo, ríos, sotobosque)
+{% g "hábitat", "Hábitat" %} y {% g "estrato" %}: ¿En qué parte de la selva vive?
 
 Respuesta: {% completar "renglones", 2 %}
 
-Nicho ecológico y alimentación: ¿De qué se alimenta y qué función cumple en el ecosistema? (Ej: dispersor de semillas, depredador de plagas, polinizador)
+{% g "nicho ecológico", "Nicho ecológico" %} y alimentación: ¿De qué se alimenta?
 
 Respuesta: {% completar "renglones", 2 %}
 
-Amenaza directa: ¿De qué manera la tala, los incendios o la minería destruyen su hogar?
+¿Qué función cumple en la selva?
 
 Respuesta: {% completar "renglones", 2 %}
+
+Amenaza directa: ¿De qué manera la tala, los incendios o la minería destruyen o modifican su hábitat? ¿Qué consecuencias tiene esto para la supervivencia de la especie?
+
+Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
 
 {% paso "🕸️", "PASO 2: Red Alimentaria e Interdependencia (El Efecto Dominó)", "paso-2" %}
+{# DECIDIR: ver CAMBIOS.md §4 (M3-P2, opción A, B o C). Hasta entonces queda el esquema actual. #}
 **Consigna:** La selva es una red donde todos dependen de todos. Completen el siguiente esquema demostrando qué sucede si la especie investigada desaparece de la cadena:
 
 <div class="red">
@@ -61,6 +66,8 @@ Respuesta: {% completar "renglones", 2 %}
 
 Testimonio escuchado (Nombre / Rol): {% completar "largo" %}
 
+{# DECIDIR: ver CAMBIOS.md §4 (M3-P3, mantener o reformular «Pérdidas sociales y culturales»). #}
+
 Pérdidas sociales y culturales: ¿Qué cuenta el poblador sobre cómo cambió su vida cotidiana o su comunidad tras la deforestación?
 
 Respuesta: {% completar "renglones", 3 %}
@@ -71,6 +78,7 @@ Respuesta: {% completar "renglones", 3 %}
 {% endpaso %}
 
 {% paso "🌡️", "PASO 4: Conexión Climática Global (Deforestación -> Cambio Climático)", "paso-4" %}
+{# DECIDIR: ver CAMBIOS.md §4 (M3-P4: mapa A o B, y pregunta de cierre A o B). «Pulmón» ya se cambió en la Fase 1. #}
 **Consigna:** La Amazonía es conocida como el "gran regulador del clima" de América del Sur. Completen el mapa de causa-efecto completando los espacios vacíos con las siguientes opciones: (Efecto Invernadero – Absorción de Dióxido de Carbono – Quema de Árboles – Calentamiento Global)
 
 <ul class="opciones" aria-hidden="true">
