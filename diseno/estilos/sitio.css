@@ -691,3 +691,41 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
     scroll-behavior: auto !important;
   }
 }
+
+/* Ronda de decisiones del grupo (2026-11-16) */
+.caja__pareja {
+  display: inline-block; margin: 0 0 0.4rem; padding: 0.1rem 0.6rem; border-radius: 999px;
+  background: #fff; border: 2px solid currentColor; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em;
+}
+.caja--cara-a .caja__pareja { color: #2f6a2b; }
+.caja--cara-b .caja__pareja { color: #9b2c20; }
+
+.red__pregunta { margin: 1rem 0 0; max-width: var(--ancho-texto); font-weight: 700; }
+
+/* Mapa del clima que arman los equipos: recuadros unidos por flechas. */
+.flujo--abierto { list-style: none; padding: 0; }
+.flujo--abierto .flujo__eslabon { display: block; position: relative; margin-bottom: 1.6rem; }
+.flujo--abierto .flujo__eslabon:not(:last-child)::after {
+  content: "▼" / ""; position: absolute; left: 1.5rem; bottom: -1.45rem; color: var(--color-mision); font-size: 0.95rem;
+}
+.flujo--abierto .flujo__eslabon:last-child { margin-bottom: 0; }
+.flujo__eslabon--inicio { border-color: var(--color-mision); background: #f4f7ec; }
+
+/* Cierre «Antes pensábamos… / Ahora pensamos…» */
+.antes-ahora {
+  margin: 2rem 0; padding: 1rem 1.1rem 0.4rem; border: 2px solid var(--color-mision); border-radius: var(--radio); background: #fff;
+}
+.antes-ahora h2 { font-size: 1.25rem; margin-top: 0; }
+.antes-ahora__grilla { display: grid; gap: 0 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+
+/* Pregunta esencial: sus tres ejes y en qué misiones se trabajan. */
+.pregunta-esencial__guia { margin: 0.9rem 0 0.5rem; color: var(--texto-suave); font-size: 0.95rem; }
+.ejes { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.eje {
+  display: grid; grid-template-columns: 7rem 1fr; gap: 0.15rem 0.75rem; align-items: baseline;
+  padding: 0.55rem 0.75rem; border: 1px solid var(--borde); border-radius: var(--radio); background: #fff;
+}
+.eje__nombre { grid-row: span 2; font-weight: 700; color: var(--acento-oscuro); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
+.eje__misiones { font-size: 0.9rem; color: var(--texto-suave); }
+.eje__misiones a { font-weight: 700; }
+@media (max-width: 30rem) { .eje { grid-template-columns: 1fr; } .eje__nombre { grid-row: auto; } }

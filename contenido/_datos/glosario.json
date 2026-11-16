@@ -4,19 +4,72 @@
     "BORRADOR: definiciones escritas por Claude para que el grupo las revise. Cambien solo el texto entre comillas de «definicion».",
     "Cuidado: ninguna definición tiene que dar la respuesta de una consigna."
   ],
-  "cuadrantes": { "termino": "Cuadrante", "definicion": "Cada una de las cuatro partes iguales en que se divide una imagen para mirarla de a poco." },
-  "hipótesis": { "termino": "Hipótesis", "definicion": "Una explicación posible que todavía hay que poner a prueba con evidencias." },
-  "evidencia": { "termino": "Evidencia", "definicion": "Un dato, una imagen o un hecho que sirve para apoyar o poner en duda una idea." },
-  "antrópica": { "termino": "Antrópica", "definicion": "Que la produce el ser humano." },
-  "garimpo": { "termino": "Garimpo", "definicion": "Nombre que se usa en Brasil para la minería de oro que hacen buscadores independientes, muchas veces sin permiso." },
-  "actores": { "termino": "Actores", "definicion": "Las personas, grupos, empresas u organizaciones que participan en una situación." },
-  "biodiversidad": { "termino": "Biodiversidad", "definicion": "La variedad de seres vivos que hay en un lugar." },
-  "ecosistema": { "termino": "Ecosistema", "definicion": "Los seres vivos de un lugar, el ambiente donde viven y las relaciones entre ellos." },
-  "indicadores": { "termino": "Indicador", "definicion": "Una señal que se puede observar o medir y que muestra cómo está algo." },
-  "sostenible": { "termino": "Sostenible", "definicion": "Que se puede seguir haciendo durante mucho tiempo sin agotar los recursos de los que depende." },
-  "regulación": { "termino": "Regulación", "definicion": "Reglas que establecen qué se puede hacer, cuánto y de qué manera." },
-  "hábitat": { "termino": "Hábitat", "definicion": "El lugar donde vive una especie y encuentra lo que necesita para vivir." },
-  "estrato": { "termino": "Estrato", "definicion": "Cada uno de los niveles de altura en que se organiza la selva, como los pisos de un edificio." },
-  "nicho ecológico": { "termino": "Nicho ecológico", "definicion": "El papel que cumple una especie en su ecosistema: cómo vive y cómo se relaciona con las demás." },
-  "conservación": { "termino": "Conservación", "definicion": "Cuidar la naturaleza para que siga existiendo y funcionando." }
+  "cuadrantes": {
+    "termino": "Cuadrante",
+    "definicion": "Cada una de las cuatro partes iguales en que se divide una imagen para mirarla de a poco."
+  },
+  "hipótesis": {
+    "termino": "Hipótesis",
+    "definicion": "Una explicación posible que todavía hay que poner a prueba con evidencias."
+  },
+  "evidencia": {
+    "termino": "Evidencia",
+    "definicion": "Un dato, una imagen o un hecho que sirve para apoyar o poner en duda una idea."
+  },
+  "antrópica": {
+    "termino": "Antrópica",
+    "definicion": "Que la produce el ser humano."
+  },
+  "garimpo": {
+    "termino": "Garimpo",
+    "definicion": "Nombre que se usa en Brasil para la minería de oro que hacen buscadores independientes, muchas veces sin permiso."
+  },
+  "actores": {
+    "termino": "Actores",
+    "definicion": "Las personas, grupos, empresas u organizaciones que participan en una situación."
+  },
+  "biodiversidad": {
+    "termino": "Biodiversidad",
+    "definicion": "La variedad de seres vivos que hay en un lugar."
+  },
+  "ecosistema": {
+    "termino": "Ecosistema",
+    "definicion": "Los seres vivos de un lugar, el ambiente donde viven y las relaciones entre ellos."
+  },
+  "indicadores": {
+    "termino": "Indicador",
+    "definicion": "Una señal que se puede observar o medir y que muestra cómo está algo."
+  },
+  "sostenible": {
+    "termino": "Sostenible",
+    "definicion": "Que se puede seguir haciendo durante mucho tiempo sin agotar los recursos de los que depende."
+  },
+  "regulación": {
+    "termino": "Regulación",
+    "definicion": "Reglas que establecen qué se puede hacer, cuánto y de qué manera."
+  },
+  "hábitat": {
+    "termino": "Hábitat",
+    "definicion": "El lugar donde vive una especie y encuentra lo que necesita para vivir."
+  },
+  "estrato": {
+    "termino": "Estrato",
+    "definicion": "Cada uno de los niveles de altura en que se organiza la selva, como los pisos de un edificio."
+  },
+  "nicho ecológico": {
+    "termino": "Nicho ecológico",
+    "definicion": "El papel que cumple una especie en su ecosistema: cómo vive y cómo se relaciona con las demás."
+  },
+  "conservación": {
+    "termino": "Conservación",
+    "definicion": "Cuidar la naturaleza para que siga existiendo y funcionando."
+  },
+  "red trófica": {
+    "termino": "Red trófica",
+    "definicion": "Todas las cadenas de alimentación de un lugar unidas entre sí: muestra quién se alimenta de quién."
+  },
+  "interdependiente": {
+    "termino": "Interdependiente",
+    "definicion": "Que depende de otros y otros dependen de él: si una parte cambia, las demás también se ven afectadas."
+  }
 }

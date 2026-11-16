@@ -60,6 +60,10 @@ Atendiendo al señalamiento de la cátedra sobre la necesidad de evitar metas in
 
 <p class="cita">¿Qué sucedió para que la Amazonía se vea así en la actualidad, qué intereses económicos y sociales están en juego, y qué estrategias fundamentadas podemos proponer para protegerla?</p>
 
+Es una pregunta paraguas: se mantiene entera y se trabaja en tres ejes, cada uno en las misiones indicadas.
+
+{% include "partes/ejes.njk" %}
+
 </section>
 
 <section class="bloque texto" aria-labelledby="trama">
@@ -143,6 +147,12 @@ Siguiendo la devolución de la cátedra, las fichas ya no traen ejemplos entre p
 </div>
 
 Las palabras difíciles de cada ficha (hipótesis, indicadores, sostenible, regulación…) están subrayadas con puntos: al tocarlas se ve una definición corta, y al imprimir aparecen al pie, en el recuadro «Palabras de la expedición».
+
+Otras decisiones del grupo para el trabajo en el aula:
+
+- **Misión 2 · Paso 3 (rompecabezas):** dentro de cada equipo, una pareja responde la Cara A y otra la Cara B; después cada pareja le explica a la otra lo que respondió y el dilema se resuelve entre todos.
+- **Misión 3 · Paso 4 (mapa del clima):** no hay banco de palabras. Los equipos parten de «Tala y quema de árboles» y ordenan las consecuencias que encontraron en su investigación.
+- **Cierre de cada misión:** antes de publicar en la Bitácora, cada equipo completa «Antes pensábamos… / Ahora pensamos…», para registrar cómo cambiaron sus ideas.
 
 </section>
 

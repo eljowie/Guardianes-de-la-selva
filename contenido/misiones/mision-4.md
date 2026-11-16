@@ -56,29 +56,24 @@ Pregunta 3: {% completar "largo" %}
 
 </div>
 
-{# DECIDIR: ver CAMBIOS.md §5 (M4-P2, opción A o B). Hasta entonces queda la pregunta actual. #}
-Pregunta de reflexión: ¿La tecnología es buena o mala en sí misma, o depende de quién y para qué se utilice? ¿Cómo ayuda la tecnología satelital a las comunidades a defender sus tierras?
+1. ¿La tecnología es buena o mala en sí misma, o depende de quién y para qué se utilice?
 
-Conclusión del equipo: {% completar "renglones", 3 %}
+Respuesta: {% completar "renglones", 3 %}
+
+2. ¿Qué diferencias encuentran entre las tecnologías que se utilizan para transformar la selva y las que permiten monitorearla y protegerla?
+
+Respuesta: {% completar "renglones", 3 %}
+
+3. ¿Qué ejemplos de la investigación permiten fundamentar su respuesta?
+
+Respuesta: {% completar "renglones", 3 %}
 {% endpaso %}
 
 {% paso "✉️", "PASO 3: Carta - Plan de Rescate Ambiental (Producción Integradora)", "paso-3" %}
-{# DECIDIR: ver CAMBIOS.md §5 (M4-P3, carta con frases para completar o texto propio). Hasta entonces queda la carta actual. #}
 **Consigna:** Redacten una carta colaborativa dirigida a estudiantes de 6.° grado de otra escuela o curso para explicarles la situación de la Amazonía y proponerles sumarse como Guardianes.
 
-{% caja "carta" %}
-<h3>CARTA A LOS FUTUROS GUARDIANES</h3>
-
-Queridos/as compañeros/as:
-
-Les escribimos este mensaje porque durante las últimas semanas estuvimos investigando qué está sucediendo en la Amazonía. Aprendimos que el territorio se está transformando principalmente debido a {% completar "renglones", 2 %}.
-
-Esto no solo destruye los árboles, sino que provoca {% completar "renglones", 2 %}.
-
-Para proteger la selva y cuidar el clima del planeta, proponemos el siguiente Plan de Acción:
-
 {% caja "orientacion" %}
-<p class="caja__rotulo">Antes de escribir las propuestas</p>
+<p class="caja__rotulo">Antes de escribir la carta</p>
 
 Teniendo en cuenta lo que investigaron en las misiones anteriores, ¿qué problema consideran más urgente de resolver y por qué? ¿Qué información o evidencia de su investigación respalda esa decisión?
 
@@ -87,9 +82,18 @@ Respuesta: {% completar "renglones", 4 %}
 En cada propuesta, expliquen qué acción llevarían adelante, quiénes deberían participar y qué cambio esperan conseguir.
 {% endcaja %}
 
-Propuesta de conservación a gran escala: {% completar "renglones", 2 %}
+{% caja "carta" %}
+<h3>CARTA A LOS FUTUROS GUARDIANES</h3>
 
-Compromiso cívico y cotidiano desde nuestra escuela/hogar: {% completar "renglones", 2 %}
+Queridos/as compañeros/as:
+
+{% completar "renglones", 8 %}
+
+Para proteger la selva y cuidar el clima del planeta, proponemos el siguiente Plan de Acción:
+
+Propuesta de conservación a gran escala: {% completar "renglones", 4 %}
+
+Compromiso cívico y cotidiano desde nuestra escuela/hogar: {% completar "renglones", 4 %}
 
 Mensaje final de compromiso: {% completar "renglones", 2 %}
 
@@ -102,7 +106,6 @@ Firma del equipo de Guardianes: {% completar "largo" %}
 
 Territorio argentino seleccionado: {% completar "largo" %}
 
-{# DECIDIR: ver CAMBIOS.md §5 (territorio: solo Gran Chaco o elección libre). Hasta entonces queda la consigna actual. #}
 ¿Qué similitudes y diferencias encuentran entre las transformaciones ambientales de la Amazonía y las del territorio argentino que investigaron? ¿Qué causas y consecuencias comparten y cuáles son diferentes?
 
 Respuesta: {% completar "renglones", 4 %}
@@ -111,6 +114,8 @@ Respuesta: {% completar "renglones", 4 %}
 
 Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
+
+{% include "partes/antes-ahora.njk" %}
 
 {% paso "📤", "PASO 5: Cierre Final del Proyecto en la Web y Padlet", "paso-5" %}
 Publiquen la versión final de su Carta - Plan de Rescate en la columna "Misión 4" del Padlet.

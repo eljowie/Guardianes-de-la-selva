@@ -32,20 +32,26 @@ Para entender la crisis amazónica, no alcanza con saber qué cambia; necesitamo
 | 1. Actividad: ¿En qué consiste exactamente esta huella o intervención? |   |
 | 2. Actores: ¿Quiénes son los {% g "actores" %} que realizan esta actividad? |   |
 | 3. Productos y Destino: ¿Qué recursos se obtienen y a qué mercados o industrias abastecen? |   |
-| 4. Impacto ambiental: ¿Qué consecuencias directas genera en el suelo, el agua y los árboles? |   |
+| 4. Impacto ambiental: ¿Qué consecuencias ambientales genera esta actividad? ¿Cuáles pueden observarse a corto plazo y cuáles podrían aparecer después de varios años? |   |
 
 </div>
-{# DECIDIR: ver CAMBIOS.md §3 (M2-P2 fila 4, opción A o B). Hasta entonces queda la fila actual. #}
 {% endpaso %}
 
 {% paso "⚖️", "PASO 3: Análisis Polifónico – \"Cara A y Cara B\"", "paso-3" %}
 Reflexión del equipo: En los problemas ambientales reales rara vez hay villanos de película; existen intereses, necesidades humanas y dilemas complejos. Vamos a analizar ambas caras de la moneda para comprender la postura de los distintos actores.
 
-{# DECIDIR: ver CAMBIOS.md §3 (carga de trabajo: i, ii rompecabezas o iii). Se aplica (i); cada Cara está en su propia caja para poder asignarla a una pareja. #}
+{% caja "orientacion" %}
+<p class="caja__rotulo">Cómo se reparten el trabajo</p>
+
+Dentro del equipo, una pareja responde la Cara A y otra pareja la Cara B. Después, cada pareja le explica a la otra lo que respondió. El dilema lo resuelven todos juntos.
+{% endcaja %}
 <div class="caras">
 
 {% caja "cara-a" %}
+<p class="caja__pareja">Pareja 1</p>
 <h3><span aria-hidden="true">🟢</span> CARA A: La perspectiva socioeconómica (Necesidades y Desarrollo)</h3>
+
+Integrantes de la pareja: {% completar "largo" %}
 
 1\. Si tuvieran que establecer un orden de prioridad entre el beneficio económico, la generación de empleo y la satisfacción de necesidades básicas, ¿cuál dirían que es el motor principal de esta actividad y por qué?
 
@@ -61,7 +67,10 @@ Respuesta: {% completar "renglones", 4 %}
 {% endcaja %}
 
 {% caja "cara-b" %}
+<p class="caja__pareja">Pareja 2</p>
 <h3><span aria-hidden="true">🔴</span> CARA B: La perspectiva ecológica (Costos Ambientales)</h3>
+
+Integrantes de la pareja: {% completar "largo" %}
 
 1\. Si analizamos el funcionamiento de la selva como un sistema, ¿qué cambios concretos se producen en el suelo, el agua y la {% g "biodiversidad" %} al inicio de esta actividad y cuáles aparecen recién décadas después?
 
@@ -82,13 +91,12 @@ Respuesta: {% completar "renglones", 4 %}
 
 </div>
 
-{# DECIDIR: ver CAMBIOS.md §3 (dilema, opción A o B). Hasta entonces queda el texto actual. #}
 {% caja "dilema" %}
 <h3><span aria-hidden="true">🤝</span> EL DILEMA DEL EQUIPO:</h3>
 
-¿Es posible realizar esta actividad de manera sostenible o la única opción es prohibirla? ¿Cómo podemos equilibrar el trabajo y el desarrollo de las personas con el cuidado del planeta?
+A partir de lo que analizaron en la Cara A y la Cara B, ¿qué cambios o medidas concretas propondrían para que esta actividad reduzca su impacto ambiental sin dejar de considerar las necesidades de las personas? Justifiquen con lo que investigaron.
 
-Conclusión de nuestro grupo: {% completar "renglones", 3 %}
+Conclusión de nuestro grupo: {% completar "renglones", 4 %}
 {% endcaja %}
 {% endpaso %}
 
@@ -101,6 +109,8 @@ Actividad Ilegal: {% completar "renglones", 2 %}
 
 Explotación Indiscriminada: {% completar "renglones", 2 %}
 {% endpaso %}
+
+{% include "partes/antes-ahora.njk" %}
 
 {% paso "📤", "PASO 5: Entrega y Cierre en la Bitácora (Padlet)", "paso-5" %}
 Suban una foto o archivo de esta matriz completa a la columna "Misión 2" del Padlet del curso.

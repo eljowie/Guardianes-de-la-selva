@@ -20,6 +20,8 @@ clase: portada
 <div class="pregunta-esencial">
 <p class="pregunta-esencial__rotulo">Pregunta esencial</p>
 <p class="pregunta-esencial__texto">¿Qué sucedió para que la Amazonía se vea así en la actualidad, qué intereses económicos y sociales están en juego, y qué estrategias fundamentadas podemos proponer para protegerla?</p>
+<p class="pregunta-esencial__guia">Se responde en tres partes, a lo largo de las misiones:</p>
+{% include "partes/ejes.njk" %}
 </div>
 </section>
 

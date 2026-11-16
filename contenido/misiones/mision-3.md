@@ -42,17 +42,29 @@ Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
 
 {% paso "🕸️", "PASO 2: Red Alimentaria e Interdependencia (El Efecto Dominó)", "paso-2" %}
-{# DECIDIR: ver CAMBIOS.md §4 (M3-P2, opción A, B o C). Hasta entonces queda el esquema actual. #}
 **Consigna:** La selva es una red donde todos dependen de todos. Completen el siguiente esquema demostrando qué sucede si la especie investigada desaparece de la cadena:
 
 <div class="red">
 <p class="red__centro">[ Especie elegida: {% completar "medio" %} ]</p>
+<p class="red__pregunta">Si tuvieran que reconstruir la cadena de efectos que provoca la desaparición de esa especie, ¿qué otros seres vivos se verían afectados primero, cuáles después y por qué?</p>
 <ul class="red__ramas">
-<li>Si desaparece, ¿qué animales se quedan sin alimento? {% completar "renglones", 2 %}</li>
-<li>Si desaparece, ¿qué plantas o insectos se multiplican en exceso? {% completar "renglones", 2 %}</li>
-<li>Conclusión de la red: ¿Cómo cambia el ecosistema completo? {% completar "renglones", 2 %}</li>
+<li><strong>Afectados primero:</strong> {% completar "renglones", 2 %}</li>
+<li><strong>Afectados después:</strong> {% completar "renglones", 2 %}</li>
+<li><strong>¿Por qué?</strong> {% completar "renglones", 2 %}</li>
+</ul>
+<p class="red__pregunta">Además de su alimentación, ¿qué otras funciones cumple esa especie en la selva (como dispersar semillas, polinizar o controlar plagas) que quedarían interrumpidas si desapareciera?</p>
+<ul class="red__ramas">
+<li><strong>Funciones que se interrumpen:</strong> {% completar "renglones", 3 %}</li>
 </ul>
 </div>
+
+¿Cómo explicarían con sus propias palabras la diferencia entre un desequilibrio pasajero y el colapso de una {% g "red trófica" %}?
+
+Respuesta: {% completar "renglones", 4 %}
+
+¿Qué significa afirmar que la selva funciona como una «red {% g "interdependiente" %}» y qué evidencia de su investigación permite comprobarlo?
+
+Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
 
 {% paso "🎧", "PASO 3: Mesa de Voces – Escucha del Podcast \"Voces de la Amazonía\"", "paso-3" %}
@@ -66,11 +78,9 @@ Respuesta: {% completar "renglones", 4 %}
 
 Testimonio escuchado (Nombre / Rol): {% completar "largo" %}
 
-{# DECIDIR: ver CAMBIOS.md §4 (M3-P3, mantener o reformular «Pérdidas sociales y culturales»). #}
+¿Qué cambios en su vida cotidiana mencionan los pobladores? ¿Qué saberes sobre la selva aparecen en sus voces y qué pasaría con ellos si la selva se transforma?
 
-Pérdidas sociales y culturales: ¿Qué cuenta el poblador sobre cómo cambió su vida cotidiana o su comunidad tras la deforestación?
-
-Respuesta: {% completar "renglones", 3 %}
+Respuesta: {% completar "renglones", 4 %}
 
 Saberes del territorio: ¿Qué enseñanza o consejo nos deja sobre el cuidado y el respeto por la naturaleza?
 
@@ -78,26 +88,22 @@ Respuesta: {% completar "renglones", 3 %}
 {% endpaso %}
 
 {% paso "🌡️", "PASO 4: Conexión Climática Global (Deforestación -> Cambio Climático)", "paso-4" %}
-{# DECIDIR: ver CAMBIOS.md §4 (M3-P4: mapa A o B, y pregunta de cierre A o B). «Pulmón» ya se cambió en la Fase 1. #}
-**Consigna:** La Amazonía es conocida como el "gran regulador del clima" de América del Sur. Completen el mapa de causa-efecto completando los espacios vacíos con las siguientes opciones: (Efecto Invernadero – Absorción de Dióxido de Carbono – Quema de Árboles – Calentamiento Global)
+**Consigna:** La Amazonía es conocida como el "gran regulador del clima" de América del Sur. Armen el mapa de causa-efecto: a partir de la tala y la quema, escriban en cada recuadro una consecuencia que encontraron en su investigación, en el orden en que creen que ocurre cada una.
 
-<ul class="opciones" aria-hidden="true">
-<li>Efecto Invernadero</li>
-<li>Absorción de Dióxido de Carbono</li>
-<li>Quema de Árboles</li>
-<li>Calentamiento Global</li>
-</ul>
+<ol class="flujo flujo--abierto">
+<li class="flujo__eslabon flujo__eslabon--inicio"><span class="flujo__num">Punto de partida:</span> <span class="flujo__causa">Tala y quema de árboles</span></li>
+<li class="flujo__eslabon"><span class="flujo__num">1.</span> {% completar "renglones", 2 %}</li>
+<li class="flujo__eslabon"><span class="flujo__num">2.</span> {% completar "renglones", 2 %}</li>
+<li class="flujo__eslabon"><span class="flujo__num">3.</span> {% completar "renglones", 2 %}</li>
+<li class="flujo__eslabon"><span class="flujo__num">4.</span> {% completar "renglones", 2 %}</li>
+</ol>
 
-<div class="flujo">
-<p class="flujo__eslabon"><span class="flujo__num">1.</span> <span class="flujo__causa">Árboles en pie</span> <span class="flujo__flecha" aria-hidden="true">→</span> <span class="flujo__efecto">Realizan la {% completar "medio" %} (guardan el carbono).</span></p>
-<p class="flujo__conector"><span aria-hidden="true">▼</span> (Ocurre la Deforestación)</p>
-<p class="flujo__eslabon"><span class="flujo__num">2.</span> <span class="flujo__causa">Tala y {% completar "medio" %}</span> <span class="flujo__flecha" aria-hidden="true">→</span> <span class="flujo__efecto">Liberan toneladas de carbono acumulado a la atmósfera.</span></p>
-<p class="flujo__conector" aria-hidden="true">▼</p>
-<p class="flujo__eslabon"><span class="flujo__num">3.</span> <span class="flujo__causa">Aumento del {% completar "medio" %}</span> <span class="flujo__flecha" aria-hidden="true">→</span> <span class="flujo__efecto">Retiene más calor en la atmósfera.</span></p>
-<p class="flujo__conector" aria-hidden="true">▼</p>
-<p class="flujo__eslabon"><span class="flujo__num">4.</span> <span class="flujo__causa">Intensificación del {% completar "medio" %}</span> <span class="flujo__flecha" aria-hidden="true">→</span> <span class="flujo__efecto">Provoca sequías y eventos climáticos extremos.</span></p>
-</div>
+¿Qué relación pueden establecer entre lo que ocurre con la selva amazónica y el clima de otras regiones del planeta? ¿Qué evidencia de lo que investigaron lo muestra?
+
+Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
+
+{% include "partes/antes-ahora.njk" %}
 
 {% paso "📤", "PASO 5: Publicación en la Bitácora Digital (Padlet)", "paso-5" %}
 Suban la Ficha de Búsqueda y Rescate (con un dibujo o imagen de la especie) a la columna "Misión 3" del Padlet.

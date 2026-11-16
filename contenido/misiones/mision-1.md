@@ -42,8 +42,9 @@ Color y textura predominante en el pasado: {% completar "largo" %}
 
 Color y textura predominante en el presente: {% completar "largo" %}
 
-{# AUDITORÍA (sin aplicar, espera OK): la pregunta de los ríos adelanta la respuesta. Ver propuesta §2. #}
-¿Se observan ríos o cursos de agua modificados o secos? (Describir): {% completar "largo" %}
+¿Qué cambios observan en los ríos o cursos de agua? Descríbanlos.
+
+Respuesta: {% completar "renglones", 2 %}
 
 ¿Qué relaciones encuentran entre los cambios que observaron en las imágenes? ¿Cuáles creen que podrían estar relacionados entre sí y por qué?
 
@@ -93,9 +94,9 @@ Noticia 3 (Título / Fuente): {% completar "largo" %}
 **NUESTRA HIPÓTESIS DE EQUIPO:** "Consideramos que el territorio de la Amazonía cambió en estos 10 años debido a {% completar "renglones", 3 %}"
 {% endcaja %}
 
-Evidencia Visual (Google Earth): La captura de pantalla N.° {% completar "corto" %} demuestra nuestra {% g "hipótesis" %} porque {% completar "renglones", 2 %}
+Evidencia Visual (Google Earth): La captura de pantalla N.° {% completar "corto" %} apoya o pone en duda nuestra {% g "hipótesis" %} porque {% completar "renglones", 2 %}
 
-Evidencia de Prensa: El dato de la Noticia N.° {% completar "corto" %} confirma que {% completar "renglones", 2 %}
+Evidencia de Prensa: El dato de la Noticia N.° {% completar "corto" %} apoya o pone en duda nuestra hipótesis porque {% completar "renglones", 2 %}
 
 Después de observar las imágenes y consultar las noticias, ¿mantienen la hipótesis inicial o cambiarían alguna parte? ¿Qué información nueva los llevó a confirmarla o modificarla?
 
@@ -113,7 +114,7 @@ Respuesta: {% completar "renglones", 4 %}
 
 | Evento o Factor Identificado | Fenómeno Climático Natural | Acción {% g "antrópica", "Antrópica" %} Directa (Humana) | ¿En qué {% g "evidencia" %} se basan? |
 |---|---|---|---|
-| Aumento de sequías e incendios por El Niño | {% casilla %} | {% casilla %} |   |
+| Aumento de sequías e incendios | {% casilla %} | {% casilla %} |   |
 | Apertura de carreteras y caminos de tierra | {% casilla %} | {% casilla %} |   |
 | Desmonte de parcelas para ganadería o agricultura | {% casilla %} | {% casilla %} |   |
 | Quemas intencionales para despejar el suelo | {% casilla %} | {% casilla %} |   |
@@ -121,11 +122,12 @@ Respuesta: {% completar "renglones", 4 %}
 
 </div>
 
-{# DECIDIR: ver CAMBIOS.md §2 (M1-P4, opción A o B). Hasta entonces queda la pregunta actual. #}
-Pregunta de reflexión: ¿Por qué es importante diferenciar una sequía natural de la tala e incendio intencional?
+Pregunta de reflexión: ¿Qué diferencias encuentran entre una sequía relacionada con El Niño y las acciones humanas que transforman la selva? ¿De qué manera pueden influir ambas situaciones, por separado o combinadas, en la aparición y propagación de incendios?
 
-Respuesta del equipo: {% completar "renglones", 3 %}
+Respuesta del equipo: {% completar "renglones", 4 %}
 {% endpaso %}
+
+{% include "partes/antes-ahora.njk" %}
 
 {% paso "📤", "PASO 5: Publicación en la Bitácora Digital (Padlet)", "paso-5" %}
 Suban la foto o archivo de esta ficha completa a la columna "Misión 1" del Padlet del curso.

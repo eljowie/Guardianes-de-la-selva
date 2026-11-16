@@ -72,3 +72,11 @@ table, .caja, .huella, .flujo__eslabon, .red, .ficha-datos { break-inside: avoid
 .caras .caja { margin-bottom: 8pt; }
 .caja--orientacion { border: 1pt dashed #000 !important; }
 .caja__rotulo { color: #000; }
+
+/* Ronda de decisiones del grupo */
+.caja__pareja { color: #000 !important; border-color: #000; }
+.flujo--abierto .flujo__eslabon:not(:last-child)::after { color: #000; }
+.flujo__eslabon--inicio { background: none !important; }
+.antes-ahora { border: 1pt solid #000; break-inside: avoid; }
+.antes-ahora__grilla { display: block; }
+.eje { border-color: #000; }
