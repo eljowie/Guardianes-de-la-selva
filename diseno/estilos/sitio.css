@@ -900,3 +900,7 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
 .expansion-ig p { margin: 0; }
 .expansion-ig__mision { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-mision); }
 .expansion-ig__formato { font-size: 1.2rem; font-weight: 700; color: var(--selva); margin-bottom: 0.35rem !important; }
+.disparadoras__ayuda { color: var(--texto-suave); font-size: 0.95rem; }
+.disparadoras__lista { margin: 0 0 1rem; padding-left: 1.4rem; }
+.disparadoras__lista li { margin-bottom: 0.5rem; font-weight: 700; color: var(--selva); }
+.disparadoras__lista li::marker { color: var(--color-mision, var(--selva)); }

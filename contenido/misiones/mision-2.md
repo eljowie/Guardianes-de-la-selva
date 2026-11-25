@@ -24,6 +24,13 @@ Respuesta: {% completar "renglones", 3 %}
 
 Respuesta: {% completar "renglones", 3 %}
 
+<p class="disparadoras__ayuda">Para seguir pensando en equipo:</p>
+<ol class="disparadoras__lista">
+<li>¿Cómo influyen los eventos climáticos naturales como el fenómeno de El Niño en la sequedad y propagación del fuego?</li>
+<li>Frente a la necesidad de obtener estos productos de uso diario y generar empleo, ¿qué criterios debería priorizar la sociedad para decidir hasta qué punto y de qué manera desarrollar esta actividad?</li>
+<li>¿Qué relación encuentran entre los recursos que extrae o genera esta producción y las necesidades de la vida urbana actual?</li>
+</ol>
+
 </section>
 
 {% paso "📌", "PASO 1: Asignación e Investigación de la \"Huella\"", "paso-1" %}

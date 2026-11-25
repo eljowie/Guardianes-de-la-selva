@@ -13,6 +13,16 @@ Su misión hoy es transformarse en rescatistas ecosistémicos: deben investigar 
 
 {% include "partes/antes-pensaba.njk" %}
 
+<section class="disparadoras" aria-labelledby="disparadoras-titulo">
+<h2 id="disparadoras-titulo"><span aria-hidden="true">❓</span> Preguntas disparadoras</h2>
+<p class="disparadoras__ayuda">Conversen en equipo antes de empezar. Las van a ir respondiendo a lo largo de la misión.</p>
+<ol class="disparadoras__lista">
+<li>En el video vimos que muchos animales huyen cuando caen los árboles… pero ¿adónde van si todo el bosque a su alrededor fue talado?</li>
+<li>En lugar de pensar solo en quién se come a quién, ¿qué otras funciones cumple esa especie en la selva (como dispersar semillas, polinizar o controlar plagas) que quedarían interrumpidas si desapareciera?</li>
+<li>Si tuvieran que reconstruir la cadena de efectos que provoca la desaparición de esa especie, ¿qué otros seres vivos se verían afectados primero, cuáles después y por qué?</li>
+</ol>
+</section>
+
 {% paso "🐾", "PASO 1: Ficha de Búsqueda y Rescate de Especies", "paso-1" %}
 **Consigna:** Elijan una especie nativa de la Amazonia (animal o vegetal) disponible en la Biblioteca del Explorador y completen los datos de rescate:
 

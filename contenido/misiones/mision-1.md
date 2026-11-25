@@ -11,6 +11,17 @@ proyecto: "Guardianes de la Selva"
 
 {% include "partes/antes-pensaba.njk" %}
 
+<section class="disparadoras" aria-labelledby="disparadoras-titulo">
+<h2 id="disparadoras-titulo"><span aria-hidden="true">❓</span> Preguntas disparadoras</h2>
+<p class="disparadoras__ayuda">Conversen en equipo antes de empezar. Las van a ir respondiendo a lo largo de la misión.</p>
+<ol class="disparadoras__lista">
+<li>¿Qué colores y formas dominaban el paisaje antes y cuáles se ven ahora?</li>
+<li>¿Qué elementos nuevos aparecen y desaparecen?</li>
+<li>¿Qué relaciones encuentran entre los cambios que observaron en las imágenes? ¿Cuáles creen que podrían estar relacionados entre sí y por qué?</li>
+<li>¿Cómo pueden relacionarse los fenómenos climáticos naturales, como El Niño, con las actividades humanas para intensificar los cambios que atraviesa la Amazonia?</li>
+</ol>
+</section>
+
 {% paso "📌", "PASO 1: Observación Detenida en Google Earth (Enseñar a mirar)", "paso-1" %}
 **Consigna:** Abran la línea de tiempo en Google Earth en la coordenada asignada por el docente. Observen primero la imagen de hace 10 años y luego la imagen actual. Dividan la imagen mentalmente en 4 {% g "cuadrantes" %} para no pasar nada por alto.
 
