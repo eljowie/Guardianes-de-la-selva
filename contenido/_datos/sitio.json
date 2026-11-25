@@ -6,22 +6,26 @@
     {
       "texto": "Misión 1",
       "url": "/mision-1/",
-      "lista": true
+      "lista": true,
+      "mision": 1
     },
     {
       "texto": "Misión 2",
       "url": "/mision-2/",
-      "lista": true
+      "lista": true,
+      "mision": 2
     },
     {
       "texto": "Misión 3",
       "url": "/mision-3/",
-      "lista": true
+      "lista": true,
+      "mision": 3
     },
     {
       "texto": "Misión 4",
       "url": "/mision-4/",
-      "lista": true
+      "lista": true,
+      "mision": 4
     },
     {
       "texto": "Biblioteca",

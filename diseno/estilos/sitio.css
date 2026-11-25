@@ -810,3 +810,44 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
 .pie__logos { font-size: 0.85rem; opacity: 0.85; }
 .menu__icono { display: inline-flex; width: 1.35rem; height: 1.35rem; margin-right: 0.35rem; }
 .menu__icono img { width: 100%; height: 100%; }
+
+/* ── P2 · Íconos de misión y sellos (CAMBIOS_2, 25/11) ─────────── */
+.icono-mision { display: block; width: 100%; height: 100%; }
+.menu__icono { flex: none; }
+.cabecera .menu a { gap: 0.1rem; }
+.tarjeta-mision__icono {
+  display: grid; place-items: center; width: 3.25rem; height: 3.25rem; padding: 0.6rem;
+  border-radius: 50%; background: var(--color-mision); color: #fff;
+}
+.mision__icono {
+  display: inline-grid; width: 2.4rem; height: 2.4rem; padding: 0.4rem;
+  border-radius: 50%; border: 2px solid var(--color-mision); color: var(--color-mision);
+}
+/* Bitácora: cada columna con su sello, como el de un pasaporte de expedición */
+.columna a { align-items: flex-start; }
+.sello {
+  display: grid; place-items: center; width: 4rem; height: 4rem; padding: 0.85rem; margin-bottom: 0.4rem;
+  border-radius: 50%; color: var(--color-mision);
+  border: 3px double var(--color-mision); outline: 1px dashed var(--color-mision); outline-offset: 3px;
+  transform: rotate(-8deg);
+}
+.columna:nth-child(even) .sello { transform: rotate(6deg); }
+@media print { .tarjeta-mision__icono, .mision__icono, .sello { color: #000; border-color: #000; background: none; } }
+/* Tarjetas visuales dentro de una misión (mapas de la Misión 1, ONG de la Misión 4) */
+.recursos-visuales { margin: 1rem 0 1.25rem; }
+.tarjetas-recursos--compactas { grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0.75rem; }
+.tarjetas-recursos--compactas .tarjeta-recurso__titulo { font-size: 1rem; }
+.tarjetas-recursos--compactas .tarjeta-recurso__visual--logo img { max-height: 4rem; }
+
+/* ── P2 · Secciones plegables «ver más» ─────────────────────────── */
+.ver-mas { margin: 0.75rem 0 1.25rem; border-left: 4px solid var(--tierra-clara); padding-left: 1rem; }
+.ver-mas > summary {
+  display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0.4rem 1rem;
+  border: 2px solid var(--selva-clara); border-radius: 999px; background: var(--superficie);
+  color: var(--selva); font-weight: 700; cursor: pointer; list-style: none;
+}
+.ver-mas > summary::-webkit-details-marker { display: none; }
+.ver-mas > summary::after { content: "▾"; transition: transform 0.15s ease; }
+.ver-mas[open] > summary::after { transform: rotate(180deg); }
+.ver-mas > summary:hover { background: var(--musgo); }
+.ver-mas[open] > summary { margin-bottom: 0.75rem; }

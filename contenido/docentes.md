@@ -24,6 +24,7 @@ permalink: /docentes/
 
 El corazón de la propuesta consiste en transformar el aula en un equipo de investigación ambiental. Los alumnos asumen el rol ficcional de exploradores y guardaparques junior que acompañan a una guardaparque experimentada (Lía) en la cuenca amazónica. A través de este recorrido, los estudiantes investigan las causas, dinámicas y consecuencias de la deforestación y el cambio climático en el territorio.
 
+{% vermas "Leer: el problema pedagógico y la justificación metodológica" %}
 ### Problema pedagógico que viene a resolver
 
 El diseño de esta propuesta responde a tres vacíos recurrentes en la enseñanza escolar tradicional de las ciencias sociales y naturales:
@@ -38,6 +39,8 @@ Para resolver estas dificultades no alcanza con incorporar recursos digitales su
 
 - En el aula: Se realizan los debates guiados, la lectura compartida de noticias, la formulación oral de hipótesis y la confrontación de posturas sobre los conflictos de la zona.
 - En el entorno digital: Se navegan mapas satelitales en tiempo real, se consultan audios con voces de pobladores, se investigan sitios web institucionales de ONGs y se sistematiza el trabajo colaborativo en una bitácora compartida.
+{% endvermas %}
+
 
 </section>
 
@@ -66,12 +69,15 @@ Para resolver estas dificultades no alcanza con incorporar recursos digitales su
 
 <h2 id="trama">Trama curricular y universo narrativo base</h2>
 
+{% vermas "Leer: el relato base ficcional" %}
 ### El relato base ficcional
 
 - Un equipo de exploradores escolares es convocado por Lía, guardaparque de la reserva.
 - Lía les comparte un archivo urgente: dos imágenes satelitales del mismo sector de la selva tomadas con diez años de diferencia. Lo que antes era un manto verde continuo aparece hoy atravesado por parcelas marrones, humo, caminos de tierra y ríos modificados.
 - A partir de este hallazgo, los estudiantes deben recorrer cuatro zonas del territorio para investigar qué ocurrió, quiénes intervinieron y qué se está perdiendo en el ecosistema.
 
+
+{% endvermas %}
 ### Universo narrativo
 
 Un grupo de jóvenes exploradores llega a la Amazonia para investigar las transformaciones que está atravesando este ecosistema. A medida que recorren diferentes zonas del territorio, descubren distintas amenazas relacionadas con la deforestación, la pérdida de biodiversidad y el cambio climático.
@@ -207,11 +213,14 @@ Siguiendo la devolución de la cátedra, las fichas ya no traen ejemplos entre p
 
 Las palabras difíciles de cada ficha (hipótesis, indicadores, sostenible, regulación…) están subrayadas con puntos: al tocarlas se ve una definición corta, y al imprimir aparecen al pie, en el recuadro «Palabras de la expedición».
 
+{% vermas "Ver otras decisiones del grupo para el aula" %}
 Otras decisiones del grupo para el trabajo en el aula:
 
 - **Misión 2 · Paso 3 (rompecabezas):** dentro de cada equipo, una pareja responde la Cara A y otra la Cara B; después cada pareja le explica a la otra lo que respondió y el dilema se resuelve entre todos.
 - **Misión 3 · Paso 4 (mapa del clima):** no hay banco de palabras. Los equipos parten de «Tala y quema de árboles» y ordenan las consecuencias que encontraron en su investigación.
 - **Cierre de cada misión:** antes de publicar en la Bitácora, cada equipo completa «Antes pensábamos… / Ahora pensamos…», para registrar cómo cambiaron sus ideas.
+{% endvermas %}
+
 
 </section>
 
@@ -229,6 +238,7 @@ Otras decisiones del grupo para el trabajo en el aula:
 
 <h3 id="matriz">Matriz de coherencia</h3>
 
+{% vermas "Ver la matriz completa" %}
 <div class="tabla-envoltorio">
 <table class="matriz">
 <thead>
@@ -244,9 +254,12 @@ Otras decisiones del grupo para el trabajo en el aula:
 </tbody>
 </table>
 </div>
+{% endvermas %}
+
 
 <h3 id="rubrica">Rúbrica de evaluación formativa</h3>
 
+{% vermas "Ver la rúbrica completa" %}
 <div class="tabla-envoltorio">
 <table class="rubrica">
 <thead>
@@ -280,6 +293,8 @@ Otras decisiones del grupo para el trabajo en el aula:
 </tbody>
 </table>
 </div>
+{% endvermas %}
+
 
 </section>
 </article>

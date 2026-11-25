@@ -1,0 +1,16 @@
+{#- Tarjetas visuales (logo o imagen) de recursos de la Biblioteca dentro de una misión.
+    Uso: {% set ids = ["ong-coica", "ong-wwf"] %}{% set tituloVisual = "…" %}{% include "partes/recursos-visuales.njk" %}
+    Solo muestra los recursos que ya tienen enlace; si no queda ninguno, no muestra nada. -#}
+{%- set visibles = [] -%}
+{%- for id in ids %}{% set r = biblioteca.recursos | buscar(id) %}{% if r.enlace %}{% set visibles = (visibles.push(r), visibles) %}{% endif %}{% endfor -%}
+{%- if visibles.length %}
+<div class="recursos-visuales no-imprimir">
+<p class="recursos__titulo">{{ tituloVisual or "Para responder, consulten estos sitios" }}</p>
+<ul class="tarjetas-recursos tarjetas-recursos--compactas">
+{%- set nivel = "h3" %}{% set compacto = true %}
+{%- for r in visibles %}
+{% include "partes/recurso.njk" %}
+{%- endfor %}
+</ul>
+</div>
+{%- endif %}

@@ -6,7 +6,7 @@ layout: base.njk
 {%- set siguiente = misiones[numero] if numero < misiones.length else null -%}
 <article class="mision mision--{{ numero }}">
   <header class="mision__encabezado">
-    <p class="mision__numero">Misión <strong>{{ numero }}</strong></p>
+    {% set n = numero %}<p class="mision__numero"><span class="mision__icono">{% include "partes/icono-mision.njk" %}</span>Misión <strong>{{ numero }}</strong></p>
     <h1>{{ actual.titulo }}</h1>
     <div class="mision__acciones no-imprimir">
       <button type="button" class="boton boton--imprimir" onclick="window.print()">Imprimir o guardar en PDF</button>

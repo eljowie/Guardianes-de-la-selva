@@ -23,9 +23,8 @@ proyecto: "Guardianes de la Selva"
 </div>
 {% endif %}
 
-{% recursos %}
-{% boton "Google Earth en la Biblioteca", "/biblioteca/#mapa-google-earth" %}
-{% endrecursos %}
+{% set ids = ["mapa-google-earth", "mapa-timelapse"] %}{% set tituloVisual = "Toquen el mapa para abrirlo" %}
+{% include "partes/recursos-visuales.njk" %}
 
 Grilla de Evidencias Visuales: Registren qué elementos del paisaje observan en cada imagen.
 

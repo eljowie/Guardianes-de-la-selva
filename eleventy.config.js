@@ -161,6 +161,14 @@ ${contenido}
     (contenido, clase) => `<div class="caja caja--${clase}">\n\n${contenido}\n\n</div>`
   );
 
+  // Texto plegable «ver más»: se muestra el título y el resto se abre al tocarlo.
+  // Al imprimir se abre solo (js/ver-mas.js).
+  eleventyConfig.addPairedShortcode(
+    "vermas",
+    (contenido, titulo = "Ver más") =>
+      `<details class="ver-mas"><summary>${escapar(titulo)}</summary>\n\n${contenido}\n\n</details>`
+  );
+
   // Mensaje de radio de Lía.
   eleventyConfig.addPairedShortcode(
     "mensajeLia",

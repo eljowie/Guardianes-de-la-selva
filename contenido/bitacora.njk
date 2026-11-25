@@ -14,7 +14,7 @@ permalink: /bitacora/
 <h2 class="sr">Columnas del muro</h2>
 <ul class="columnas">
 {%- for m in misiones %}
-<li class="columna mision--{{ m.numero }}"><a href="{{ m.url }}#paso-5"><small>Columna</small><strong>Misión {{ m.numero }}</strong><small>{{ m.titulo }}</small></a></li>
+<li class="columna mision--{{ m.numero }}"><a href="{{ m.url }}#paso-5">{% set n = m.numero %}<span class="sello">{% include "partes/icono-mision.njk" %}</span><small>Columna</small><strong>Misión {{ m.numero }}</strong><small>{{ m.titulo }}</small></a></li>
 {%- endfor %}
 </ul>
 

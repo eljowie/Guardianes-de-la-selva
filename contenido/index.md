@@ -29,6 +29,7 @@ clase: portada
 {%- for m in misiones %}
 <li class="tarjeta-mision tarjeta-mision--{{ m.numero }}">
 <a href="{{ m.url }}">
+{% set n = m.numero %}<span class="tarjeta-mision__icono">{% include "partes/icono-mision.njk" %}</span>
 <span class="tarjeta-mision__numero">Misión {{ m.numero }}</span>
 <span class="tarjeta-mision__titulo">{{ m.titulo }}</span>
 <span class="tarjeta-mision__enfoque">{{ m.enfoque }}</span>

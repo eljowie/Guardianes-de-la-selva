@@ -26,9 +26,12 @@ Esta propuesta fundamenta cada una de sus decisiones de diseño en los marcos te
 
 Guardianes de la Selva busca un aprendizaje basado en una narrativa transmedia y partitura móvil, como le dice Lion, donde el aprendizaje no es lineal ni pasivo, sino una experiencia abierta que los estudiantes interpretan, navegan y reconstruyen activamente como prosumidores. Al integrar varios lenguajes, imágenes satelitales, mapas interactivos, registros audiovisuales y producciones colaborativas, la propuesta se centra en una cultura visual contemporánea y resignifica la fragmentación digital para la construcción de sentido.
 
+{% vermas "Seguir leyendo la justificación" %}
 Esta arquitectura mediática se vincula con el marco de la Enseñanza para la Comprensión, de Blythe, a través de un Tópico Generativo central: la deforestación de la Amazonia y sus vínculos sistémicos con el cambio climático. La problemática conecta de forma interdisciplinar las ciencias naturales, la geografía y la ética ciudadana mediante preguntas y desempeños de comprensión concretos, donde el pensamiento de los alumnos se vuelve visible al formular hipótesis, analizar evidencias del territorio y realizar propuestas de preservación.
 
 La propuesta también retoma las ideas de Furman, en *Enseñar distinto*, para combatir el conocimiento inerte, situando a las infancias en una auténtica cultura de indagación guiada. Al asumir el rol de exploradores, los estudiantes colaboran, debaten y aprenden a desenvolverse, transformando la información en pensamiento crítico y compromiso activo con el cuidado ambiental.
+{% endvermas %}
+
 
 </section>
 
@@ -39,6 +42,7 @@ La propuesta también retoma las ideas de Furman, en *Enseñar distinto*, para c
 
 El proyecto se estructura alrededor de un Tópico Generativo central: La deforestación de la Amazonia y sus vínculos sistémicos con la transformación del territorio y el cambio climático. Siguiendo a Perkins, este tema posee:
 
+{% vermas "Ver por qué es un tópico generativo y qué desempeños pide" %}
 Centralidad: Une contenidos nodales de tres disciplinas curriculares.
 
 Riqueza y ramificación: Permite derivar hacia la economía de mercado, los derechos indígenas, la tecnología y la crisis climática global.
@@ -46,6 +50,8 @@ Riqueza y ramificación: Permite derivar hacia la economía de mercado, los dere
 Accesibilidad: Ofrece múltiples puertas de entrada (imágenes satelitales, mapas interactivos, podcasts, prensa escrita y videos).
 
 Para que la comprensión sea real, el proyecto plantea desempeños visibles de comprensión, donde los estudiantes deben usar el conocimiento en situaciones nuevas: comparar evidencias visuales, justificar hipótesis, analizar dilemas de actores sociales y redactar propuestas fundamentadas.
+{% endvermas %}
+
 
 <div class="en-el-sitio">
 <p class="en-el-sitio__rotulo">En el sitio</p>
@@ -69,7 +75,10 @@ Melina Furman advierte que el principal obstáculo en la educación ambiental es
 
 Carina Lion propone pensar las narrativas transmedia en la escuela como una "partitura móvil": un diseño abierto donde las trayectorias no son rígidas y los estudiantes leen, interpretan y producen sentido.
 
+{% vermas "Seguir leyendo: la tecnología no es neutral" %}
 Asimismo, el proyecto adopta una postura crítica sobre la tecnología, evitando tanto la tecnofobia (temor a las pantallas) como la tecnopatía (celebración acrítica de lo digital). Esto se concreta en la enseñanza del eje sociotécnico: se muestra a los alumnos que las mismas tecnologías que sirven para monitorear y denunciar la deforestación (satélites, mapas interactivos, datos abiertos) conviven con la infraestructura y la maquinaria pesada que hacen posible el desmonte.
+{% endvermas %}
+
 
 <div class="en-el-sitio">
 <p class="en-el-sitio__rotulo">En el sitio</p>

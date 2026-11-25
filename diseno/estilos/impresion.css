@@ -86,3 +86,7 @@ table, .caja, .huella, .flujo__eslabon, .red, .ficha-datos { break-inside: avoid
 .orientadora, .disciplina, .actor, .mapa-ideas, .mi-hoja { border-color: #000; }
 .pregunta-esencial__cierre, .mi-nodo--centro, .mi-nodo--alerta, .mi-nodo--futuro { background: none !important; color: #000 !important; border: 1pt solid #000; }
 .disparadoras { border: 1pt dashed #000; break-inside: avoid; }
+
+/* Secciones plegables: en papel no se ve el botón, solo el texto (js/ver-mas.js las abre). */
+.ver-mas { border: 0; padding: 0; }
+.ver-mas > summary { display: none; }

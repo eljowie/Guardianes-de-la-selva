@@ -1,6 +1,6 @@
 # Revisión de enlaces
 
-Fecha: 25/11/2026, 03:09:08
+Fecha: 25/11/2026, 03:15:57
 
 | Página | Texto del link | URL | Estado |
 |---|---|---|---|
@@ -164,7 +164,8 @@ Fecha: 25/11/2026, 03:09:08
 | /mision-1/ | Docentes | /docentes/ | OK |
 | /mision-1/ | Marco teórico | /fundamentos/ | OK |
 | /mision-1/ | Volver al mapa | /#mapa | OK |
-| /mision-1/ | Google Earth en la Biblioteca | /biblioteca/#mapa-google-earth | OK |
+| /mision-1/ |  | /imagenes/mapa-amazonia.svg | OK |
+| /mision-1/ |  | /imagenes/mapa-timelapse.svg | OK |
 | /mision-1/ | Noticia 1 · Infobae | /biblioteca/#noticia-1 | OK |
 | /mision-1/ | Noticia 2 · BBC News Mundo | /biblioteca/#noticia-2 | OK |
 | /mision-1/ | Noticia 3 · National Geographic | /biblioteca/#noticia-3 | OK |
@@ -175,6 +176,8 @@ Fecha: 25/11/2026, 03:09:08
 | /mision-1/ | Misión 2 → Las huellas humanas | /mision-2/ | OK |
 | /mision-1/ | Guía del Docente | /docentes/ | OK |
 | /mision-1/ | Credencial | /credencial/ | OK |
+| /mision-1/ | 🗺️ Mapa Google Earth Google (abre el sitio en otra pestaña) | https://earth.google.com/web/ | OK 200 |
+| /mision-1/ | 🗺️ Mapa Google Earth Timelapse Google Earth Engine (abre el sitio en  | https://earthengine.google.com/timelapse/ | OK 200 |
 | /mision-2/ | link | /iconos/favicon.svg | OK |
 | /mision-2/ | Saltar al contenido | #contenido | OK |
 | /mision-2/ | Guardianes de la Selva | / | OK |
@@ -226,7 +229,11 @@ Fecha: 25/11/2026, 03:09:08
 | /mision-4/ | Docentes | /docentes/ | OK |
 | /mision-4/ | Marco teórico | /fundamentos/ | OK |
 | /mision-4/ | Volver al mapa | /#mapa | OK |
-| /mision-4/ | ONG y pueblos originarios en la Biblioteca | /biblioteca/#ong | OK |
+| /mision-4/ |  | /imagenes/logos/coica.png | OK |
+| /mision-4/ |  | /imagenes/logos/raisg.png | OK |
+| /mision-4/ |  | /imagenes/logos/wwf.png | OK |
+| /mision-4/ |  | /imagenes/logos/greenpeace.png | OK |
+| /mision-4/ |  | /imagenes/logos/vidasilvestre.png | OK |
 | /mision-4/ | «Antes pensaba que…» | #antes-titulo | OK |
 | /mision-4/ | Ver la Bitácora en el sitio | /bitacora/ | OK |
 | /mision-4/ | Obtener la credencial de Guardianes | /credencial/ | OK |
@@ -234,3 +241,8 @@ Fecha: 25/11/2026, 03:09:08
 | /mision-4/ | Elegir otra misión Mapa de la expedición | /#mapa | OK |
 | /mision-4/ | Guía del Docente | /docentes/ | OK |
 | /mision-4/ | Credencial | /credencial/ | OK |
+| /mision-4/ | 🌐 Sitio web COICA Coordinadora de las Organizaciones Indígenas de la  | https://coicamazonia.org/ | OK 200 |
+| /mision-4/ | 🌐 Sitio web RAISG Red Amazónica de Información Socioambiental Georref | https://www.raisg.org/es/ | OK 200 |
+| /mision-4/ | 🌐 Sitio web WWF WWF Colombia (en español) (abre el sitio en otra pest | https://www.wwf.org.co/ | OK 200 |
+| /mision-4/ | 🌐 Sitio web Greenpeace Greenpeace Argentina (abre el sitio en otra pe | https://www.greenpeace.org/argentina/ | OK 200 |
+| /mision-4/ | 🌐 Sitio web Fundación Vida Silvestre Argentina Organización asociada  | https://www.vidasilvestre.org.ar/ | OK 200 |

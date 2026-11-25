@@ -18,9 +18,9 @@
 <details class="tarjeta-recurso__mas">
 <summary>Ver de qué se trata</summary>
 <p>{{ r.descripcion }}</p>
-<ul class="recurso__misiones" aria-label="Misiones donde se usa">
+{% if not compacto %}<ul class="recurso__misiones" aria-label="Misiones donde se usa">
 {%- for n in r.misiones %}<li class="mision--{{ n }}">Misión {{ n }}</li>{% endfor -%}
-</ul>
+</ul>{% endif %}
 </details>
 {%- endif %}
 </li>

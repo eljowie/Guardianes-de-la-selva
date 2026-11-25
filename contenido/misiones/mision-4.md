@@ -16,9 +16,8 @@ En la selva no estamos solos: existen científicos, organizaciones no gubernamen
 {% paso "🌐", "PASO 1: Rastreo de Organizaciones y Pueblos Originarios Reales", "paso-1" %}
 **Consigna:** Abran la sección Biblioteca del Explorador en nuestra página web y elijan una de las organizaciones reales que trabajan en la Cuenca Amazónica (ejemplo: COICA, RAISG, WWF o Greenpeace).
 
-{% recursos %}
-{% boton "ONG y pueblos originarios en la Biblioteca", "/biblioteca/#ong" %}
-{% endrecursos %}
+{% set ids = ["ong-coica", "ong-raisg", "ong-wwf", "ong-greenpeace", "ong-vidasilvestre"] %}{% set tituloVisual = "Elijan una organización y toquen su logo" %}
+{% include "partes/recursos-visuales.njk" %}
 
 Organización seleccionada: {% completar "largo" %}
 
