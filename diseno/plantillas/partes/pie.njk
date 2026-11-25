@@ -2,17 +2,12 @@
   <div class="pie__interior">
     <nav aria-label="Secundaria">
       <ul class="menu">
-        {%- for item in sitio.pie %}
-        <li>
-          {%- if item.lista %}
-          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.texto }}</a>
-          {%- else %}
-          <span class="proximamente">{{ item.texto }} <small>(próximamente)</small></span>
-          {%- endif %}
-        </li>
-        {%- endfor %}
+        {%- for item in sitio.pie %}{% if item.lista %}
+        <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.texto }}</a></li>
+        {%- endif %}{% endfor %}
       </ul>
     </nav>
     <p>{{ sitio.creditos }} · {{ "" | anio }}</p>
+    <p class="pie__logos">{{ sitio.creditosLogos }}</p>
   </div>
 </footer>

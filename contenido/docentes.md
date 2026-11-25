@@ -9,10 +9,10 @@ permalink: /docentes/
 <header class="pagina__encabezado">
 <p class="pagina__sello">Para docentes</p>
 <h1>Guía del Docente</h1>
-<p class="pagina__intro">Guardianes de la Selva: Una expedición por la Amazonía · 6.º año de la Educación Primaria</p>
+<p class="pagina__intro">Guardianes de la Selva: Una expedición por la Amazonia · 6.º año de la Educación Primaria</p>
 <div class="pagina__acciones no-imprimir">
 <button type="button" class="boton" onclick="window.print()">Imprimir guía</button>
-{% boton "Fundamentos", "/fundamentos/", "secundario" %}
+{% boton "Marco teórico", "/fundamentos/", "secundario" %}
 </div>
 </header>
 
@@ -20,7 +20,7 @@ permalink: /docentes/
 
 <h2 id="presentacion">Presentación de la Propuesta y Destinatarios</h2>
 
-"Guardianes de la Selva: Una expedición por la Amazonía" es un proyecto didáctico transmedia pensado para desarrollarse a lo largo de tres a cuatro semanas en el 6.º año de la Educación Primaria (estudiantes de entre 11 y 12 años). La propuesta articula de manera explícita saberes de Ciencias Naturales, Geografía y Formación Ética y Ciudadana.
+"Guardianes de la Selva: Una expedición por la Amazonia" es un proyecto didáctico transmedia pensado para desarrollarse a lo largo de tres a cuatro semanas en el 6.º año de la Educación Primaria (estudiantes de entre 11 y 12 años). La propuesta articula de manera explícita saberes de Ciencias Naturales, Geografía y Formación Ética y Ciudadana.
 
 El corazón de la propuesta consiste en transformar el aula en un equipo de investigación ambiental. Los alumnos asumen el rol ficcional de exploradores y guardaparques junior que acompañan a una guardaparque experimentada (Lía) en la cuenca amazónica. A través de este recorrido, los estudiantes investigan las causas, dinámicas y consecuencias de la deforestación y el cambio climático en el territorio.
 
@@ -28,7 +28,7 @@ El corazón de la propuesta consiste en transformar el aula en un equipo de inve
 
 El diseño de esta propuesta responde a tres vacíos recurrentes en la enseñanza escolar tradicional de las ciencias sociales y naturales:
 
-- La fragmentación de los contenidos curriculares: En la escuela primaria, el cambio climático suele abordarse como una definición abstracta en Ciencias Naturales, mientras que la agricultura o la minería se analizan en Geografía como temas de producción, y los derechos ambientales en Ciudadanía. Esta división impide que los estudiantes comprendan la Amazonía como un sistema complejo e interdependiente.
+- La fragmentación de los contenidos curriculares: En la escuela primaria, el cambio climático suele abordarse como una definición abstracta en Ciencias Naturales, mientras que la agricultura o la minería se analizan en Geografía como temas de producción, y los derechos ambientales en Ciudadanía. Esta división impide que los estudiantes comprendan la Amazonia como un sistema complejo e interdependiente.
 - La persistencia del "conocimiento inerte" (Furman): Muchos estudiantes recuerdan datos aislados (como la frase "la selva es el pulmón del mundo"), pero no logran utilizar esa información para analizar una imagen satelital, evaluar una noticia de prensa o proponer una alternativa de protección.
 - El consumo mediático pasivo: Aunque los niños interactúan a diario con pantallas y videos, esa familiaridad tecnológica no garantiza por sí sola una alfabetización digital crítica. El proyecto busca pasar del consumo receptivo a la indagación, la contrastación de fuentes y la producción mediática con sentido.
 
@@ -47,24 +47,20 @@ Para resolver estas dificultades no alcanza con incorporar recursos digitales su
 
 ### Objetivos de aprendizaje
 
-Atendiendo al señalamiento de la cátedra sobre la necesidad de evitar metas inalcanzables para una secuencia de tres semanas, se delimitaron objetivos específicos de aprendizaje:
-
-1. Reconocer y describir las transformaciones del paisaje amazónico mediante la observación guiada por cuadrantes en imágenes satelitales.
-1. Formular hipótesis iniciales sobre las causas del cambio en el terreno y contrastarlas utilizando guías de lectura sobre artículos de prensa ambiental.
-1. Diferenciar las causas climáticas naturales (como el fenómeno de El Niño) de las intervenciones humanas antrópicas directas.
-1. Analizar las principales actividades productivas responsables de la deforestación (ganadería, agricultura, minería, tala) identificando actores e intereses en conflicto (perspectiva polifónica "Cara A y Cara B").
-1. Explicar las relaciones de interdependencia en el ecosistema (pérdida de hábitat, alteración de redes alimentarias y ciclo del carbono).
-1. Investigar el trabajo de organizaciones reales (ONGs y pueblos originarios) y formular un Plan de Rescate ambiental fundamentado, transfiriendo lo aprendido a una problemática local cercana (el Gran Chaco argentino).
+1. Comprender las transformaciones que atraviesa la Amazonia.
+1. Reconocer las causas y consecuencias de la deforestación.
+1. Comprender la relación entre deforestación y cambio climático.
+1. Identificar los efectos de la pérdida de biodiversidad y la alteración de los ecosistemas.
+1. Reflexionar sobre el impacto de las actividades humanas en el territorio.
+1. Desarrollar propuestas de conservación y protección ambiental.
+1. Trabajar colaborativamente en la resolución de problemas.
 
 ### Pregunta esencial
 
-<p class="cita">¿Qué sucedió para que la Amazonía se vea así en la actualidad, qué intereses económicos y sociales están en juego, y qué estrategias fundamentadas podemos proponer para protegerla?</p>
-
-Es una pregunta paraguas: se mantiene entera y se trabaja en tres ejes, cada uno en las misiones indicadas.
-
-{% include "partes/ejes.njk" %}
+{% include "partes/pregunta-esencial.njk" %}
 
 </section>
+
 
 <section class="bloque texto" aria-labelledby="trama">
 
@@ -76,43 +72,76 @@ Es una pregunta paraguas: se mantiene entera y se trabaja en tres ejes, cada uno
 - Lía les comparte un archivo urgente: dos imágenes satelitales del mismo sector de la selva tomadas con diez años de diferencia. Lo que antes era un manto verde continuo aparece hoy atravesado por parcelas marrones, humo, caminos de tierra y ríos modificados.
 - A partir de este hallazgo, los estudiantes deben recorrer cuatro zonas del territorio para investigar qué ocurrió, quiénes intervinieron y qué se está perdiendo en el ecosistema.
 
-### Mapeo de contenidos disciplinares
+### Universo narrativo
 
-Tópico generativo: **Deforestación amazónica y cambio climático**.
+Un grupo de jóvenes exploradores llega a la Amazonia para investigar las transformaciones que está atravesando este ecosistema. A medida que recorren diferentes zonas del territorio, descubren distintas amenazas relacionadas con la deforestación, la pérdida de biodiversidad y el cambio climático.
 
-<div class="tabla-envoltorio">
+Para comprender qué está ocurriendo, deberán atravesar diferentes zonas y superar una serie de misiones vinculadas con las causas y consecuencias de estas transformaciones. Al finalizar la expedición, deberán elaborar una estrategia para proteger el territorio.
 
-| Disciplina | Contenidos |
-|---|---|
-| Ciencias Naturales | Ecosistemas, biodiversidad, nichos, redes alimentarias, ciclo del carbono, efecto invernadero y cambio climático. |
-| Geografía | Transformación del territorio, uso del suelo, imágenes satelitales, agronegocio, minería (garimpo) y tala. |
-| Ética y Ciudadanía | Responsabilidad ambiental, derechos de pueblos originarios, tensión desarrollo vs. conservación («Cara A / Cara B»). |
+### Tópico generativo
 
+**La deforestación de la Amazonia y su relación con las transformaciones del territorio y el cambio climático.**
+
+### Material base
+
+Tomamos la información científica y problemáticas del video y tamizamos esos datos transformándolos en un universo inmersivo de expedición, donde los contenidos se desglosan en misiones interactivas y los estudiantes asumen el rol de exploradores y guardianes del territorio amazónico.
+
+Video: «¡La Maravillosa Selva del Amazonas!», video educativo de YouTube, canal «Videos Educativos para Escuela Primaria».
+
+<div class="no-imprimir">{% boton "Ver el video en la Biblioteca", "/biblioteca/#video-base", "secundario" %}</div>
+
+### Disciplinas involucradas
+
+<div class="disciplinas">
+<div class="disciplina">
+<h4>Geografía</h4>
+<ul><li>Transformación del territorio.</li><li>Uso de la tierra.</li><li>Expansión agrícola.</li><li>Minería.</li><li>Cambios en los ríos.</li></ul>
+</div>
+<div class="disciplina">
+<h4>Ciencias naturales</h4>
+<ul><li>Ecosistemas.</li><li>Biodiversidad.</li><li>Hábitats.</li><li>Cambio climático.</li><li>Fenómeno de El Niño.</li></ul>
+</div>
+<div class="disciplina">
+<h4>Ciudadanía / ética ambiental</h4>
+<ul><li>Responsabilidad humana.</li><li>Consecuencias sociales y ambientales.</li><li>Formas de intervención y conservación.</li></ul>
+</div>
 </div>
 
+### Líneas temáticas
+
+<ol class="lineas">
+<li><strong>Transformación del territorio.</strong> Cambios en el paisaje. Uso y transformación de la tierra.</li>
+<li><strong>Deforestación.</strong> Causas. Actividades humanas. Expansión agrícola. Minería. Incendios.</li>
+<li><strong>Pérdida de biodiversidad.</strong> Desaparición de hábitats. Pérdida de especies. Alteración de los ecosistemas.</li>
+<li><strong>Consecuencias.</strong> Consecuencias ambientales. Consecuencias sociales. Relación entre deforestación y cambio climático. Interacción entre eventos climáticos naturales (El Niño y sequías / tormentas extremas).</li>
+<li><strong>Futuro y conservación.</strong> Posibles escenarios futuros. Estrategias de conservación. Protección del territorio.</li>
+</ol>
+
 </section>
+
 
 <section class="bloque texto" aria-labelledby="trama-mediatica">
 
 <h2 id="trama-mediatica">Trama mediática y arquitectura digital</h2>
 
-Para superar la dependencia de un único recurso (como el video tradicional de YouTube) y responder al pedido de la cátedra de construir una verdadera arquitectura transmedia, la propuesta se organiza alrededor de una plataforma central:
+<div class="actores">
+<div class="actor"><h3>Estudiantes</h3><p>Organizados en grupos de exploradores/guardianes, encargados de resolver las misiones y producir los contenidos.</p></div>
+<div class="actor"><h3>Docente</h3><p>Guía la expedición, presenta las misiones y acompaña el proceso de investigación.</p></div>
+<div class="actor"><h3>Fuentes externas</h3><p>Materiales audiovisuales, textos, mapas, imágenes satelitales y otros recursos que permitan ampliar la investigación.</p></div>
+</div>
 
-Arquitectura: **Hub web central** (el sitio) que reúne: Portada interactiva (Genially, tipo «Buscando a Wally») · Google Earth (línea de tiempo / teledetección) · Prensa ambiental (3 noticias curadas con guía de lectura) · Podcast «Voces de la Amazonía» (testimonios) · Webs de ONG y pueblos (WWF, Greenpeace, COICA, RAISG) · Padlet embebido (bitácora colaborativa).
+### Plataformas y soportes
 
-### Detalle de plataformas y roles mediáticos
+- **Video base (YouTube):** funciona como el disparador de la expedición (el informe audiovisual de alerta que reciben los exploradores al iniciar la aventura).
+- **Google Earth / imágenes satelitales:** expansión cartográfica interactiva para comprobar en tiempo real sobre el mapa las zonas desmontadas que el video solo mencionaba en dibujos o fotos.
+- **Mural digital colaborativo (Padlet/Miro):** la bitácora de campo donde los equipos comparten hallazgos y debaten hipótesis.
+- **Herramientas de diseño (Canva):** soporte de producción para crear su personaje guardián y la lámina informativa final, manteniendo los elementos gráficos y narrativos del video base del Amazonas para evitar generar piezas aisladas.
+- **Este sitio web:** reúne la narrativa de la expedición, las fichas de cada misión, la Biblioteca del Explorador (con todas las fuentes de consulta), la Bitácora y esta guía.
 
-<p class="marca-borrador no-imprimir"><strong>Pendiente del grupo</strong> <span>Este texto menciona Google Sites y Genially; el sitio se armó con Eleventy y la portada usa un mapa propio. El grupo decide si se ajusta la redacción.</span></p>
-
-- Google Sites (El Hub Web): Es el centro neurálgico del proyecto. Alberga la narrativa de la expedición, las fichas de trabajo de cada misión, la Biblioteca del Explorador (con todas las fuentes de consulta) y la Guía del Docente.
-- Genially: Se utiliza exclusivamente en la portada del sitio web como un mapa de exploración interactivo donde los estudiantes hacen clic en diferentes sectores de la selva para ingresar a las misiones.
-- Google Earth (Herramienta de Teledetección): Permite a los estudiantes operar el control deslizante de tiempo para contrastar espacial y temporalmente las transformaciones del territorio.
-- Prensa Ambiental Curada: Tres artículos breves adaptados para primaria sobre eventos climáticos y producción en la región, acompañados por una guía de lectura con preguntas orientadoras.
-- Podcast "Voces de la Amazonía": Piezas sonoras que recogen testimonios de residentes, científicos y miembros de comunidades indígenas, incorporando la dimensión afectiva y polifónica de la problemática.
-- Padlet Embebido (Bitácora Colaborativa): Funciona únicamente como el muro de entrega e intercambio de producciones entre equipos.
-- Resguardo Ético sobre Redes Sociales (+13 años): Atendiendo a la sugerencia de interactuar con ONGs en Instagram, pero respetando las normativas de protección de menores en educación primaria, las interacciones con redes se realizan de forma simulada dentro del Padlet o mediante la cuenta institucional administrada por el docente.
+**Resguardo ético sobre redes sociales (+13 años):** atendiendo a la sugerencia de interactuar con ONGs en Instagram, pero respetando las normativas de protección de menores en educación primaria, las interacciones con redes se realizan de forma simulada dentro del Padlet o mediante la cuenta institucional administrada por el docente.
 
 </section>
+
 
 <section class="bloque texto" aria-labelledby="sintesis">
 
@@ -122,6 +151,36 @@ Arquitectura: **Hub web central** (el sitio) que reúne: Portada interactiva (Ge
 ### Misión {{ m.numero }}: "{{ m.titulo }}"
 Enfoque: {{ m.enfoque }}
 {% endfor %}
+
+</section>
+
+<section class="bloque texto" aria-labelledby="desempenos">
+
+<h2 id="desempenos">Desempeños de comprensión</h2>
+
+Denominamos cada actividad como «misión» de los exploradores: representan la secuencia de aprendizaje que realizarán los estudiantes en grupos. Cada misión parte de una pregunta problema y de un recurso visual o satelital, y culmina con una producción concreta que hace visible el compromiso y el aprendizaje.
+
+<ul class="desempenos">
+<li>Comparar y analizar información.</li>
+<li>Formular hipótesis.</li>
+<li>Identificar causas y consecuencias.</li>
+<li>Relacionar conceptos.</li>
+<li>Investigar y seleccionar información.</li>
+<li>Justificar decisiones.</li>
+<li>Aplicar lo aprendido a una situación nueva.</li>
+<li>Crear nuevas propuestas.</li>
+</ul>
+
+Por ejemplo:
+
+- Mirar fotos del pasado y del presente de la selva y encontrar las 3 diferencias principales.
+- Descubrir qué máquinas, actividades o personas dejaron marcas en el bosque.
+- Armar una Ficha de Expedición con dibujos y mensajes cortos para contarle a la escuela por qué los árboles son el hogar de tantas especies.
+- Idear juntos 3 ideas que cualquier persona puede hacer para no dañar el planeta.
+
+<h3 id="mapa-de-ideas">Mapa de ideas</h3>
+
+{% include "partes/mapa-ideas.njk" %}
 
 </section>
 
@@ -170,8 +229,6 @@ Otras decisiones del grupo para el trabajo en el aula:
 
 <h3 id="matriz">Matriz de coherencia</h3>
 
-<p class="marca-borrador"><strong>Borrador</strong> <span>Propuesta para que el grupo la revise. No es texto definitivo.</span></p>
-
 <div class="tabla-envoltorio">
 <table class="matriz">
 <thead>
@@ -189,8 +246,6 @@ Otras decisiones del grupo para el trabajo en el aula:
 </div>
 
 <h3 id="rubrica">Rúbrica de evaluación formativa</h3>
-
-<p class="marca-borrador"><strong>Borrador</strong> <span>Propuesta para que el grupo la revise. Usa los cuatro criterios del resumen y los tres niveles acordados.</span></p>
 
 <div class="tabla-envoltorio">
 <table class="rubrica">

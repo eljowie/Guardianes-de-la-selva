@@ -12,9 +12,10 @@ clase: pagina-biblioteca
 <p class="pagina__intro">Acá están todas las fuentes para investigar en las misiones. Pueden ver todo o elegir una misión para encontrar solo lo que necesitan.</p>
 <nav class="estantes-indice" aria-label="Secciones de la Biblioteca">
 <ul>
-{%- for s in biblioteca.secciones %}
+{%- set disponibles = biblioteca.recursos | conEnlace %}
+{%- for s in biblioteca.secciones %}{% if disponibles | donde("seccion", s.id) | length %}
 <li><a href="#{{ s.id }}"><span aria-hidden="true">{{ s.icono }}</span> {{ s.titulo }}</a></li>
-{%- endfor %}
+{%- endif %}{% endfor %}
 </ul>
 </nav>
 </header>
@@ -33,7 +34,7 @@ clase: pagina-biblioteca
 <p class="filtros__rotulo" id="filtro-tipo-rotulo">Tipo de recurso</p>
 <div class="filtros__opciones">
 <button type="button" class="chip" data-tipo="todos" aria-pressed="true">Todos</button>
-{%- for t in biblioteca.tipos | tiposUsados(biblioteca.recursos) %}
+{%- for t in biblioteca.tipos | tiposUsados(disponibles) %}
 <button type="button" class="chip" data-tipo="{{ t.id }}" aria-pressed="false"><span aria-hidden="true">{{ t.icono }}</span> {{ t.nombre }}</button>
 {%- endfor %}
 </div>
@@ -42,29 +43,31 @@ clase: pagina-biblioteca
 </div>
 
 {%- for s in biblioteca.secciones %}
-{%- set lista = biblioteca.recursos | donde("seccion", s.id) %}
+{%- set lista = disponibles | donde("seccion", s.id) %}
+{%- if lista | length %}
 <section class="estante" id="{{ s.id }}" aria-labelledby="{{ s.id }}-titulo" data-estante>
 <h2 id="{{ s.id }}-titulo"><span aria-hidden="true">{{ s.icono }}</span> {{ s.titulo }}</h2>
 <p class="estante__descripcion">{{ s.descripcion }}</p>
 {%- if s.id == "huellas" %}
-{%- for h in biblioteca.huellas %}
+{%- for h in biblioteca.huellas %}{% if lista | donde("huella", h.id) | length %}
 <div class="estante__grupo" id="huella-{{ h.id }}" data-grupo>
 <h3>{{ h.titulo }}</h3>
-<ul class="recursos-lista">
+<ul class="recursos-lista tarjetas-recursos">
 {%- for r in lista | donde("huella", h.id) %}{% set nivel = "h4" %}
 {% include "partes/recurso.njk" %}
 {%- endfor %}
 </ul>
 </div>
-{%- endfor %}
+{%- endif %}{% endfor %}
 {%- else %}
-<ul class="recursos-lista">
+<ul class="recursos-lista tarjetas-recursos">
 {%- for r in lista %}{% set nivel = "h3" %}
 {% include "partes/recurso.njk" %}
 {%- endfor %}
 </ul>
 {%- endif %}
 </section>
+{%- endif %}
 {%- endfor %}
 </article>
 <script src="/js/biblioteca.js" defer></script>

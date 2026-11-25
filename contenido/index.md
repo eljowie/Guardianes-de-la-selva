@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-descripcion: "Una expedición por la Amazonía para 6.º grado: cuatro misiones para investigar qué le pasó a la selva."
+descripcion: "Una expedición por la Amazonia para 6.º grado: cuatro misiones para investigar qué le pasó a la selva."
 clase: portada
 ---
 
@@ -13,16 +13,10 @@ clase: portada
 {% mensajeLia "Bienvenida" %}
 «Soy Lía, guardaparque de la reserva. Nos llegó un archivo urgente: dos imágenes satelitales del mismo lugar, tomadas con diez años de diferencia. Necesito exploradores. ¿Se animan?»
 
-<p class="borrador">Texto provisorio: lo confirma el grupo.</p>
 {% endmensajeLia %}
 </div>
 
-<div class="pregunta-esencial">
-<p class="pregunta-esencial__rotulo">Pregunta esencial</p>
-<p class="pregunta-esencial__texto">¿Qué sucedió para que la Amazonía se vea así en la actualidad, qué intereses económicos y sociales están en juego, y qué estrategias fundamentadas podemos proponer para protegerla?</p>
-<p class="pregunta-esencial__guia">Se responde en tres partes, a lo largo de las misiones:</p>
-{% include "partes/ejes.njk" %}
-</div>
+{% include "partes/pregunta-esencial.njk" %}
 </section>
 
 <section class="mapa" id="mapa" aria-labelledby="titulo-mapa">
@@ -52,8 +46,6 @@ clase: portada
 <div class="video">
 <iframe src="https://www.youtube-nocookie.com/embed/{{ idVideo }}" title="Video base: ¡La Maravillosa Selva del Amazonas!" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-{% else %}
-<div class="video video--pendiente" role="note"><p>Video pendiente: el grupo todavía no cargó el enlace de YouTube.</p></div>
 {% endif %}
 </section>
 

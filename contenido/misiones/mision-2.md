@@ -11,6 +11,21 @@ proyecto: "Guardianes de la Selva"
 Para entender la crisis amazónica, no alcanza con saber qué cambia; necesitamos averiguar quiénes están detrás de estos cambios, por qué realizan estas actividades y qué debates existen entre las necesidades humanas y la conservación de la naturaleza. ¡A investigar!"
 {% endmensajeLia %}
 
+{% include "partes/antes-pensaba.njk" %}
+
+<section class="disparadoras" aria-labelledby="disparadoras-titulo">
+<h2 id="disparadoras-titulo"><span aria-hidden="true">❓</span> Preguntas disparadoras</h2>
+
+¿Qué actividades humanas reconocen a partir de cada huella?
+
+Respuesta: {% completar "renglones", 3 %}
+
+¿Quiénes participan de esta actividad? ¿Qué obtiene cada uno y qué otros grupos se ven afectados?
+
+Respuesta: {% completar "renglones", 3 %}
+
+</section>
+
 {% paso "📌", "PASO 1: Asignación e Investigación de la \"Huella\"", "paso-1" %}
 **Consigna:** Cada equipo investigará una actividad humana específica. Marquen con una X la huella asignada a su grupo y consulten el material disponible en la Biblioteca del Explorador de nuestra página web:
 
@@ -25,12 +40,17 @@ Para entender la crisis amazónica, no alcanza con saber qué cambia; necesitamo
 {% paso "📊", "PASO 2: Matriz Causa - Actor - Consecuencia", "paso-2" %}
 **Consigna:** A partir de los textos e infografías de la Biblioteca del Explorador, completen la siguiente matriz analizando los elementos clave de la actividad asignada:
 
+{% recursos %}
+{% boton "Noticia BBC: las principales amenazas para la selva", "/biblioteca/#noticia-2" %}
+{% boton "Material de cada huella", "/biblioteca/#huellas" %}
+{% endrecursos %}
+
 <div class="tabla-envoltorio">
 
 | Pregunta Guía | Registro de Investigación del Equipo |
 |---|---|
 | 1. Actividad: ¿En qué consiste exactamente esta huella o intervención? |   |
-| 2. Actores: ¿Quiénes son los {% g "actores" %} que realizan esta actividad? |   |
+| 2. {% g "actores", "Actores" %}: ¿Quiénes participan de esta actividad? ¿Qué obtiene cada uno y qué otros grupos se ven afectados? |   |
 | 3. Productos y Destino: ¿Qué recursos se obtienen y a qué mercados o industrias abastecen? |   |
 | 4. Impacto ambiental: ¿Qué consecuencias ambientales genera esta actividad? ¿Cuáles pueden observarse a corto plazo y cuáles podrían aparecer después de varios años? |   |
 

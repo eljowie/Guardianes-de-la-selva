@@ -18,9 +18,10 @@ permalink: /bitacora/
 {%- endfor %}
 </ul>
 
+{%- set srcPadlet = enlaces.padletInsertar | padletEmbed %}
+{% if srcPadlet or enlaces.padlet %}
 <section class="bloque" aria-labelledby="titulo-muro">
 <h2 id="titulo-muro">El muro del curso</h2>
-{%- set srcPadlet = enlaces.padletInsertar | padletEmbed %}
 {% if srcPadlet %}
 <div class="padlet">
 <iframe src="{{ srcPadlet }}" title="Bitácora del curso en Padlet: una columna por misión" loading="lazy" allow="camera;clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -29,10 +30,8 @@ permalink: /bitacora/
 {% if enlaces.padlet %}
 <p>{% boton "Abrir el muro en otra pestaña", enlaces.padlet, "acento" %}</p>
 {% endif %}
-{% if not srcPadlet and not enlaces.padlet %}
-<div class="video video--pendiente padlet--pendiente" role="note"><p>Muro pendiente: el docente todavía no cargó el enlace del Padlet.</p></div>
-{% endif %}
 </section>
+{% endif %}
 
 <section class="bloque" aria-labelledby="titulo-como">
 <h2 id="titulo-como">Cómo usar la Bitácora</h2>

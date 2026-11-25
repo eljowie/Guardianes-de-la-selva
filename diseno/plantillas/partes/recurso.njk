@@ -1,14 +1,26 @@
-{#- Tarjeta de un recurso de la Biblioteca. Usa las variables r (recurso) y nivel (h3 o h4). -#}
+{#- Tarjeta de un recurso de la Biblioteca: imagen o logo primero, texto de apoyo después.
+    Usa las variables r (recurso) y nivel (h3 o h4). -#}
 {%- set tipo = biblioteca.tipos | buscar(r.tipo) -%}
-<li class="recurso" data-tipo="{{ r.tipo }}" data-misiones="{{ r.misiones | join(' ') }}">
-<p class="recurso__tipo"><span aria-hidden="true">{{ tipo.icono }}</span> {{ tipo.nombre }}</p>
-<{{ nivel }} class="recurso__titulo">{{ r.titulo }}</{{ nivel }}>
-<p class="recurso__fuente">{{ r.fuente }}</p>
+{%- set externo = r.enlace.startsWith("http") -%}
+<li class="recurso tarjeta-recurso" {% if r.id %}id="{{ r.id }}" {% endif %}data-tipo="{{ r.tipo }}" data-misiones="{{ r.misiones | join(' ') }}">
+<a class="tarjeta-recurso__enlace" href="{{ r.enlace }}"{% if externo %} target="_blank" rel="noopener noreferrer"{% endif %}>
+<span class="tarjeta-recurso__visual{% if r.logo %} tarjeta-recurso__visual--logo{% endif %}">
+{%- if r.logo %}<img src="{{ r.logo }}" alt="" loading="lazy">
+{%- elif r.imagen %}<img src="{{ r.imagen }}" alt="" loading="lazy">
+{%- else %}<span class="tarjeta-recurso__icono" aria-hidden="true">{{ tipo.icono }}</span>{% endif -%}
+</span>
+<span class="tarjeta-recurso__tipo"><span aria-hidden="true">{{ tipo.icono }}</span> {{ tipo.nombre }}</span>
+<{{ nivel }} class="tarjeta-recurso__titulo">{{ r.titulo }}</{{ nivel }}>
+<span class="tarjeta-recurso__fuente">{{ r.fuente }}</span>
+<span class="sr">{% if externo %} (abre el sitio en otra pestaña){% endif %}</span>
+</a>
 {%- if r.descripcion %}
-<p class="recurso__descripcion">{{ r.descripcion }}</p>
-{%- endif %}
+<details class="tarjeta-recurso__mas">
+<summary>Ver de qué se trata</summary>
+<p>{{ r.descripcion }}</p>
 <ul class="recurso__misiones" aria-label="Misiones donde se usa">
 {%- for n in r.misiones %}<li class="mision--{{ n }}">Misión {{ n }}</li>{% endfor -%}
 </ul>
-<div class="recurso__accion">{% boton "Abrir «" + r.titulo + "»", r.enlace, "chico" %}</div>
+</details>
+{%- endif %}
 </li>

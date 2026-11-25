@@ -729,3 +729,84 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
 .eje__misiones { font-size: 0.9rem; color: var(--texto-suave); }
 .eje__misiones a { font-weight: 700; }
 @media (max-width: 30rem) { .eje { grid-template-columns: 1fr; } .eje__nombre { grid-row: auto; } }
+
+/* ── Versión final (CAMBIOS_2, 25/11) ─────────────────────────── */
+
+/* Pregunta esencial del Canva: una central, cuatro orientadoras y el cierre. */
+.pregunta-esencial__guia { margin: 1rem 0 0.5rem; color: var(--tierra); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.orientadoras { display: grid; gap: 0.5rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); margin: 0; padding: 0; list-style: none; }
+.orientadora { display: flex; gap: 0.6rem; align-items: center; padding: 0.55rem 0.7rem; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); font-size: 0.98rem; line-height: 1.35; }
+.orientadora svg { flex: 0 0 2.4rem; width: 2.4rem; height: 2.4rem; }
+.pregunta-esencial__cierre { margin: 0.9rem 0 0; padding: 0.55rem 0.8rem; border-radius: var(--radio); background: var(--selva); color: #fff; font-weight: 700; font-size: 1.1rem; text-align: center; letter-spacing: 0.02em; }
+
+/* Antes pensaba / Ahora pienso */
+.antes-ahora--inicio { margin-top: 1.25rem; background: #fbf7ea; }
+.antes-ahora__recordatorio { color: var(--texto-suave); }
+.antes-ahora__eco { display: block; margin-top: 0.4rem; padding: 0.5rem 0.7rem; border-left: 4px solid var(--color-mision, var(--selva-clara)); background: #f4f7ec; color: var(--texto); font-style: italic; }
+.nota-pantalla { margin: 0.25rem 0 1rem; }
+.nota-pantalla label { display: block; font-weight: 700; margin-bottom: 0.3rem; }
+.nota-pantalla textarea { width: 100%; padding: 0.6rem; border: 2px solid var(--borde); border-radius: 0.5rem; font: inherit; background: #fff; }
+.nota-pantalla textarea:focus-visible { border-color: var(--color-mision, var(--selva)); }
+.nota-pantalla__ayuda { margin: 0.25rem 0 0; font-size: 0.85rem; color: var(--texto-suave); }
+
+/* Preguntas disparadoras (Misión 2) */
+.disparadoras { margin: 1.5rem 0; padding: 1rem 1.1rem 0.25rem; border: 2px dashed var(--color-mision, var(--selva-clara)); border-radius: var(--radio); }
+.disparadoras h2 { font-size: 1.2rem; margin-top: 0; }
+
+/* Biblioteca: tarjetas con logo o imagen arriba, texto de apoyo abajo. */
+.tarjetas-recursos { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr)); margin: 0; padding: 0; list-style: none; }
+.tarjeta-recurso { display: flex; flex-direction: column; padding: 0; overflow: hidden; background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); }
+.tarjeta-recurso__enlace { display: flex; flex-direction: column; gap: 0.2rem; padding: 0 0 0.8rem; color: inherit; text-decoration: none; flex: 1; }
+.tarjeta-recurso__enlace:hover .tarjeta-recurso__titulo { text-decoration: underline; }
+.tarjeta-recurso__enlace:focus-visible { outline: 3px solid var(--acento); outline-offset: -3px; }
+.tarjeta-recurso__visual { display: grid; place-items: center; aspect-ratio: 16 / 9; margin-bottom: 0.5rem; background: var(--musgo); }
+.tarjeta-recurso__visual--logo { background: #fff; border-bottom: 1px solid var(--borde); padding: 1rem; }
+.tarjeta-recurso__visual img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.tarjeta-recurso__visual--logo img { max-height: 5.5rem; width: auto; }
+.tarjeta-recurso__visual:not(.tarjeta-recurso__visual--logo) img { width: 100%; height: 100%; object-fit: cover; }
+.tarjeta-recurso__icono { font-size: 3rem; }
+.tarjeta-recurso__tipo, .tarjeta-recurso__titulo, .tarjeta-recurso__fuente { padding: 0 0.9rem; }
+.tarjeta-recurso__tipo { font-size: 0.8rem; font-weight: 700; color: var(--tierra); text-transform: uppercase; letter-spacing: 0.05em; }
+.tarjeta-recurso__titulo { margin: 0; font-size: 1.05rem; line-height: 1.3; color: var(--selva); }
+.tarjeta-recurso__fuente { font-size: 0.88rem; color: var(--texto-suave); }
+.tarjeta-recurso__mas { margin: 0 0.9rem 0.8rem; font-size: 0.93rem; }
+.tarjeta-recurso__mas summary { cursor: pointer; font-weight: 700; color: var(--selva-clara); min-height: 1.5rem; }
+.tarjeta-recurso__mas p { margin: 0.4rem 0; }
+.tarjeta-recurso:target { outline: 3px solid var(--acento); outline-offset: 3px; }
+
+/* Guía docente: disciplinas, líneas, actores, desempeños */
+.disciplinas, .actores { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin: 0 0 1.25rem; }
+.disciplina, .actor { padding: 0.8rem 1rem; background: #fff; border: 1px solid var(--borde); border-top: 4px solid var(--selva-clara); border-radius: var(--radio); }
+.disciplina h4, .actor h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+.disciplina ul { margin: 0; padding-left: 1.1rem; }
+.actor p { margin: 0; }
+.lineas { padding-left: 1.4rem; }
+.lineas li { margin-bottom: 0.45rem; }
+.desempenos { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.desempenos li { padding: 0.3rem 0.8rem; border-radius: 999px; background: var(--musgo); font-weight: 700; font-size: 0.95rem; color: var(--selva); }
+
+/* Mapa de ideas */
+.mapa-ideas { margin: 0 0 1.5rem; padding: 1rem; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); text-align: center; }
+.mi-nodo { display: inline-block; margin: 0; padding: 0.45rem 0.9rem; border-radius: 999px; font-weight: 700; }
+.mi-nodo--centro { background: var(--selva); color: #fff; font-size: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.mi-nodo--rama { background: var(--musgo); color: var(--selva); }
+.mi-nodo--alerta { background: var(--acento); color: #fff; font-size: 1.1rem; }
+.mi-nodo--futuro { background: var(--selva-clara); color: #fff; }
+.mi-fila { display: grid; gap: 0.5rem; margin: 0.6rem 0; padding: 0; list-style: none; }
+.mi-fila--2 { grid-template-columns: repeat(2, 1fr); }
+.mi-fila--3 { grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+.mi-fila--4 { grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); }
+.mi-fila li { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+.mi-sub { margin: 0; font-weight: 700; color: var(--tierra); }
+.mi-hoja { margin: 0; padding: 0.3rem 0.6rem; border: 1px solid var(--borde); border-radius: 0.5rem; background: var(--superficie); font-size: 0.93rem; }
+.mi-flecha { margin: 0.2rem 0; color: var(--texto-suave); font-size: 0.9rem; }
+.mi-flecha::before { content: "▼" / ""; display: block; color: var(--tierra-clara); }
+
+/* Marco teórico: el texto del Canva primero */
+.justificacion { padding: 1rem 1.2rem 0.4rem; margin-bottom: 1.5rem; background: var(--superficie); border-left: 5px solid var(--selva-clara); border-radius: var(--radio); }
+.justificacion h2 { margin-top: 0; }
+.marco-subtitulo { margin-top: 2rem; }
+
+.pie__logos { font-size: 0.85rem; opacity: 0.85; }
+.menu__icono { display: inline-flex; width: 1.35rem; height: 1.35rem; margin-right: 0.35rem; }
+.menu__icono img { width: 100%; height: 100%; }

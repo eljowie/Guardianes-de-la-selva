@@ -11,6 +11,8 @@ proyecto: "Guardianes de la Selva"
 En la selva no estamos solos: existen científicos, organizaciones no gubernamentales (ONGs) y comunidades originarias que trabajan todos los días para proteger el territorio. Su última misión es investigar su trabajo, reflexionar sobre el uso de la tecnología y redactar un Plan de Rescate Ambiental para compartir con otros estudiantes."
 {% endmensajeLia %}
 
+{% include "partes/antes-pensaba.njk" %}
+
 {% paso "🌐", "PASO 1: Rastreo de Organizaciones y Pueblos Originarios Reales", "paso-1" %}
 **Consigna:** Abran la sección Biblioteca del Explorador en nuestra página web y elijan una de las organizaciones reales que trabajan en la Cuenca Amazónica (ejemplo: COICA, RAISG, WWF o Greenpeace).
 
@@ -42,7 +44,7 @@ Pregunta 3: {% completar "largo" %}
 {% endpaso %}
 
 {% paso "🤖", "PASO 2: Debate sobre el Eje Sociotécnico (La tecnología que daña vs. la que cuida)", "paso-2" %}
-**Consigna:** En la expedición hemos visto que la tecnología cumple un doble rol en la Amazonía. Analicen la siguiente contradicción y respondan en equipo:
+**Consigna:** En la expedición hemos visto que la tecnología cumple un doble rol en la Amazonia. Analicen la siguiente contradicción y respondan en equipo:
 
 <div class="caras">
 
@@ -70,7 +72,7 @@ Respuesta: {% completar "renglones", 3 %}
 {% endpaso %}
 
 {% paso "✉️", "PASO 3: Carta - Plan de Rescate Ambiental (Producción Integradora)", "paso-3" %}
-**Consigna:** Redacten una carta colaborativa dirigida a estudiantes de 6.° grado de otra escuela o curso para explicarles la situación de la Amazonía y proponerles sumarse como Guardianes.
+**Consigna:** Redacten una carta colaborativa dirigida a estudiantes de 6.° grado de otra escuela o curso para explicarles la situación de la Amazonia y proponerles sumarse como Guardianes.
 
 {% caja "orientacion" %}
 <p class="caja__rotulo">Antes de escribir la carta</p>
@@ -106,7 +108,7 @@ Firma del equipo de Guardianes: {% completar "largo" %}
 
 Territorio argentino seleccionado: {% completar "largo" %}
 
-¿Qué similitudes y diferencias encuentran entre las transformaciones ambientales de la Amazonía y las del territorio argentino que investigaron? ¿Qué causas y consecuencias comparten y cuáles son diferentes?
+¿Qué similitudes y diferencias encuentran entre las transformaciones ambientales de la Amazonia y las del territorio argentino que investigaron? ¿Qué causas y consecuencias comparten y cuáles son diferentes?
 
 Respuesta: {% completar "renglones", 4 %}
 

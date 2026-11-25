@@ -9,7 +9,7 @@ layout: base.njk
     <p class="mision__numero">Misión <strong>{{ numero }}</strong></p>
     <h1>{{ actual.titulo }}</h1>
     <div class="mision__acciones no-imprimir">
-      <button type="button" class="boton boton--imprimir" onclick="window.print()">Imprimir ficha</button>
+      <button type="button" class="boton boton--imprimir" onclick="window.print()">Imprimir o guardar en PDF</button>
       <a class="boton boton--secundario" href="/#mapa">Volver al mapa</a>
     </div>
   </header>
@@ -35,3 +35,4 @@ layout: base.njk
     {% else %}<span></span>{% endif %}
   </nav>
 </article>
+<script src="/js/antes-ahora.js" defer></script>

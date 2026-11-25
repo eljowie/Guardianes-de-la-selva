@@ -7,130 +7,490 @@
     "misiones: los números de las misiones donde se usa, por ejemplo [1, 3].",
     "huella: solo en la sección «huellas»: a, b, c o d.",
     "enlace: la dirección completa (https://...). Si todavía no la tienen, dejen las comillas vacías: el sitio muestra «enlace pendiente».",
-    "Antes de publicar, un adulto revisa cada enlace externo y cambia «revisado» a true."
+    "Antes de publicar, un adulto revisa cada enlace externo y cambia «revisado» a true.",
+    "imagen: foto o dibujo para la tarjeta (en public/imagenes). logo: logo del sitio (en public/imagenes/logos). audio: archivo de audio, si lo hay. credito: de quién es la imagen o el logo."
   ],
-
   "secciones": [
-    { "id": "prensa", "titulo": "Prensa ambiental", "icono": "📰", "descripcion": "Las 3 noticias elegidas para la Misión 1, con su guía de lectura." },
-    { "id": "fichas", "titulo": "Fichas informativas", "icono": "📄", "descripcion": "Fichas cortas para consultar, como la del fenómeno de El Niño." },
-    { "id": "huellas", "titulo": "Material de las huellas humanas", "icono": "👣", "descripcion": "Textos e infografías para investigar cada huella de la Misión 2." },
-    { "id": "especies", "titulo": "Especies de la Amazonía", "icono": "🐾", "descripcion": "Fichas de especies nativas para la Ficha de Búsqueda y Rescate." },
-    { "id": "mapas", "titulo": "Mapas y Google Earth", "icono": "🗺️", "descripcion": "Herramientas para ver cómo cambió el territorio con el tiempo." },
-    { "id": "podcast", "titulo": "Podcast y audios", "icono": "🎧", "descripcion": "Voces de la Amazonía: testimonios de pobladores, científicos y comunidades." },
-    { "id": "ong", "titulo": "ONG y pueblos originarios", "icono": "🌐", "descripcion": "Organizaciones reales que trabajan para proteger la selva." },
-    { "id": "bibliotecas", "titulo": "Bibliotecas virtuales y enciclopedias", "icono": "📚", "descripcion": "Lugares confiables para seguir investigando." }
+    {
+      "id": "prensa",
+      "titulo": "Prensa ambiental",
+      "icono": "📰",
+      "descripcion": "Las 3 noticias elegidas para la Misión 1, con su guía de lectura."
+    },
+    {
+      "id": "videos",
+      "titulo": "Videos",
+      "icono": "🎬",
+      "descripcion": "El video base de la expedición y material audiovisual extra."
+    },
+    {
+      "id": "fichas",
+      "titulo": "Fichas informativas",
+      "icono": "📄",
+      "descripcion": "Fichas cortas para consultar, como la del fenómeno de El Niño."
+    },
+    {
+      "id": "huellas",
+      "titulo": "Material de las huellas humanas",
+      "icono": "👣",
+      "descripcion": "Textos e infografías para investigar cada huella de la Misión 2."
+    },
+    {
+      "id": "especies",
+      "titulo": "Especies de la Amazonia",
+      "icono": "🐾",
+      "descripcion": "Fichas de especies nativas para la Ficha de Búsqueda y Rescate."
+    },
+    {
+      "id": "mapas",
+      "titulo": "Mapas y Google Earth",
+      "icono": "🗺️",
+      "descripcion": "Herramientas para ver cómo cambió el territorio con el tiempo."
+    },
+    {
+      "id": "podcast",
+      "titulo": "Podcast y audios",
+      "icono": "🎧",
+      "descripcion": "Voces de la Amazonia: testimonios de pobladores, científicos y comunidades."
+    },
+    {
+      "id": "ong",
+      "titulo": "ONG y pueblos originarios",
+      "icono": "🌐",
+      "descripcion": "Organizaciones reales que trabajan para proteger la selva."
+    },
+    {
+      "id": "bibliotecas",
+      "titulo": "Bibliotecas virtuales y enciclopedias",
+      "icono": "📚",
+      "descripcion": "Lugares confiables para seguir investigando."
+    }
   ],
-
   "huellas": [
-    { "id": "a", "titulo": "Huella A: Expansión Agropecuaria (Ganadería y cultivo de soja)" },
-    { "id": "b", "titulo": "Huella B: Minería a gran escala y Minería Ilegal (Garimpo)" },
-    { "id": "c", "titulo": "Huella C: Tala de Madera y Extracción Forestal" },
-    { "id": "d", "titulo": "Huella D: Incendios Intencionales para cambio de uso del suelo" }
+    {
+      "id": "a",
+      "titulo": "Huella A: Expansión Agropecuaria (Ganadería y cultivo de soja)"
+    },
+    {
+      "id": "b",
+      "titulo": "Huella B: Minería a gran escala y Minería Ilegal (Garimpo)"
+    },
+    {
+      "id": "c",
+      "titulo": "Huella C: Tala de Madera y Extracción Forestal"
+    },
+    {
+      "id": "d",
+      "titulo": "Huella D: Incendios Intencionales para cambio de uso del suelo"
+    }
   ],
-
   "tipos": [
-    { "id": "noticia", "nombre": "Noticia", "icono": "📰" },
-    { "id": "ficha", "nombre": "Ficha informativa", "icono": "📄" },
-    { "id": "infografia", "nombre": "Infografía", "icono": "📊" },
-    { "id": "especie", "nombre": "Ficha de especie", "icono": "🐾" },
-    { "id": "mapa", "nombre": "Mapa", "icono": "🗺️" },
-    { "id": "audio", "nombre": "Audio", "icono": "🎧" },
-    { "id": "web", "nombre": "Sitio web", "icono": "🌐" },
-    { "id": "enciclopedia", "nombre": "Enciclopedia", "icono": "📚" },
-    { "id": "video", "nombre": "Video", "icono": "🎬" }
+    {
+      "id": "noticia",
+      "nombre": "Noticia",
+      "icono": "📰"
+    },
+    {
+      "id": "ficha",
+      "nombre": "Ficha informativa",
+      "icono": "📄"
+    },
+    {
+      "id": "infografia",
+      "nombre": "Infografía",
+      "icono": "📊"
+    },
+    {
+      "id": "especie",
+      "nombre": "Ficha de especie",
+      "icono": "🐾"
+    },
+    {
+      "id": "mapa",
+      "nombre": "Mapa",
+      "icono": "🗺️"
+    },
+    {
+      "id": "audio",
+      "nombre": "Audio",
+      "icono": "🎧"
+    },
+    {
+      "id": "web",
+      "nombre": "Sitio web",
+      "icono": "🌐"
+    },
+    {
+      "id": "enciclopedia",
+      "nombre": "Enciclopedia",
+      "icono": "📚"
+    },
+    {
+      "id": "video",
+      "nombre": "Video",
+      "icono": "🎬"
+    }
   ],
-
   "recursos": [
     {
-      "seccion": "prensa", "tipo": "noticia", "misiones": [1],
-      "titulo": "Noticia 1", "fuente": "A elegir por el grupo",
-      "descripcion": "", "enlace": "", "revisado": false
+      "id": "noticia-1",
+      "seccion": "prensa",
+      "tipo": "noticia",
+      "misiones": [
+        1
+      ],
+      "titulo": "El Niño amenaza a la Amazonía: crece el riesgo de un colapso irreversible",
+      "fuente": "Infobae (basado en estudios de Nature)",
+      "descripcion": "Explica cómo El Niño calienta las aguas del Pacífico y altera las lluvias en toda la cuenca amazónica. Muestra cómo bajan drásticamente los niveles de los ríos, el bosque sufre estrés hídrico y la vegetación seca queda lista para arder.",
+      "enlace": "https://www.infobae.com/america/medio-ambiente/2026/08/11/el-nino-amenaza-a-la-amazonia-crece-el-riesgo-de-un-colapso-irreversible/",
+      "revisado": true,
+      "logo": "/imagenes/logos/infobae.png",
+      "credito": "Logo: Infobae",
+      "imagen": "",
+      "audio": ""
     },
     {
-      "seccion": "prensa", "tipo": "noticia", "misiones": [1],
-      "titulo": "Noticia 2", "fuente": "A elegir por el grupo",
-      "descripcion": "", "enlace": "", "revisado": false
+      "id": "noticia-2",
+      "seccion": "prensa",
+      "tipo": "noticia",
+      "misiones": [
+        1,
+        2
+      ],
+      "titulo": "Destrucción del Amazonas: las principales amenazas para la mayor selva tropical del mundo",
+      "fuente": "BBC News Mundo",
+      "descripcion": "Detalla cómo la acción humana inicia los desmontes: primero se abren caminos, se talan árboles valiosos y luego se recurre al fuego deliberado para limpiar el terreno y convertirlo en campos para ganado o soja.",
+      "enlace": "https://www.bbc.com/mundo/noticias-america-latina-51377234",
+      "revisado": true,
+      "logo": "/imagenes/logos/bbc.png",
+      "credito": "Logo: BBC News Mundo",
+      "imagen": "",
+      "audio": ""
     },
     {
-      "seccion": "prensa", "tipo": "noticia", "misiones": [1],
-      "titulo": "Noticia 3", "fuente": "A elegir por el grupo",
-      "descripcion": "", "enlace": "", "revisado": false
+      "id": "noticia-3",
+      "seccion": "prensa",
+      "tipo": "noticia",
+      "misiones": [
+        1,
+        3
+      ],
+      "titulo": "El Amazonas podría sufrir una deforestación de hasta el 47% para el año 2050",
+      "fuente": "National Geographic España",
+      "descripcion": "Aborda el «punto de no retorno» del calentamiento global de manera muy visual y sencilla: explica cómo el aumento global de la temperatura y la reducción de lluvias pueden transformar partes de la selva húmeda en una sabana seca, perdiendo su rol como regulador del clima del planeta.",
+      "enlace": "https://www.nationalgeographic.com.es/medio-ambiente/amazonas-podria-sufrir-deforestacion-hasta-47-pocas-decadas_21639",
+      "revisado": true,
+      "logo": "/imagenes/logos/natgeo.png",
+      "credito": "Logo: National Geographic España",
+      "imagen": "",
+      "audio": ""
     },
     {
-      "seccion": "prensa", "tipo": "ficha", "misiones": [1],
-      "titulo": "Guía de Lectura Crítica de Prensa Ambiental", "fuente": "Misión 1 · Paso 2",
+      "seccion": "prensa",
+      "tipo": "ficha",
+      "misiones": [
+        1
+      ],
+      "titulo": "Guía de Lectura Crítica de Prensa Ambiental",
+      "fuente": "Misión 1 · Paso 2",
       "descripcion": "Las preguntas para leer cada noticia están en la ficha de la Misión 1.",
-      "enlace": "/mision-1/#paso-2", "revisado": true
+      "enlace": "/mision-1/#paso-2",
+      "revisado": true,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
     },
-
     {
-      "seccion": "fichas", "tipo": "ficha", "misiones": [1],
-      "titulo": "Ficha informativa: el fenómeno de El Niño", "fuente": "A preparar por el grupo",
-      "descripcion": "", "enlace": "", "revisado": false
+      "seccion": "fichas",
+      "tipo": "ficha",
+      "misiones": [
+        1
+      ],
+      "titulo": "Ficha informativa: el fenómeno de El Niño",
+      "fuente": "A preparar por el grupo",
+      "descripcion": "",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
     },
-
-    { "seccion": "huellas", "huella": "a", "tipo": "infografia", "misiones": [2], "titulo": "Material sobre la Huella A", "fuente": "A elegir por el grupo", "descripcion": "", "enlace": "", "revisado": false },
-    { "seccion": "huellas", "huella": "b", "tipo": "infografia", "misiones": [2], "titulo": "Material sobre la Huella B", "fuente": "A elegir por el grupo", "descripcion": "", "enlace": "", "revisado": false },
-    { "seccion": "huellas", "huella": "c", "tipo": "infografia", "misiones": [2], "titulo": "Material sobre la Huella C", "fuente": "A elegir por el grupo", "descripcion": "", "enlace": "", "revisado": false },
-    { "seccion": "huellas", "huella": "d", "tipo": "infografia", "misiones": [2], "titulo": "Material sobre la Huella D", "fuente": "A elegir por el grupo", "descripcion": "", "enlace": "", "revisado": false },
-
     {
-      "seccion": "especies", "tipo": "especie", "misiones": [3],
-      "titulo": "Fichas de especies", "fuente": "A preparar por el grupo",
+      "seccion": "huellas",
+      "huella": "a",
+      "tipo": "infografia",
+      "misiones": [
+        2
+      ],
+      "titulo": "Material sobre la Huella A",
+      "fuente": "A elegir por el grupo",
+      "descripcion": "",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
+    },
+    {
+      "seccion": "huellas",
+      "huella": "b",
+      "tipo": "infografia",
+      "misiones": [
+        2
+      ],
+      "titulo": "Material sobre la Huella B",
+      "fuente": "A elegir por el grupo",
+      "descripcion": "",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
+    },
+    {
+      "seccion": "huellas",
+      "huella": "c",
+      "tipo": "infografia",
+      "misiones": [
+        2
+      ],
+      "titulo": "Material sobre la Huella C",
+      "fuente": "A elegir por el grupo",
+      "descripcion": "",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
+    },
+    {
+      "seccion": "huellas",
+      "huella": "d",
+      "tipo": "infografia",
+      "misiones": [
+        2
+      ],
+      "titulo": "Material sobre la Huella D",
+      "fuente": "A elegir por el grupo",
+      "descripcion": "",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
+    },
+    {
+      "seccion": "especies",
+      "tipo": "especie",
+      "misiones": [
+        3
+      ],
+      "titulo": "Fichas de especies",
+      "fuente": "A preparar por el grupo",
       "descripcion": "Cada ficha: nombre común y científico, hábitat, alimentación y amenazas.",
-      "enlace": "", "revisado": false
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
     },
-
     {
-      "seccion": "mapas", "tipo": "mapa", "misiones": [1],
-      "titulo": "Google Earth", "fuente": "Google",
+      "seccion": "mapas",
+      "tipo": "mapa",
+      "misiones": [
+        1
+      ],
+      "titulo": "Google Earth",
+      "fuente": "Google",
       "descripcion": "Para observar el territorio. Las coordenadas de cada equipo están en la Misión 1, Paso 1.",
-      "enlace": "https://earth.google.com/web/", "revisado": false
+      "enlace": "https://earth.google.com/web/",
+      "revisado": false,
+      "id": "mapa-google-earth",
+      "imagen": "/imagenes/mapa-amazonia.svg",
+      "logo": "",
+      "audio": "",
+      "credito": ""
     },
     {
-      "seccion": "mapas", "tipo": "mapa", "misiones": [1],
-      "titulo": "Google Earth Timelapse", "fuente": "Google Earth Engine",
+      "seccion": "mapas",
+      "tipo": "mapa",
+      "misiones": [
+        1
+      ],
+      "titulo": "Google Earth Timelapse",
+      "fuente": "Google Earth Engine",
       "descripcion": "Imágenes satelitales de muchos años seguidos: muestran cómo cambia un lugar con el tiempo.",
-      "enlace": "https://earthengine.google.com/timelapse/", "revisado": false
-    },
-
-    {
-      "seccion": "podcast", "tipo": "audio", "misiones": [3],
-      "titulo": "Episodio del podcast «Voces de la Amazonía»", "fuente": "Episodio existente, a elegir por el grupo",
-      "descripcion": "", "enlace": "", "revisado": false
-    },
-
-    {
-      "seccion": "ong", "tipo": "web", "misiones": [4],
-      "titulo": "COICA", "fuente": "Coordinadora de las Organizaciones Indígenas de la Cuenca Amazónica",
-      "descripcion": "", "enlace": "https://coica.org.ec/", "revisado": false
+      "enlace": "https://earthengine.google.com/timelapse/",
+      "revisado": false,
+      "id": "mapa-timelapse",
+      "imagen": "/imagenes/mapa-timelapse.svg",
+      "logo": "",
+      "audio": "",
+      "credito": ""
     },
     {
-      "seccion": "ong", "tipo": "web", "misiones": [4],
-      "titulo": "RAISG", "fuente": "Red Amazónica de Información Socioambiental Georreferenciada",
-      "descripcion": "", "enlace": "https://www.raisg.org/es/", "revisado": false
+      "seccion": "podcast",
+      "tipo": "audio",
+      "misiones": [
+        3
+      ],
+      "titulo": "Episodio del podcast «Voces de la Amazonia»",
+      "fuente": "Episodio existente, a elegir por el grupo",
+      "descripcion": "",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
     },
     {
-      "seccion": "ong", "tipo": "web", "misiones": [4],
-      "titulo": "WWF", "fuente": "WWF Colombia (en español)",
-      "descripcion": "", "enlace": "https://www.wwf.org.co/", "revisado": false
+      "seccion": "ong",
+      "tipo": "web",
+      "misiones": [
+        4
+      ],
+      "titulo": "COICA",
+      "fuente": "Coordinadora de las Organizaciones Indígenas de la Cuenca Amazónica",
+      "descripcion": "",
+      "enlace": "https://coicamazonia.org/",
+      "revisado": false,
+      "logo": "/imagenes/logos/coica.png",
+      "credito": "Logo: Coordinadora de las Organizaciones Indígenas de la Cuenca Amazónica",
+      "id": "ong-coica",
+      "imagen": "",
+      "audio": ""
     },
     {
-      "seccion": "ong", "tipo": "web", "misiones": [4],
-      "titulo": "Greenpeace", "fuente": "Greenpeace Argentina",
-      "descripcion": "", "enlace": "https://www.greenpeace.org/argentina/", "revisado": false
+      "seccion": "ong",
+      "tipo": "web",
+      "misiones": [
+        4
+      ],
+      "titulo": "RAISG",
+      "fuente": "Red Amazónica de Información Socioambiental Georreferenciada",
+      "descripcion": "",
+      "enlace": "https://www.raisg.org/es/",
+      "revisado": false,
+      "logo": "/imagenes/logos/raisg.png",
+      "credito": "Logo: Red Amazónica de Información Socioambiental Georreferenciada",
+      "id": "ong-raisg",
+      "imagen": "",
+      "audio": ""
     },
     {
-      "seccion": "ong", "tipo": "web", "misiones": [4],
-      "titulo": "Fundación Vida Silvestre Argentina", "fuente": "Organización asociada a WWF en Argentina",
+      "seccion": "ong",
+      "tipo": "web",
+      "misiones": [
+        4
+      ],
+      "titulo": "WWF",
+      "fuente": "WWF Colombia (en español)",
+      "descripcion": "",
+      "enlace": "https://www.wwf.org.co/",
+      "revisado": false,
+      "logo": "/imagenes/logos/wwf.png",
+      "credito": "Logo: WWF Colombia",
+      "id": "ong-wwf",
+      "imagen": "",
+      "audio": ""
+    },
+    {
+      "seccion": "ong",
+      "tipo": "web",
+      "misiones": [
+        4
+      ],
+      "titulo": "Greenpeace",
+      "fuente": "Greenpeace Argentina",
+      "descripcion": "",
+      "enlace": "https://www.greenpeace.org/argentina/",
+      "revisado": false,
+      "logo": "/imagenes/logos/greenpeace.png",
+      "credito": "Logo: Greenpeace Argentina",
+      "id": "ong-greenpeace",
+      "imagen": "",
+      "audio": ""
+    },
+    {
+      "seccion": "ong",
+      "tipo": "web",
+      "misiones": [
+        4
+      ],
+      "titulo": "Fundación Vida Silvestre Argentina",
+      "fuente": "Organización asociada a WWF en Argentina",
       "descripcion": "Para el Paso 4 de la Misión 4: problemáticas ambientales en Argentina, como el Gran Chaco.",
-      "enlace": "https://www.vidasilvestre.org.ar/", "revisado": false
+      "enlace": "https://www.vidasilvestre.org.ar/",
+      "revisado": false,
+      "logo": "/imagenes/logos/vidasilvestre.png",
+      "credito": "Logo: Organización asociada a WWF en Argentina",
+      "id": "ong-vidasilvestre",
+      "imagen": "",
+      "audio": ""
     },
-
     {
-      "seccion": "bibliotecas", "tipo": "enciclopedia", "misiones": [1, 2, 3, 4],
-      "titulo": "Biblioteca virtual o enciclopedia", "fuente": "A elegir por el grupo",
-      "descripcion": "", "enlace": "", "revisado": false
+      "seccion": "bibliotecas",
+      "tipo": "enciclopedia",
+      "misiones": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "titulo": "Biblioteca virtual o enciclopedia",
+      "fuente": "A elegir por el grupo",
+      "descripcion": "",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
+    },
+    {
+      "id": "video-base",
+      "seccion": "videos",
+      "tipo": "video",
+      "misiones": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "titulo": "¡La Maravillosa Selva del Amazonas!",
+      "fuente": "YouTube · canal «Videos Educativos para la Escuela Primaria»",
+      "descripcion": "El video base de la expedición: el informe de alerta que reciben los exploradores al empezar.",
+      "enlace": "https://www.youtube.com/watch?v=IKsBjU8WqDY",
+      "revisado": true,
+      "logo": "/imagenes/logos/youtube.png",
+      "imagen": "",
+      "audio": "",
+      "credito": ""
+    },
+    {
+      "id": "video-el-nino",
+      "seccion": "videos",
+      "tipo": "video",
+      "misiones": [
+        1
+      ],
+      "titulo": "¿Qué es el fenómeno de El Niño?",
+      "fuente": "MinAmbiente (Colombia)",
+      "descripcion": "Material audiovisual extra sobre El Niño.",
+      "enlace": "",
+      "revisado": false,
+      "imagen": "",
+      "logo": "",
+      "audio": "",
+      "credito": ""
     }
   ]
 }

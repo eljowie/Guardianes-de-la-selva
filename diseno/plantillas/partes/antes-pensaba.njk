@@ -1,0 +1,17 @@
+{#- Se completa al EMPEZAR la misión. En pantalla, lo que escriben queda guardado solo en este dispositivo. -#}
+<section class="antes-ahora antes-ahora--inicio" aria-labelledby="antes-titulo">
+<h2 id="antes-titulo"><span aria-hidden="true">💭</span> Antes de empezar: Antes pensaba que…</h2>
+
+Antes de investigar, escriban lo que piensan hoy sobre el tema de esta misión. Al final de la misión lo van a volver a leer.
+
+**Antes pensaba que…**
+
+{% completar "renglones", 3 %}
+
+<div class="nota-pantalla no-imprimir">
+<label for="antes-mision-{{ numero }}">Si trabajan en la computadora, pueden escribirlo acá:</label>
+<textarea id="antes-mision-{{ numero }}" rows="3" data-guardar="antes-mision-{{ numero }}"></textarea>
+<p class="nota-pantalla__ayuda">Queda guardado solo en esta computadora o celular. No se envía a ningún lado.</p>
+</div>
+
+</section>

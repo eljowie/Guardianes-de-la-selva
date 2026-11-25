@@ -6,15 +6,9 @@
     </a>
     <nav aria-label="Principal">
       <ul class="menu">
-        {%- for item in sitio.menu %}
-        <li>
-          {%- if item.lista %}
-          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.texto }}</a>
-          {%- else %}
-          <span class="proximamente">{{ item.texto }} <small>(próximamente)</small></span>
-          {%- endif %}
-        </li>
-        {%- endfor %}
+        {%- for item in sitio.menu %}{% if item.lista %}
+        <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{% if item.icono %}<span class="menu__icono" aria-hidden="true">{{ item.icono }}</span>{% endif %}{{ item.texto }}</a></li>
+        {%- endif %}{% endfor %}
       </ul>
     </nav>
   </div>

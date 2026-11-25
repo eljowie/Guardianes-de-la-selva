@@ -80,3 +80,9 @@ table, .caja, .huella, .flujo__eslabon, .red, .ficha-datos { break-inside: avoid
 .antes-ahora { border: 1pt solid #000; break-inside: avoid; }
 .antes-ahora__grilla { display: block; }
 .eje { border-color: #000; }
+
+/* Versión final */
+.nota-pantalla, .antes-ahora__eco { display: none !important; }
+.orientadora, .disciplina, .actor, .mapa-ideas, .mi-hoja { border-color: #000; }
+.pregunta-esencial__cierre, .mi-nodo--centro, .mi-nodo--alerta, .mi-nodo--futuro { background: none !important; color: #000 !important; border: 1pt solid #000; }
+.disparadoras { border: 1pt dashed #000; break-inside: avoid; }

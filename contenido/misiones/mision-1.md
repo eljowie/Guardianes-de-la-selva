@@ -6,22 +6,26 @@ proyecto: "Guardianes de la Selva"
 ---
 
 {% mensajeLia %}
-"¡Bienvenidos exploradores! Soy Lía, guardaparque de la reserva. Necesitamos su ayuda urgente. Nos han llegado imágenes satelitales de una misma zona de la Amazonía tomadas con 10 años de diferencia. El paisaje verde y continuo que conocíamos ha cambiado. Su primera misión no es adivinar qué pasó, sino aprender a observar detenidamente como científicos, consultar fuentes de información y formular una hipótesis fundamentada sobre las causas de esta transformación."
+"¡Bienvenidos exploradores! Soy Lía, guardaparque de la reserva. Necesitamos su ayuda urgente. Nos han llegado imágenes satelitales de una misma zona de la Amazonia tomadas con 10 años de diferencia. El paisaje verde y continuo que conocíamos ha cambiado. Su primera misión no es adivinar qué pasó, sino aprender a observar detenidamente como científicos, consultar fuentes de información y formular una hipótesis fundamentada sobre las causas de esta transformación."
 {% endmensajeLia %}
+
+{% include "partes/antes-pensaba.njk" %}
 
 {% paso "📌", "PASO 1: Observación Detenida en Google Earth (Enseñar a mirar)", "paso-1" %}
 **Consigna:** Abran la línea de tiempo en Google Earth en la coordenada asignada por el docente. Observen primero la imagen de hace 10 años y luego la imagen actual. Dividan la imagen mentalmente en 4 {% g "cuadrantes" %} para no pasar nada por alto.
 
+{% if coordenadas.puntos.length %}
 <div class="recursos no-imprimir">
 <p class="recursos__titulo">Coordenadas para Google Earth</p>
-{% if coordenadas.puntos.length %}
 <ul class="coordenadas">
 {% for p in coordenadas.puntos %}<li><span class="coordenadas__nombre">{{ p.nombre }}</span> <span class="coordenadas__valor">{{ p.latitud }}, {{ p.longitud }}</span> {% boton "Abrir en Google Earth", "https://earth.google.com/web/@" + p.latitud + "," + p.longitud + ",500a,5000d,35y,0h,0t,0r" %}</li>
 {% endfor %}</ul>
-{% else %}
-<p class="pendiente pendiente--chico">Coordenadas pendientes: las asigna el docente.</p>
-{% endif %}
 </div>
+{% endif %}
+
+{% recursos %}
+{% boton "Google Earth en la Biblioteca", "/biblioteca/#mapa-google-earth" %}
+{% endrecursos %}
 
 Grilla de Evidencias Visuales: Registren qué elementos del paisaje observan en cada imagen.
 
@@ -55,7 +59,9 @@ Respuesta: {% completar "renglones", 4 %}
 **Consigna:** Consulten los 3 artículos breves de noticias seleccionados en la Biblioteca del Explorador (sitio web del proyecto) para buscar datos sobre la región.
 
 {% recursos %}
-{% boton "Las 3 noticias en la Biblioteca", "/biblioteca/#prensa" %}
+{% boton "Noticia 1 · Infobae", "/biblioteca/#noticia-1" %}
+{% boton "Noticia 2 · BBC News Mundo", "/biblioteca/#noticia-2" %}
+{% boton "Noticia 3 · National Geographic", "/biblioteca/#noticia-3" %}
 {% endrecursos %}
 
 <div class="noticia">
@@ -91,7 +97,7 @@ Noticia 3 (Título / Fuente): {% completar "largo" %}
 **Consigna:** Integrando lo que observaron en el mapa (Paso 1) y lo que leyeron en las noticias (Paso 2), redacten la explicación inicial de su equipo.
 
 {% caja "hipotesis" %}
-**NUESTRA HIPÓTESIS DE EQUIPO:** "Consideramos que el territorio de la Amazonía cambió en estos 10 años debido a {% completar "renglones", 3 %}"
+**NUESTRA HIPÓTESIS DE EQUIPO:** "Consideramos que el territorio de la Amazonia cambió en estos 10 años debido a {% completar "renglones", 3 %}"
 {% endcaja %}
 
 Evidencia Visual (Google Earth): La captura de pantalla N.° {% completar "corto" %} apoya o pone en duda nuestra {% g "hipótesis" %} porque {% completar "renglones", 2 %}
@@ -108,6 +114,7 @@ Respuesta: {% completar "renglones", 4 %}
 
 {% recursos %}
 {% boton "Ficha de El Niño en la Biblioteca", "/biblioteca/#fichas" %}
+{% boton "Noticia 1 · Infobae: El Niño y la Amazonia", "/biblioteca/#noticia-1" %}
 {% endrecursos %}
 
 <div class="tabla-envoltorio">
@@ -130,9 +137,9 @@ Respuesta del equipo: {% completar "renglones", 4 %}
 {% include "partes/antes-ahora.njk" %}
 
 {% paso "📤", "PASO 5: Publicación en la Bitácora Digital (Padlet)", "paso-5" %}
-Suban la foto o archivo de esta ficha completa a la columna "Misión 1" del Padlet del curso.
+Suban esta ficha completa a la columna "Misión 1" del Padlet del curso: en PDF (con el botón «Imprimir o guardar en PDF») o como foto de la ficha en papel.
 
-Adjunten la captura de pantalla de Google Earth con las marcas del equipo.
+Adjunten la captura de pantalla de Google Earth con las marcas del equipo, como imagen (PNG o JPG).
 
 Lean la hipótesis de otro equipo y dejen un comentario constructivo o una pregunta.
 

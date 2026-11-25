@@ -14,6 +14,25 @@ function paginaLista(url) {
   return item ? item.lista : true;
 }
 
+// Secciones de la Biblioteca que tienen al menos un recurso con enlace.
+// Un botón que apunta a una sección vacía no se muestra (no publicamos bloques vacíos).
+const DATOS_BIBLIOTECA = new URL("./contenido/_datos/biblioteca.json", import.meta.url);
+function anclasConRecursos() {
+  const b = JSON.parse(readFileSync(DATOS_BIBLIOTECA, "utf8"));
+  const con = b.recursos.filter((r) => r.enlace);
+  const anclas = new Set(con.map((r) => r.seccion));
+  con.forEach((r) => {
+    if (r.huella) anclas.add("huella-" + r.huella);
+    if (r.id) anclas.add(r.id);
+  });
+  return anclas;
+}
+function destinoDisponible(url) {
+  if (!paginaLista(url)) return false;
+  const m = url.match(/^\/biblioteca\/#(.+)$/);
+  return m ? anclasConRecursos().has(m[1]) : true;
+}
+
 const escapar = (t) =>
   String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -75,18 +94,14 @@ export default function (eleventyConfig) {
     () => '<span class="casilla" role="img" aria-label="casilla para marcar"></span>'
   );
 
-  // Botón o enlace. Si el destino falta o la página no existe todavía, muestra un cartel.
+  // Botón o enlace. Si el destino falta o está vacío, no se muestra nada.
   eleventyConfig.addShortcode("boton", (texto, destino = "", estilo = "") => {
     const clase = `boton${estilo ? " boton--" + estilo : ""}`;
-    if (!destino) {
-      return `<span class="${clase} boton--pendiente">${escapar(texto)} <small>(enlace pendiente)</small></span>`;
-    }
+    if (!destino) return "";
     if (destino.startsWith("http")) {
       return `<a class="${clase}" href="${escapar(destino)}" target="_blank" rel="noopener noreferrer">${escapar(texto)}<span class="sr"> (se abre en otra pestaña)</span></a>`;
     }
-    if (!paginaLista(destino)) {
-      return `<span class="${clase} boton--pendiente">${escapar(texto)} <small>(próximamente)</small></span>`;
-    }
+    if (!destinoDisponible(destino)) return "";
     return `<a class="${clase}" href="${escapar(destino)}">${escapar(texto)}</a>`;
   });
 
@@ -159,11 +174,24 @@ ${contenido}
   );
 
   // Recursos de un paso (no se imprimen).
-  eleventyConfig.addPairedShortcode(
-    "recursos",
-    (contenido) =>
-      `<div class="recursos no-imprimir"><p class="recursos__titulo">Recursos para este paso</p>\n<div class="recursos__botones">${contenido.trim()}</div></div>`
+  // Si todos sus botones quedaron vacíos, no se muestra.
+  eleventyConfig.addPairedShortcode("recursos", (contenido, titulo = "Para responder, consulten en la Biblioteca") =>
+    contenido.trim()
+      ? `<div class="recursos no-imprimir"><p class="recursos__titulo">${titulo}</p>\n<div class="recursos__botones">${contenido.trim()}</div></div>`
+      : ""
   );
+
+  // Solo los recursos que ya tienen enlace (los demás esperan a que el grupo los cargue).
+  eleventyConfig.addFilter("conEnlace", (lista) => (lista || []).filter((r) => r.enlace));
+
+  // Los enlaces a otros sitios se abren en otra pestaña y lo avisan a los lectores de pantalla.
+  eleventyConfig.addTransform("enlacesExternos", function (html) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return html;
+    return html.replace(/<a\b([^>]*?)href="(https?:\/\/[^"]+)"([^>]*)>([\s\S]*?)<\/a>/g, (todo, antes, url, despues, texto) => {
+      if (/target=/.test(antes + despues)) return todo;
+      return `<a${antes}href="${url}"${despues} target="_blank" rel="noopener noreferrer">${texto}<span class="sr"> (se abre en otra pestaña)</span></a>`;
+    });
+  });
 }
 
 export const config = {

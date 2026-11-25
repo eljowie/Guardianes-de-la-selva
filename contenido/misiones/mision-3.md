@@ -11,8 +11,10 @@ proyecto: "Guardianes de la Selva: Expedición Amazónica"
 Su misión hoy es transformarse en rescatistas ecosistémicos: deben investigar una especie en peligro, reconstruir su red de vida, escuchar las voces de los pobladores locales y comprender cómo la pérdida de la selva afecta el clima de todo el planeta."
 {% endmensajeLia %}
 
+{% include "partes/antes-pensaba.njk" %}
+
 {% paso "🐾", "PASO 1: Ficha de Búsqueda y Rescate de Especies", "paso-1" %}
-**Consigna:** Elijan una especie nativa de la Amazonía (animal o vegetal) disponible en la Biblioteca del Explorador y completen los datos de rescate:
+**Consigna:** Elijan una especie nativa de la Amazonia (animal o vegetal) disponible en la Biblioteca del Explorador y completen los datos de rescate:
 
 {% recursos %}
 {% boton "Fichas de especies en la Biblioteca", "/biblioteca/#especies" %}
@@ -67,14 +69,12 @@ Respuesta: {% completar "renglones", 4 %}
 Respuesta: {% completar "renglones", 4 %}
 {% endpaso %}
 
-{% paso "🎧", "PASO 3: Mesa de Voces – Escucha del Podcast \"Voces de la Amazonía\"", "paso-3" %}
+{% paso "🎧", "PASO 3: Mesa de Voces – Escucha del Podcast \"Voces de la Amazonia\"", "paso-3" %}
 **Consigna:** Abran la sección de audio en la página web del proyecto y escuchen el testimonio asignado (residente local, científico o miembro de una comunidad indígena).
 
-<div class="recursos no-imprimir">
-<p class="recursos__titulo">Podcast «Voces de la Amazonía»</p>
-<p class="pendiente pendiente--chico">Audio a definir: episodios existentes sobre el tema, que va a elegir el grupo.</p>
-<div class="recursos__botones">{% boton "Podcast y audios en la Biblioteca", "/biblioteca/#podcast" %}</div>
-</div>
+{% recursos %}
+{% boton "Podcast y audios en la Biblioteca", "/biblioteca/#podcast" %}
+{% endrecursos %}
 
 Testimonio escuchado (Nombre / Rol): {% completar "largo" %}
 
@@ -88,7 +88,7 @@ Respuesta: {% completar "renglones", 3 %}
 {% endpaso %}
 
 {% paso "🌡️", "PASO 4: Conexión Climática Global (Deforestación -> Cambio Climático)", "paso-4" %}
-**Consigna:** La Amazonía es conocida como el "gran regulador del clima" de América del Sur. Armen el mapa de causa-efecto: a partir de la tala y la quema, escriban en cada recuadro una consecuencia que encontraron en su investigación, en el orden en que creen que ocurre cada una.
+**Consigna:** La Amazonia es conocida como el "gran regulador del clima" de América del Sur. Armen el mapa de causa-efecto: a partir de la tala y la quema, escriban en cada recuadro una consecuencia que encontraron en su investigación, en el orden en que creen que ocurre cada una.
 
 <ol class="flujo flujo--abierto">
 <li class="flujo__eslabon flujo__eslabon--inicio"><span class="flujo__num">Punto de partida:</span> <span class="flujo__causa">Tala y quema de árboles</span></li>

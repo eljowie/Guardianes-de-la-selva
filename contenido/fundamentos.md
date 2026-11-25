@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Fundamentos
+title: Marco teórico
 descripcion: "Marco conceptual de la propuesta y cómo se ve cada idea en el sitio."
 permalink: /fundamentos/
 ---
@@ -8,8 +8,8 @@ permalink: /fundamentos/
 <article class="pagina">
 <header class="pagina__encabezado">
 <p class="pagina__sello">Para la cátedra y docentes</p>
-<h1>Fundamentos</h1>
-<p class="pagina__intro">Marco conceptual</p>
+<h1>Marco teórico</h1>
+<p class="pagina__intro">Justificación teórica de la propuesta</p>
 <div class="pagina__acciones no-imprimir">
 <button type="button" class="boton" onclick="window.print()">Imprimir</button>
 {% boton "Guía del Docente", "/docentes/", "secundario" %}
@@ -20,12 +20,24 @@ permalink: /fundamentos/
 
 Esta propuesta fundamenta cada una de sus decisiones de diseño en los marcos teóricos de la cátedra, articulando el contenido temático con la metodología de enseñanza:
 
-<p class="marca-borrador no-imprimir"><strong>Agregado</strong> <span>Los recuadros «En el sitio» no son texto del documento del grupo: los propone el desarrollador web y el grupo los revisa.</span></p>
+<section class="justificacion" aria-labelledby="justificacion">
+
+<h2 id="justificacion">Justificación teórica</h2>
+
+Guardianes de la Selva busca un aprendizaje basado en una narrativa transmedia y partitura móvil, como le dice Lion, donde el aprendizaje no es lineal ni pasivo, sino una experiencia abierta que los estudiantes interpretan, navegan y reconstruyen activamente como prosumidores. Al integrar varios lenguajes, imágenes satelitales, mapas interactivos, registros audiovisuales y producciones colaborativas, la propuesta se centra en una cultura visual contemporánea y resignifica la fragmentación digital para la construcción de sentido.
+
+Esta arquitectura mediática se vincula con el marco de la Enseñanza para la Comprensión, de Blythe, a través de un Tópico Generativo central: la deforestación de la Amazonia y sus vínculos sistémicos con el cambio climático. La problemática conecta de forma interdisciplinar las ciencias naturales, la geografía y la ética ciudadana mediante preguntas y desempeños de comprensión concretos, donde el pensamiento de los alumnos se vuelve visible al formular hipótesis, analizar evidencias del territorio y realizar propuestas de preservación.
+
+La propuesta también retoma las ideas de Furman, en *Enseñar distinto*, para combatir el conocimiento inerte, situando a las infancias en una auténtica cultura de indagación guiada. Al asumir el rol de exploradores, los estudiantes colaboran, debaten y aprenden a desenvolverse, transformando la información en pensamiento crítico y compromiso activo con el cuidado ambiental.
+
+</section>
+
+<h2 class="marco-subtitulo">Los autores, uno por uno</h2>
 
 <section class="autor" aria-labelledby="perkins">
 <h2 id="perkins">Enseñanza para la Comprensión (Perkins y Blythe)</h2>
 
-El proyecto se estructura alrededor de un Tópico Generativo central: La deforestación de la Amazonía y sus vínculos sistémicos con la transformación del territorio y el cambio climático. Siguiendo a Perkins, este tema posee:
+El proyecto se estructura alrededor de un Tópico Generativo central: La deforestación de la Amazonia y sus vínculos sistémicos con la transformación del territorio y el cambio climático. Siguiendo a Perkins, este tema posee:
 
 Centralidad: Une contenidos nodales de tres disciplinas curriculares.
 
