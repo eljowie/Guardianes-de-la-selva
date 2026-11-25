@@ -1,6 +1,6 @@
 # Revisión de enlaces
 
-Fecha: 25/11/2026, 03:15:57
+Fecha: 25/11/2026, 03:25:18
 
 | Página | Texto del link | URL | Estado |
 |---|---|---|---|
@@ -172,6 +172,7 @@ Fecha: 25/11/2026, 03:15:57
 | /mision-1/ | Noticia 1 · Infobae: El Niño y la Amazonia | /biblioteca/#noticia-1 | OK |
 | /mision-1/ | «Antes pensaba que…» | #antes-titulo | OK |
 | /mision-1/ | Ver la Bitácora en el sitio | /bitacora/ | OK |
+| /mision-1/ | mapa de la expedición | /#mapa | OK |
 | /mision-1/ | Elegir otra misión Mapa de la expedición | /#mapa | OK |
 | /mision-1/ | Misión 2 → Las huellas humanas | /mision-2/ | OK |
 | /mision-1/ | Guía del Docente | /docentes/ | OK |
@@ -193,6 +194,7 @@ Fecha: 25/11/2026, 03:15:57
 | /mision-2/ | Noticia BBC: las principales amenazas para la selva | /biblioteca/#noticia-2 | OK |
 | /mision-2/ | «Antes pensaba que…» | #antes-titulo | OK |
 | /mision-2/ | Ver la Bitácora en el sitio | /bitacora/ | OK |
+| /mision-2/ | mapa de la expedición | /#mapa | OK |
 | /mision-2/ | ← Misión 1 El territorio que cambió | /mision-1/ | OK |
 | /mision-2/ | Elegir otra misión Mapa de la expedición | /#mapa | OK |
 | /mision-2/ | Misión 3 → Lo que se pierde | /mision-3/ | OK |
@@ -212,6 +214,7 @@ Fecha: 25/11/2026, 03:15:57
 | /mision-3/ | Volver al mapa | /#mapa | OK |
 | /mision-3/ | «Antes pensaba que…» | #antes-titulo | OK |
 | /mision-3/ | Ver la Bitácora en el sitio | /bitacora/ | OK |
+| /mision-3/ | mapa de la expedición | /#mapa | OK |
 | /mision-3/ | ← Misión 2 Las huellas humanas | /mision-2/ | OK |
 | /mision-3/ | Elegir otra misión Mapa de la expedición | /#mapa | OK |
 | /mision-3/ | Misión 4 → Guardianes en acción | /mision-4/ | OK |
@@ -237,6 +240,7 @@ Fecha: 25/11/2026, 03:15:57
 | /mision-4/ | «Antes pensaba que…» | #antes-titulo | OK |
 | /mision-4/ | Ver la Bitácora en el sitio | /bitacora/ | OK |
 | /mision-4/ | Obtener la credencial de Guardianes | /credencial/ | OK |
+| /mision-4/ | mapa de la expedición | /#mapa | OK |
 | /mision-4/ | ← Misión 3 Lo que se pierde | /mision-3/ | OK |
 | /mision-4/ | Elegir otra misión Mapa de la expedición | /#mapa | OK |
 | /mision-4/ | Guía del Docente | /docentes/ | OK |

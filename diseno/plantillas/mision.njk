@@ -25,6 +25,13 @@ layout: base.njk
 
   {% glosarioPagina %}
 
+  <section class="cierre-mision no-imprimir" aria-labelledby="cierre-titulo" hidden>
+    <h2 id="cierre-titulo">¿Terminaron la misión?</h2>
+    <p>Cuando hayan publicado su ficha en la Bitácora, márquenla: su zona se enciende en el <a href="/#mapa">mapa de la expedición</a>. Queda guardado solo en esta computadora.</p>
+    <button type="button" class="boton boton--acento" data-terminar-mision="{{ numero }}" hidden>Marcar la misión como terminada</button>
+    <p class="cierre-mision__estado" role="status"></p>
+  </section>
+
   <nav class="mision__nav no-imprimir" aria-label="Otras misiones">
     {% if anterior %}
     <a class="mision__nav-enlace" href="{{ anterior.url }}" rel="prev"><small>← Misión {{ anterior.numero }}</small>{{ anterior.titulo }}</a>

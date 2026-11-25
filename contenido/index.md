@@ -65,3 +65,18 @@ clase: portada
 </div>
 </div>
 </section>
+
+{#- Radio del Explorador (CAMBIOS_2 §4.1): aparece solo cuando la Biblioteca tenga podcasts o audios con enlace. -#}
+{%- set radio = biblioteca.recursos | donde("seccion", "podcast") | conEnlace %}
+{%- if radio.length %}
+<section class="radio-explorador" aria-labelledby="titulo-radio">
+<h2 id="titulo-radio">Radio del Explorador</h2>
+<p>Podcasts y audios para escuchar antes de salir de expedición.</p>
+<ul class="tarjetas-recursos">
+{%- set nivel = "h3" %}{% set compacto = true %}
+{%- for r in radio %}
+{% include "partes/recurso.njk" %}
+{%- endfor %}
+</ul>
+</section>
+{%- endif %}

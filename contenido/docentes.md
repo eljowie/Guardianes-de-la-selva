@@ -190,6 +190,34 @@ Por ejemplo:
 
 </section>
 
+<section class="bloque texto" aria-labelledby="expansiones">
+
+<h2 id="expansiones">Expansiones</h2>
+
+<h3 id="tu-guardian">Tu guardián</h3>
+
+Actividad de la trama didáctica. Los equipos pueden producirla en Canva.
+
+<div class="guardian">
+<div class="guardian__paso"><span class="guardian__icono" aria-hidden="true">🦸</span><h4>Creá tu guardián</h4><p>Aspecto físico y "superpoderes" necesarios para su misión en la Amazonia. Justificá por qué.</p></div>
+<div class="guardian__paso"><span class="guardian__icono" aria-hidden="true">🗺️</span><h4>Elegí tu territorio</h4><p>Cada grupo selecciona una región de la Amazonia para proteger con su guardián.</p></div>
+<div class="guardian__paso"><span class="guardian__icono" aria-hidden="true">🎧</span><h4>Elegí una referencia</h4><p>Un contenido audiovisual, texto o canción que tu guardián debería conocer para entender la situación actual. Explicá los puntos clave y su relación con la trama principal.</p></div>
+</div>
+
+<h3 id="instagram">Si el curso tuviera Instagram</h3>
+
+Ideas para llevar algunas misiones a una red social. La cuenta sería del curso y la administraría el docente: los menores de 13 años no pueden tener cuenta propia.
+
+<div class="expansiones-ig">
+<div class="expansion-ig mision--1"><p class="expansion-ig__mision">Misión 1</p><p class="expansion-ig__formato">Carrusel</p><p>Comparación antes / después del territorio, una imagen por diapositiva.</p></div>
+<div class="expansion-ig mision--3"><p class="expansion-ig__mision">Misión 3</p><p class="expansion-ig__formato">Stories</p><p>Fichas de especie: una historia por animal o planta investigada.</p></div>
+<div class="expansion-ig mision--4"><p class="expansion-ig__mision">Misión 4</p><p class="expansion-ig__formato">Publicación</p><p>La carta-Plan de Rescate como publicación del curso.</p></div>
+</div>
+
+La Misión 2 no se adapta a este formato.
+
+</section>
+
 <section class="bloque texto" aria-labelledby="orientaciones">
 
 <h2 id="orientaciones">Orientaciones para acompañar las fichas</h2>

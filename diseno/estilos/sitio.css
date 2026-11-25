@@ -551,8 +551,8 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
   font: inherit; font-size: 0.95rem; cursor: pointer;
 }
 .chip:hover { border-color: var(--selva); }
-.chip[aria-pressed="true"] { background: var(--selva); border-color: var(--selva); color: #fff; font-weight: 700; }
-.chip--mision[aria-pressed="true"] { background: var(--color-mision); border-color: var(--color-mision); }
+.chip[data-activo="true"] { background: var(--selva); border-color: var(--selva); color: #fff; font-weight: 700; }
+.chip--mision[data-activo="true"] { background: var(--color-mision); border-color: var(--color-mision); }
 
 .estante { margin: 0 0 2.25rem; scroll-margin-top: 1rem; }
 .estante h2 { padding-top: 0.5rem; border-top: 2px solid var(--borde); }
@@ -851,3 +851,52 @@ td:has(> .casilla) { text-align: center; vertical-align: middle; width: 22%; }
 .ver-mas[open] > summary::after { transform: rotate(180deg); }
 .ver-mas > summary:hover { background: var(--musgo); }
 .ver-mas[open] > summary { margin-bottom: 0.75rem; }
+
+/* ── P3 · Escuchar con la voz del navegador ─────────────────────── */
+.escuchar {
+  display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.75rem; margin: 0 0 0.75rem; padding: 0.35rem 0.95rem;
+  border: 2px solid currentColor; border-radius: 999px; background: transparent; color: var(--selva);
+  font: inherit; font-size: 0.95rem; font-weight: 700; cursor: pointer;
+}
+.escuchar:hover { background: var(--musgo); }
+.escuchar[data-activo="true"] { background: var(--selva); border-color: var(--selva); color: #fff; }
+.mensaje .escuchar { color: var(--arena); }
+.mensaje .escuchar:hover { background: rgba(255, 255, 255, 0.1); }
+.mensaje .escuchar[data-activo="true"] { background: var(--arena); border-color: var(--arena); color: var(--selva); }
+.escuchar:focus-visible { outline: 3px solid #f2c94c; outline-offset: 2px; }
+
+/* ── P3 · Mapa con progreso ──────────────────────────────────────── */
+.zona__brillo { fill: none; stroke: #f2c94c; stroke-width: 10; stroke-dasharray: 2 18; stroke-linecap: round; opacity: 0; pointer-events: none; }
+.zona__tilde { display: none; }
+.zona--terminada .zona__brillo { opacity: 1; }
+.zona--terminada .zona__marca circle { fill: #f2c94c; }
+.zona--terminada .zona__numero { display: none; }
+.zona--terminada .zona__tilde { display: inline; }
+.mapa__progreso {
+  display: inline-block; margin-top: 0.75rem; padding: 0.4rem 1rem; border-radius: 999px;
+  background: var(--arena); color: var(--selva); font-weight: 700;
+}
+.mapa__progreso[hidden] { display: none; }
+.cierre-mision {
+  margin: 2rem 0 1rem; padding: 1.25rem; text-align: center;
+  border: 2px dashed var(--color-mision); border-radius: var(--radio); background: var(--superficie);
+}
+.cierre-mision h2 { margin-top: 0; }
+.cierre-mision__estado { margin: 0.75rem 0 0; font-weight: 700; color: var(--selva); }
+.cierre-mision__estado:empty { display: none; }
+.boton[data-activo="true"] { background: var(--selva); border-color: var(--selva); }
+@media (prefers-reduced-motion: no-preference) {
+  .zona--terminada .zona__brillo { animation: brillo 2.4s ease-in-out infinite; }
+  @keyframes brillo { 50% { opacity: 0.45; } }
+}
+
+/* ── P3 · Expansiones (Tu guardián, Instagram) ───────────────────── */
+.guardian, .expansiones-ig { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin: 1rem 0 1.5rem; }
+.guardian__paso { padding: 1rem 1.1rem; background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); }
+.guardian__icono { display: grid; place-items: center; width: 3rem; height: 3rem; margin-bottom: 0.5rem; border-radius: 50%; background: var(--musgo); font-size: 1.6rem; }
+.guardian__paso h4 { margin: 0 0 0.35rem; color: var(--selva); }
+.guardian__paso p { margin: 0; }
+.expansion-ig { padding: 1rem 1.1rem; border-radius: var(--radio); background: var(--superficie); border: 1px solid var(--borde); border-top: 6px solid var(--color-mision); }
+.expansion-ig p { margin: 0; }
+.expansion-ig__mision { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-mision); }
+.expansion-ig__formato { font-size: 1.2rem; font-weight: 700; color: var(--selva); margin-bottom: 0.35rem !important; }

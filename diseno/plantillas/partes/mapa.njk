@@ -1,4 +1,4 @@
-{#- Mapa provisorio de la expedición. Se reemplaza por la ilustración definitiva del grupo. -#}
+{#- Mapa de la expedición. Las zonas terminadas se «encienden» (js/progreso.js). -#}
 <figure class="mapa__figura">
 <svg class="mapa__svg" viewBox="0 0 1200 720" role="group" aria-labelledby="mapa-desc" xmlns="http://www.w3.org/2000/svg">
   <desc id="mapa-desc">Mapa ilustrado de la selva con cuatro zonas, una por misión.</desc>
@@ -40,7 +40,7 @@
   </g>
   {%- for m in misiones %}
   {%- set pos = [[290, 230], [900, 220], [300, 500], [900, 520]][loop.index0] %}
-  <a class="zona zona--{{ m.numero }}" href="{{ m.url }}" aria-label="Misión {{ m.numero }}: {{ m.titulo }}">
+  <a class="zona zona--{{ m.numero }}" data-mision="{{ m.numero }}" href="{{ m.url }}" aria-label="Misión {{ m.numero }}: {{ m.titulo }}">
     <circle class="zona__area" cx="{{ pos[0] }}" cy="{{ pos[1] }}" r="150"/>
     <g class="zona__dibujo" transform="translate({{ pos[0] }} {{ pos[1] }})" aria-hidden="true">
       {%- if m.numero == 1 %}
@@ -85,9 +85,11 @@
       <path d="M-110 50 V-20 M-122 -20 h24" stroke="#d9dee3" stroke-width="4"/>
       {%- endif %}
     </g>
+    <circle class="zona__brillo" cx="{{ pos[0] }}" cy="{{ pos[1] }}" r="140" aria-hidden="true"/>
     <g class="zona__marca" transform="translate({{ pos[0] - 120 }} {{ pos[1] - 120 }})" aria-hidden="true">
       <circle r="30" fill="#f3e6c4" stroke="#2d3b1e" stroke-width="4" filter="url(#sombra)"/>
       <text y="11" text-anchor="middle" class="zona__numero">{{ m.numero }}</text>
+      <path class="zona__tilde" d="M-13 0 l9 10 l17 -20" fill="none" stroke="#2d3b1e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
     <g class="zona__rotulo" transform="translate({{ pos[0] }} {{ pos[1] + 125 }})" aria-hidden="true">
       <rect x="-170" y="-26" width="340" height="52" rx="26" fill="#f3e6c4" filter="url(#sombra)"/>
@@ -96,4 +98,5 @@
   </a>
   {%- endfor %}
 </svg>
+<figcaption class="mapa__progreso" role="status" hidden>Misiones terminadas: <strong></strong>. Las zonas encendidas son las que ya completaron.</figcaption>
 </figure>
